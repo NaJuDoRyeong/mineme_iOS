@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CommonUIViewController : UIViewController {
+public protocol CommonUIViewController : UIViewController {
     func initAttribute()
     func initAutolayout()
 }

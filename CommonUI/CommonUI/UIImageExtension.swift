@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIImage {
-    func resize(width: CGFloat, height: CGFloat) -> UIImage {
+    public func resize(width: CGFloat, height: CGFloat) -> UIImage {
         let size = CGSize(width: width, height: height)
         let render = UIGraphicsImageRenderer(size: size)
         let renderImage = render.image { _ in

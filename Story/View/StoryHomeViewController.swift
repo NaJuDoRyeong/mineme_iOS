@@ -6,24 +6,33 @@
 //
 
 import UIKit
+import SnapKit
 
-class StoryHomeViewController: UIViewController {
+open class StoryHomeViewController: UIViewController {
+    
+    private var image = UIImageView()
 
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .white
+        initAttribute()
+        initAutolayout()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func initAttribute(){
+        image.image = UIImage(named: "no-image-bread")
     }
-    */
+    
+    func initAutolayout(){
+        self.view.addSubview(image)
+        
+        [image].forEach { self.view.addSubview($0) }
+        
+        image.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
+        
+    }
 
 }
