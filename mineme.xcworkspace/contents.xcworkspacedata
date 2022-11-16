@@ -7,4 +7,10 @@
    <FileRef
       location = "group:Home/Home.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Story/Story.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CommonUI/CommonUI.xcodeproj">
+   </FileRef>
 </Workspace>
