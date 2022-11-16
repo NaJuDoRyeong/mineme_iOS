@@ -11,6 +11,12 @@ class ProfileImageView : UIImageView {
     
     private var imageURL: String?
     
+    init(image : UIImage){
+        super.init(frame: .zero)
+        self.image = image
+        initAttribute()
+    }
+    
     init(url : String? = nil){
         super.init(frame: .zero)
         self.imageURL = url
@@ -23,6 +29,7 @@ class ProfileImageView : UIImageView {
     
     
     func initAttribute(){
+        self.frame.size = CGSize(width: 80, height: 80)
         if imageURL == nil {
 //            self.image = UIImage(named: imageURL!)
         }else{
@@ -30,7 +37,19 @@ class ProfileImageView : UIImageView {
 //            self.image = LoadImage(url : imageURL)
             self.image = UIImage(named: imageURL!)
         }
-        self.frame.size = CGSize(width: 80, height: 80)
+        self.circle()
+    }
+    
+    func changeImage(image : UIImage){
+        self.image = image.resize(width: 80, height: 80)
+        self.circle()
+    }
+    
+    func circle(){
+        self.contentMode = .scaleAspectFill
+        self.layer.cornerRadius = self.frame.height/2
+        self.layer.cornerCurve = .circular
+        self.clipsToBounds = true
     }
     
 }

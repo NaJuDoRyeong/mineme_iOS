@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		B905E8EB291A5FB60038485D /* TextFieldWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8EA291A5FB60038485D /* TextFieldWithTitle.swift */; };
 		B905E8F6291AC14D0038485D /* FeedPriview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8F5291AC14D0038485D /* FeedPriview.swift */; };
+		B9BE5A5B292386E800E82CFB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9BE5A5A292386E800E82CFB /* SnapKit */; };
 		B9F11FA5291696DB00CED4C1 /* Home.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F11FA4291696DB00CED4C1 /* Home.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9F11FB82916AD0100CED4C1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FB72916AD0100CED4C1 /* HomeViewController.swift */; };
 		B9F11FBA2916B21B00CED4C1 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FB92916B21B00CED4C1 /* ProfileImageView.swift */; };
 		B9F11FC32917693200CED4C1 /* HomeProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FC22917693200CED4C1 /* HomeProfileView.swift */; };
 		B9F11FC5291769FC00CED4C1 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FC4291769FC00CED4C1 /* Entity.swift */; };
-		B9F11FC8291A37E600CED4C1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9F11FC7291A37E600CED4C1 /* SnapKit */; };
 		B9F11FCA291A43C900CED4C1 /* HomeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FC9291A43C900CED4C1 /* HomeSettingViewController.swift */; };
 		B9F11FE3291A4F1500CED4C1 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F11FE2291A4F1500CED4C1 /* CommonUI.framework */; };
 		B9F11FE4291A4F1500CED4C1 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9F11FE2291A4F1500CED4C1 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -52,8 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F11FC8291A37E600CED4C1 /* SnapKit in Frameworks */,
 				B9F11FE3291A4F1500CED4C1 /* CommonUI.framework in Frameworks */,
+				B9BE5A5B292386E800E82CFB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +162,7 @@
 			);
 			name = Home;
 			packageProductDependencies = (
-				B9F11FC7291A37E600CED4C1 /* SnapKit */,
+				B9BE5A5A292386E800E82CFB /* SnapKit */,
 			);
 			productName = Home;
 			productReference = B9F11FA1291696DB00CED4C1 /* Home.framework */;
@@ -375,10 +375,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.Home;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -405,9 +408,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.Home;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -446,7 +452,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B9F11FC7291A37E600CED4C1 /* SnapKit */ = {
+		B9BE5A5A292386E800E82CFB /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B9F11FC6291A37E600CED4C1 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
