@@ -11,6 +11,7 @@
 		B9FDB7F329362308002DB8B1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FDB7F229362308002DB8B1 /* SettingViewController.swift */; };
 		B9FDB7F529362373002DB8B1 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FDB7F429362373002DB8B1 /* SettingTableViewCell.swift */; };
 		B9FDB7F829362664002DB8B1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9FDB7F729362664002DB8B1 /* SnapKit */; };
+		B9FDB7FA293631A7002DB8B1 /* AccountVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FDB7F9293631A7002DB8B1 /* AccountVIewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		B9FDB7E72936176A002DB8B1 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		B9FDB7F229362308002DB8B1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B9FDB7F429362373002DB8B1 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		B9FDB7F9293631A7002DB8B1 /* AccountVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVIewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				B9FDB7F229362308002DB8B1 /* SettingViewController.swift */,
+				B9FDB7F9293631A7002DB8B1 /* AccountVIewController.swift */,
 				B9FDB7F429362373002DB8B1 /* SettingTableViewCell.swift */,
 			);
 			path = View;
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9FDB7F529362373002DB8B1 /* SettingTableViewCell.swift in Sources */,
+				B9FDB7FA293631A7002DB8B1 /* AccountVIewController.swift in Sources */,
 				B9FDB7F329362308002DB8B1 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
