@@ -30,6 +30,10 @@ open class HomeSettingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    open override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     func initAttribute() {
         
         self.navigationController?.navigationBar.tintColor = .lightGray
