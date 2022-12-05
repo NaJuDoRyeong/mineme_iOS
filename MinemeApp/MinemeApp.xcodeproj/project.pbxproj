@@ -16,6 +16,8 @@
 		B9F11F8D291696CD00CED4C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F11F8C291696CD00CED4C1 /* Assets.xcassets */; };
 		B9F11FBD2916B48200CED4C1 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F11FBC2916B48200CED4C1 /* Home.framework */; };
 		B9F11FBE2916B48200CED4C1 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9F11FBC2916B48200CED4C1 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9FDB7EF29361789002DB8B1 /* Setting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FDB7EE29361789002DB8B1 /* Setting.framework */; };
+		B9FDB7F029361789002DB8B1 /* Setting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9FDB7EE29361789002DB8B1 /* Setting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,7 @@
 			files = (
 				B9BE5A742923881A00E82CFB /* Story.framework in Embed Frameworks */,
 				B9F11FBE2916B48200CED4C1 /* Home.framework in Embed Frameworks */,
+				B9FDB7F029361789002DB8B1 /* Setting.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +46,7 @@
 		B9F11F8C291696CD00CED4C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9F11F91291696CD00CED4C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9F11FBC2916B48200CED4C1 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9FDB7EE29361789002DB8B1 /* Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 				B9BE5A7D2923BDA600E82CFB /* SnapKit in Frameworks */,
 				B9BE5A732923881A00E82CFB /* Story.framework in Frameworks */,
 				B9F11FBD2916B48200CED4C1 /* Home.framework in Frameworks */,
+				B9FDB7EF29361789002DB8B1 /* Setting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +96,7 @@
 		B9F11FBB2916B48200CED4C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9FDB7EE29361789002DB8B1 /* Setting.framework */,
 				B9BE5A722923881A00E82CFB /* Story.framework */,
 				B9BE5A4D2923779E00E82CFB /* Story.framework */,
 				B9F11FBC2916B48200CED4C1 /* Home.framework */,

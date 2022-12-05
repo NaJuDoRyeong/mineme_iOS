@@ -11,6 +11,9 @@
       location = "group:Story/Story.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Setting/Setting.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CommonUI/CommonUI.xcodeproj">
    </FileRef>
 </Workspace>
