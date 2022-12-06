@@ -10,9 +10,7 @@ import CommonUI
 
 open class OnboardingViewController: UIViewController {
     
-    private var progressBarBackground = UIView()
-    private var progressBar = UIView()
-    private var progressPosition = CGFloat()
+    private var progress = OnboardingProgessBar(size: 230)
     
     private var skipButton = UILabel()
     private var content : [OnboardingData] = []
@@ -30,24 +28,6 @@ open class OnboardingViewController: UIViewController {
     }
     
     func initAttribute(){
-        progressBarBackground = {
-            let bar = UIView()
-            bar.backgroundColor = .lightGray
-            bar.frame = CGRect(x: 0, y: 0, width: 230, height: 10)
-            bar.layer.cornerRadius = 20
-            bar.layer.cornerCurve = .continuous
-
-            return bar
-        }()
-        
-        progressBar = {
-            let bar = UIView()
-            bar.backgroundColor = .black
-            bar.layer.cornerRadius = 20
-            bar.layer.cornerCurve = .continuous
-            
-            return bar
-        }()
         
         skipButton = {
             let label = UILabel()
@@ -68,31 +48,24 @@ open class OnboardingViewController: UIViewController {
     }
     
     func initAutolayout(){
-        [progressBarBackground, progressBar, skipButton, nextButton, contentView].forEach {
+        [progress, skipButton, nextButton, contentView].forEach {
             self.view.addSubview($0)
         }
         
-        progressBarBackground.snp.makeConstraints {
+        progress.snp.makeConstraints {
             $0.height.equalTo(10)
             $0.top.equalToSuperview().offset(61)
             $0.left.equalToSuperview().offset(80)
             $0.right.equalToSuperview().offset(-80)
         }
         
-        progressBar.snp.makeConstraints {
-            $0.height.equalTo(8)
-            $0.width.equalTo(progressBarBackground.frame.width/3)
-            $0.left.equalTo(progressBarBackground)
-            $0.centerY.equalTo(progressBarBackground)
-        }
-        
         skipButton.snp.makeConstraints {
-            $0.centerY.equalTo(progressBarBackground)
-            $0.left.equalTo(progressBarBackground.snp.right).offset(8)
+            $0.centerY.equalTo(progress)
+            $0.left.equalTo(progress.snp.right).offset(8)
         }
         
         contentView.snp.makeConstraints {
-            $0.top.equalTo(progressBarBackground).offset(70)
+            $0.top.equalTo(progress).offset(70)
             $0.left.equalToSuperview().offset(68)
             $0.right.equalToSuperview().offset(-68)
         }
@@ -105,17 +78,13 @@ open class OnboardingViewController: UIViewController {
     
     func loadContent(){
         
-        contentView.initData(content: content[contentNumber])
-        progressPosition += progressBarBackground.frame.width/3
+        self.contentView.initData(content: content[contentNumber])
+        progress.updateProgress()
         
         contentView.snp.updateConstraints {
-            $0.top.equalTo(progressBarBackground).offset(70)
+            $0.top.equalTo(progress).offset(70)
             $0.left.equalToSuperview().offset(68)
             $0.right.equalToSuperview().offset(-68)
-        }
-        
-        progressBar.snp.updateConstraints {
-            $0.left.equalTo(progressBarBackground).offset(progressPosition)
         }
     }
 

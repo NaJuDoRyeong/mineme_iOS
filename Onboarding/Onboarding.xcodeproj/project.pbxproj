@@ -14,6 +14,7 @@
 		B9F7A908293F636000619054 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9F7A907293F636000619054 /* SnapKit */; };
 		B9F7A910293F701B00619054 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7A90F293F701B00619054 /* CommonUI.framework */; };
 		B9F7A911293F701B00619054 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7A90F293F701B00619054 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9F7A919293F8F6E00619054 /* OnboardingProgessBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A918293F8F6E00619054 /* OnboardingProgessBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		B9F7A8FC293F60C000619054 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
 		B9F7A901293F610000619054 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		B9F7A90F293F701B00619054 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F7A918293F8F6E00619054 /* OnboardingProgessBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgessBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				B9F7A6F7293E700D00619054 /* OnboardingViewController.swift */,
+				B9F7A918293F8F6E00619054 /* OnboardingProgessBar.swift */,
 				B9F7A8FC293F60C000619054 /* OnboardingContentView.swift */,
 			);
 			path = View;
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F7A919293F8F6E00619054 /* OnboardingProgessBar.swift in Sources */,
 				B9F7A6F8293E700D00619054 /* OnboardingViewController.swift in Sources */,
 				B9F7A8FD293F60C000619054 /* OnboardingContentView.swift in Sources */,
 				B9F7A902293F610000619054 /* Entity.swift in Sources */,
