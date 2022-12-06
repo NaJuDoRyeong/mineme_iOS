@@ -18,6 +18,7 @@ class OnboardingContentView: UIView {
     init(content: OnboardingData) {
         self.content = content
         super.init(frame: .zero)
+        self.backgroundColor = .white
         initAttribute()
         initAutolayout()
     }

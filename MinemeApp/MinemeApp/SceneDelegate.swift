@@ -7,6 +7,7 @@
 
 import UIKit
 import Home
+import Onboarding
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,7 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 //        window.rootViewController = HomeSettingViewController()
 //        window.rootViewController = UINavigationController(rootViewController: HomeViewController())
+        
+        
+        // MARK - real View
         window.rootViewController = ViewController()
+        
+        
+        // MARK - Onboarding test View
+        window.rootViewController = OnboardingViewController()
         
         window.makeKeyAndVisible()
         self.window = window
