@@ -18,6 +18,7 @@
 		B9F11FBE2916B48200CED4C1 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9F11FBC2916B48200CED4C1 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F7A904293F632F00619054 /* Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7A903293F632F00619054 /* Onboarding.framework */; };
 		B9F7A905293F632F00619054 /* Onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7A903293F632F00619054 /* Onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9F7A915293F712B00619054 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A914293F712B00619054 /* Color.xcassets */; };
 		B9FDB7EF29361789002DB8B1 /* Setting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FDB7EE29361789002DB8B1 /* Setting.framework */; };
 		B9FDB7F029361789002DB8B1 /* Setting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9FDB7EE29361789002DB8B1 /* Setting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		B9F11F91291696CD00CED4C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9F11FBC2916B48200CED4C1 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F7A903293F632F00619054 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F7A914293F712B00619054 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		B9FDB7EE29361789002DB8B1 /* Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				B9F11F85291696CC00CED4C1 /* SceneDelegate.swift */,
 				B9F11F87291696CC00CED4C1 /* ViewController.swift */,
 				B9F11F8C291696CD00CED4C1 /* Assets.xcassets */,
+				B9F7A914293F712B00619054 /* Color.xcassets */,
 				B9F11F91291696CD00CED4C1 /* Info.plist */,
 			);
 			path = MinemeApp;
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F11F8D291696CD00CED4C1 /* Assets.xcassets in Resources */,
+				B9F7A915293F712B00619054 /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,8 @@
 		B905E8F8291B3E960038485D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8F7291B3E960038485D /* UIImageExtension.swift */; };
 		B9F11FD9291A4E7B00CED4C1 /* CommonUI.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9F11FE0291A4EA500CED4C1 /* CommonUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FDF291A4EA500CED4C1 /* CommonUIViewController.swift */; };
+		B9F7A90A293F6E7100619054 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A909293F6E7100619054 /* CommonButton.swift */; };
+		B9F7A90D293F6FCB00619054 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9F7A90C293F6FCB00619054 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUI.h; sourceTree = "<group>"; };
 		B9F11FDF291A4EA500CED4C1 /* CommonUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIViewController.swift; sourceTree = "<group>"; };
+		B9F7A909293F6E7100619054 /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F7A90D293F6FCB00619054 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +39,10 @@
 		B9F11FCB291A4E7B00CED4C1 = {
 			isa = PBXGroup;
 			children = (
+				B9F7A909293F6E7100619054 /* CommonButton.swift */,
+				B9F11FDF291A4EA500CED4C1 /* CommonUIViewController.swift */,
+				B905E8EF291AB8490038485D /* FeedUIView.swift */,
+				B905E8F7291B3E960038485D /* UIImageExtension.swift */,
 				B9F11FD7291A4E7B00CED4C1 /* CommonUI */,
 				B9F11FD6291A4E7B00CED4C1 /* Products */,
 			);
@@ -52,9 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */,
-				B9F11FDF291A4EA500CED4C1 /* CommonUIViewController.swift */,
-				B905E8EF291AB8490038485D /* FeedUIView.swift */,
-				B905E8F7291B3E960038485D /* UIImageExtension.swift */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -87,6 +92,9 @@
 			dependencies = (
 			);
 			name = CommonUI;
+			packageProductDependencies = (
+				B9F7A90C293F6FCB00619054 /* SnapKit */,
+			);
 			productName = CommonUI;
 			productReference = B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -115,6 +123,9 @@
 				Base,
 			);
 			mainGroup = B9F11FCB291A4E7B00CED4C1;
+			packageReferences = (
+				B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = B9F11FD6291A4E7B00CED4C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +152,7 @@
 			files = (
 				B9F11FE0291A4EA500CED4C1 /* CommonUIViewController.swift in Sources */,
 				B905E8F8291B3E960038485D /* UIImageExtension.swift in Sources */,
+				B9F7A90A293F6E7100619054 /* CommonButton.swift in Sources */,
 				B905E8F0291AB8490038485D /* FeedUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +363,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9F7A90C293F6FCB00619054 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9F11FCC291A4E7B00CED4C1 /* Project object */;
 }

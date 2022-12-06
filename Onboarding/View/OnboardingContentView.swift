@@ -10,13 +10,13 @@ import SnapKit
 
 class OnboardingContentView: UIView {
 
-    private let content : OnboardingData
+    var content : OnboardingData?
     private var title = UILabel()
     private var subTitle = UILabel()
     private var imageView = UIImageView()
     
-    init(content: OnboardingData) {
-        self.content = content
+    init() {
+        print("init OnboardingContentView")
         super.init(frame: .zero)
         self.backgroundColor = .white
         initAttribute()
@@ -27,10 +27,16 @@ class OnboardingContentView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func initAttribute(){
+    func initData(content: OnboardingData){
+        self.content = content
+        title.text = content.title
+        subTitle.text = content.subTitle
+        imageView.image = UIImage(named: content.imageName)
+    }
+    
+    private func initAttribute(){
         title = {
             let label = UILabel()
-            label.text = content.title
             label.textColor = .black
             label.font = .boldSystemFont(ofSize: 24)
             label.numberOfLines = 2
@@ -41,7 +47,6 @@ class OnboardingContentView: UIView {
         
         subTitle = {
             let label = UILabel()
-            label.text = content.subTitle
             label.textColor = .gray
             label.font = .boldSystemFont(ofSize: 14)
             label.numberOfLines = 2
@@ -49,11 +54,9 @@ class OnboardingContentView: UIView {
             
             return label
         }()
-        
-        imageView.image = UIImage(named: content.imageName)
     }
     
-    func initAutolayout(){
+    private func initAutolayout(){
         
         [title, subTitle, imageView].forEach {
             self.addSubview($0)

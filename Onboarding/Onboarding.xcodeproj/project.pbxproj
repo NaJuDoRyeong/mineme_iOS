@@ -12,7 +12,23 @@
 		B9F7A8FD293F60C000619054 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A8FC293F60C000619054 /* OnboardingContentView.swift */; };
 		B9F7A902293F610000619054 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A901293F610000619054 /* Entity.swift */; };
 		B9F7A908293F636000619054 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9F7A907293F636000619054 /* SnapKit */; };
+		B9F7A910293F701B00619054 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7A90F293F701B00619054 /* CommonUI.framework */; };
+		B9F7A911293F701B00619054 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7A90F293F701B00619054 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B9F7A912293F701B00619054 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B9F7A911293F701B00619054 /* CommonUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B9F7A6EC293E6FBE00619054 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +36,7 @@
 		B9F7A6F7293E700D00619054 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		B9F7A8FC293F60C000619054 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
 		B9F7A901293F610000619054 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		B9F7A90F293F701B00619054 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F7A908293F636000619054 /* SnapKit in Frameworks */,
+				B9F7A910293F701B00619054 /* CommonUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 				B9F7A6F6293E6FCB00619054 /* View */,
 				B9F7A8FF293F60D000619054 /* Model */,
 				B9F7A6ED293E6FBE00619054 /* Products */,
+				B9F7A90E293F701B00619054 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +106,14 @@
 			path = /Users/sladuf/Desktop/Developer/mineme/Onboarding/View/Model;
 			sourceTree = "<absolute>";
 		};
+		B9F7A90E293F701B00619054 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9F7A90F293F701B00619054 /* CommonUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -109,6 +136,7 @@
 				B9F7A6E8293E6FBE00619054 /* Sources */,
 				B9F7A6E9293E6FBE00619054 /* Frameworks */,
 				B9F7A6EA293E6FBE00619054 /* Resources */,
+				B9F7A912293F701B00619054 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
