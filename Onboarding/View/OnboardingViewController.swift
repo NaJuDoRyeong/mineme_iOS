@@ -7,6 +7,7 @@
 
 import UIKit
 import CommonUI
+import CoreLocation
 
 open class OnboardingViewController: UIViewController {
     
@@ -18,6 +19,8 @@ open class OnboardingViewController: UIViewController {
     private var nextButton = UIButton()
     
     private var contentNumber = 0
+    
+    var locationManager : CLLocationManager?
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +90,10 @@ open class OnboardingViewController: UIViewController {
             $0.right.equalToSuperview().offset(-68)
         }
     }
+    
+    deinit {
+        print("⭕️ deinit OnboardingViewController")
+    }
 
 }
 
@@ -95,9 +102,25 @@ extension OnboardingViewController {
     @objc func nextContent(){
         print("✅ next button counter : \(contentNumber)")
         contentNumber += 1
-        if content.count > contentNumber {
+        
+        // MARK - 권한허용 팝업 부분
+        switch contentNumber {
+        case 1 :
+            locationManager = CLLocationManager()
+            locationManager?.requestWhenInUseAuthorization()
+            locationManager?.startUpdatingLocation()
             loadContent()
-        }else{
+        case 2 :
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge], completionHandler: {didAllow,Error in
+                if didAllow {
+                    print("Push: 권한 허용")
+                } else {
+                    print("Push: 권한 거부")
+                }
+            })
+            loadContent()
+        default:
+            OnboardingManager.read()
             self.dismiss(animated: true)
         }
     }
