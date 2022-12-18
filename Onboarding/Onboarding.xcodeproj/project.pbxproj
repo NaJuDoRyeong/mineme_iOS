@@ -7,114 +7,162 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B905E8F0291AB8490038485D /* FeedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8EF291AB8490038485D /* FeedUIView.swift */; };
-		B905E8F8291B3E960038485D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8F7291B3E960038485D /* UIImageExtension.swift */; };
-		B9F11FD9291A4E7B00CED4C1 /* CommonUI.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9F11FE0291A4EA500CED4C1 /* CommonUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FDF291A4EA500CED4C1 /* CommonUIViewController.swift */; };
-		B9F7A90A293F6E7100619054 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A909293F6E7100619054 /* CommonButton.swift */; };
-		B9F7A90D293F6FCB00619054 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9F7A90C293F6FCB00619054 /* SnapKit */; };
+		B96D82E3294F353D00C29AA9 /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82E2294F353D00C29AA9 /* OnboardingManager.swift */; };
+		B9F7A6F0293E6FBE00619054 /* Onboarding.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F7A6EF293E6FBE00619054 /* Onboarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9F7A6F8293E700D00619054 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A6F7293E700D00619054 /* OnboardingViewController.swift */; };
+		B9F7A8FD293F60C000619054 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A8FC293F60C000619054 /* OnboardingContentView.swift */; };
+		B9F7A902293F610000619054 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A901293F610000619054 /* Entity.swift */; };
+		B9F7A908293F636000619054 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9F7A907293F636000619054 /* SnapKit */; };
+		B9F7A910293F701B00619054 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7A90F293F701B00619054 /* CommonUI.framework */; };
+		B9F7A911293F701B00619054 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7A90F293F701B00619054 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9F7A919293F8F6E00619054 /* OnboardingProgessBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A918293F8F6E00619054 /* OnboardingProgessBar.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B9F7A912293F701B00619054 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B9F7A911293F701B00619054 /* CommonUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		B905E8EF291AB8490038485D /* FeedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIView.swift; sourceTree = "<group>"; };
-		B905E8F7291B3E960038485D /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUI.h; sourceTree = "<group>"; };
-		B9F11FDF291A4EA500CED4C1 /* CommonUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIViewController.swift; sourceTree = "<group>"; };
-		B9F7A909293F6E7100619054 /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
+		B96D82E2294F353D00C29AA9 /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
+		B9F7A6EC293E6FBE00619054 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F7A6EF293E6FBE00619054 /* Onboarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Onboarding.h; sourceTree = "<group>"; };
+		B9F7A6F7293E700D00619054 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		B9F7A8FC293F60C000619054 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
+		B9F7A901293F610000619054 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		B9F7A90F293F701B00619054 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F7A918293F8F6E00619054 /* OnboardingProgessBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgessBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B9F11FD2291A4E7B00CED4C1 /* Frameworks */ = {
+		B9F7A6E9293E6FBE00619054 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F7A90D293F6FCB00619054 /* SnapKit in Frameworks */,
+				B9F7A908293F636000619054 /* SnapKit in Frameworks */,
+				B9F7A910293F701B00619054 /* CommonUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B9F11FCB291A4E7B00CED4C1 = {
+		B9F7A6E2293E6FBE00619054 = {
 			isa = PBXGroup;
 			children = (
-				B9F7A909293F6E7100619054 /* CommonButton.swift */,
-				B9F11FDF291A4EA500CED4C1 /* CommonUIViewController.swift */,
-				B905E8EF291AB8490038485D /* FeedUIView.swift */,
-				B905E8F7291B3E960038485D /* UIImageExtension.swift */,
-				B9F11FD7291A4E7B00CED4C1 /* CommonUI */,
-				B9F11FD6291A4E7B00CED4C1 /* Products */,
+				B9F7A6EE293E6FBE00619054 /* Onboarding */,
+				B9F7A6F6293E6FCB00619054 /* View */,
+				B9F7A8FF293F60D000619054 /* Model */,
+				B9F7A6ED293E6FBE00619054 /* Products */,
+				B9F7A90E293F701B00619054 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		B9F11FD6291A4E7B00CED4C1 /* Products */ = {
+		B9F7A6ED293E6FBE00619054 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */,
+				B9F7A6EC293E6FBE00619054 /* Onboarding.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9F11FD7291A4E7B00CED4C1 /* CommonUI */ = {
+		B9F7A6EE293E6FBE00619054 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */,
+				B9F7A6EF293E6FBE00619054 /* Onboarding.h */,
 			);
-			path = CommonUI;
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B9F7A6F6293E6FCB00619054 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9F7A6F7293E700D00619054 /* OnboardingViewController.swift */,
+				B9F7A918293F8F6E00619054 /* OnboardingProgessBar.swift */,
+				B9F7A8FC293F60C000619054 /* OnboardingContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9F7A8FF293F60D000619054 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9F7A901293F610000619054 /* Entity.swift */,
+				B96D82E2294F353D00C29AA9 /* OnboardingManager.swift */,
+			);
+			name = Model;
+			path = /Users/sladuf/Desktop/Developer/mineme/Onboarding/View/Model;
+			sourceTree = "<absolute>";
+		};
+		B9F7A90E293F701B00619054 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9F7A90F293F701B00619054 /* CommonUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B9F11FD0291A4E7B00CED4C1 /* Headers */ = {
+		B9F7A6E7293E6FBE00619054 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F11FD9291A4E7B00CED4C1 /* CommonUI.h in Headers */,
+				B9F7A6F0293E6FBE00619054 /* Onboarding.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B9F11FD4291A4E7B00CED4C1 /* CommonUI */ = {
+		B9F7A6EB293E6FBE00619054 /* Onboarding */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9F11FDC291A4E7B00CED4C1 /* Build configuration list for PBXNativeTarget "CommonUI" */;
+			buildConfigurationList = B9F7A6F3293E6FBE00619054 /* Build configuration list for PBXNativeTarget "Onboarding" */;
 			buildPhases = (
-				B9F11FD0291A4E7B00CED4C1 /* Headers */,
-				B9F11FD1291A4E7B00CED4C1 /* Sources */,
-				B9F11FD2291A4E7B00CED4C1 /* Frameworks */,
-				B9F11FD3291A4E7B00CED4C1 /* Resources */,
+				B9F7A6E7293E6FBE00619054 /* Headers */,
+				B9F7A6E8293E6FBE00619054 /* Sources */,
+				B9F7A6E9293E6FBE00619054 /* Frameworks */,
+				B9F7A6EA293E6FBE00619054 /* Resources */,
+				B9F7A912293F701B00619054 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CommonUI;
+			name = Onboarding;
 			packageProductDependencies = (
-				B9F7A90C293F6FCB00619054 /* SnapKit */,
+				B9F7A907293F636000619054 /* SnapKit */,
 			);
-			productName = CommonUI;
-			productReference = B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */;
+			productName = Onboarding;
+			productReference = B9F7A6EC293E6FBE00619054 /* Onboarding.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B9F11FCC291A4E7B00CED4C1 /* Project object */ = {
+		B9F7A6E3293E6FBE00619054 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					B9F11FD4291A4E7B00CED4C1 = {
+					B9F7A6EB293E6FBE00619054 = {
 						CreatedOnToolsVersion = 14.1;
 						LastSwiftMigration = 1410;
 					};
 				};
 			};
-			buildConfigurationList = B9F11FCF291A4E7B00CED4C1 /* Build configuration list for PBXProject "CommonUI" */;
+			buildConfigurationList = B9F7A6E6293E6FBE00619054 /* Build configuration list for PBXProject "Onboarding" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,21 +170,21 @@
 				en,
 				Base,
 			);
-			mainGroup = B9F11FCB291A4E7B00CED4C1;
+			mainGroup = B9F7A6E2293E6FBE00619054;
 			packageReferences = (
-				B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B9F7A906293F636000619054 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
-			productRefGroup = B9F11FD6291A4E7B00CED4C1 /* Products */;
+			productRefGroup = B9F7A6ED293E6FBE00619054 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9F11FD4291A4E7B00CED4C1 /* CommonUI */,
+				B9F7A6EB293E6FBE00619054 /* Onboarding */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B9F11FD3291A4E7B00CED4C1 /* Resources */ = {
+		B9F7A6EA293E6FBE00619054 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -146,21 +194,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B9F11FD1291A4E7B00CED4C1 /* Sources */ = {
+		B9F7A6E8293E6FBE00619054 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F11FE0291A4EA500CED4C1 /* CommonUIViewController.swift in Sources */,
-				B905E8F8291B3E960038485D /* UIImageExtension.swift in Sources */,
-				B9F7A90A293F6E7100619054 /* CommonButton.swift in Sources */,
-				B905E8F0291AB8490038485D /* FeedUIView.swift in Sources */,
+				B9F7A919293F8F6E00619054 /* OnboardingProgessBar.swift in Sources */,
+				B9F7A6F8293E700D00619054 /* OnboardingViewController.swift in Sources */,
+				B96D82E3294F353D00C29AA9 /* OnboardingManager.swift in Sources */,
+				B9F7A8FD293F60C000619054 /* OnboardingContentView.swift in Sources */,
+				B9F7A902293F610000619054 /* Entity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		B9F11FDA291A4E7B00CED4C1 /* Debug */ = {
+		B9F7A6F1293E6FBE00619054 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,7 +272,7 @@
 			};
 			name = Debug;
 		};
-		B9F11FDB291A4E7B00CED4C1 /* Release */ = {
+		B9F7A6F2293E6FBE00619054 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +329,7 @@
 			};
 			name = Release;
 		};
-		B9F11FDD291A4E7B00CED4C1 /* Debug */ = {
+		B9F7A6F4293E6FBE00619054 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -301,7 +350,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.CommonUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.Onboarding;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -311,7 +360,7 @@
 			};
 			name = Debug;
 		};
-		B9F11FDE291A4E7B00CED4C1 /* Release */ = {
+		B9F7A6F5293E6FBE00619054 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -332,7 +381,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.CommonUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.Onboarding;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -344,20 +393,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9F11FCF291A4E7B00CED4C1 /* Build configuration list for PBXProject "CommonUI" */ = {
+		B9F7A6E6293E6FBE00619054 /* Build configuration list for PBXProject "Onboarding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9F11FDA291A4E7B00CED4C1 /* Debug */,
-				B9F11FDB291A4E7B00CED4C1 /* Release */,
+				B9F7A6F1293E6FBE00619054 /* Debug */,
+				B9F7A6F2293E6FBE00619054 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9F11FDC291A4E7B00CED4C1 /* Build configuration list for PBXNativeTarget "CommonUI" */ = {
+		B9F7A6F3293E6FBE00619054 /* Build configuration list for PBXNativeTarget "Onboarding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9F11FDD291A4E7B00CED4C1 /* Debug */,
-				B9F11FDE291A4E7B00CED4C1 /* Release */,
+				B9F7A6F4293E6FBE00619054 /* Debug */,
+				B9F7A6F5293E6FBE00619054 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -365,7 +414,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		B9F7A906293F636000619054 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -376,12 +425,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B9F7A90C293F6FCB00619054 /* SnapKit */ = {
+		B9F7A907293F636000619054 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = B9F7A906293F636000619054 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = B9F11FCC291A4E7B00CED4C1 /* Project object */;
+	rootObject = B9F7A6E3293E6FBE00619054 /* Project object */;
 }
