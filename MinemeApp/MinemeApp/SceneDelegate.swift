@@ -23,10 +23,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         // MARK - real View
-        window.rootViewController = ViewController()
+//        window.rootViewController = ViewController()
         
-        // MARK - Onboarding test View
-//        window.rootViewController = OnboardingViewController()
+        
+        // MARK - Test View
+        window.rootViewController = TestUIViewController()
         
         window.makeKeyAndVisible()
         self.window = window
