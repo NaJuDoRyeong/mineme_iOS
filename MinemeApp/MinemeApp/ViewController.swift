@@ -42,7 +42,7 @@ class ViewController: UITabBarController {
         StoryTab.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "default-story"), selectedImage: UIImage(named: "selected-story"))
         SettingTab.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "default-setting"), selectedImage: UIImage(named: "selected-setting"))
         
-        // 위 같이, 필요한 Tab을 추가해주세요!
+        //필요한 탭 위와 같은 방식으로 추가하기
         self.viewControllers = [HomeTab, StoryTab, SettingTab]
         initAttribute()
     }
@@ -50,6 +50,8 @@ class ViewController: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         print("rootViewController viewDidAppear")
         
+        
+        // MARK - 온보딩 프로세스 진행 여부 확인하고 View 여부 결정
         if let onboardingView = onboardingManager.isRead() {
             onboardingView.modalPresentationStyle = .fullScreen
             self.present(onboardingView, animated: true)
