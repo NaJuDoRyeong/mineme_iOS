@@ -11,11 +11,12 @@ import SnapKit
 
 class TestUIViewController: UIViewController {
     
-    private let customDatePicker = CustomDatePicker(title: "우리가 만난 날")
-
+    private let customPicker = CustomDatePicker(title: "생년월일")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        initAttribute()
         initAutolayout()
     }
     
@@ -24,11 +25,11 @@ class TestUIViewController: UIViewController {
     }
     
     func initAutolayout(){
-        [customDatePicker].forEach {
+        [customPicker].forEach {
             self.view.addSubview($0)
         }
         
-        customDatePicker.snp.makeConstraints {
+        customPicker.snp.makeConstraints {
             $0.left.equalToSuperview()
             $0.centerY.equalToSuperview()
         }
