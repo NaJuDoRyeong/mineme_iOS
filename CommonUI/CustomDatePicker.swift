@@ -38,7 +38,7 @@ open class CustomDatePicker: UIView{
     }
     
     func dataSetting(){
-        for y in 1990...dateFormatter("yyyy") {
+        for y in 1970...dateFormatter("yyyy") {
             years.append(String(y))
         }
         for m in 1...12{

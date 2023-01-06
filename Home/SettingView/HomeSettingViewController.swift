@@ -12,12 +12,17 @@ import PhotosUI
 
 open class HomeSettingViewController: UIViewController {
     
+    private let scrollView = UIScrollView()
+    private let contentView = UIView()
+    
     private var profileImage = ProfileImageView(url: "profile-my")
     private var editImageButton = UIButton()
     private var nameField = TextFieldWithTitle(title: "이름", placeholder: "이름 입력")
     private var coupleNameField = TextFieldWithTitle(title: "커플이름", placeholder: "이름 입력")
     private var loverCommnetField = TextFieldWithTitle(title: "상대 소개글", placeholder: "나의 소개글은 상대가 작성할 수 있어요!")
     private var instaIdField = TextFieldWithTitle(title: "링크", placeholder: "링크 입력")
+    private var coupleDay = CustomDatePicker(title: "우리가 만난 날")
+    private var birthDay = CustomDatePicker(title: "내 생일")
     
 
     open override func viewDidLoad() {
@@ -44,7 +49,19 @@ open class HomeSettingViewController: UIViewController {
     
     func initAutolayout() {
         
-        [profileImage, editImageButton, nameField, coupleNameField, loverCommnetField, instaIdField].forEach { self.view.addSubview($0) }
+        self.view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        
+        scrollView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        contentView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+            $0.width.equalToSuperview()
+        }
+        
+        [profileImage, editImageButton, nameField, coupleNameField, loverCommnetField, instaIdField, coupleDay, birthDay].forEach { contentView.addSubview($0) }
         
         profileImage.snp.makeConstraints {
             $0.top.equalToSuperview().offset(133)
@@ -80,6 +97,21 @@ open class HomeSettingViewController: UIViewController {
             $0.right.equalToSuperview().offset(-21)
         }
         
+        coupleDay.snp.makeConstraints {
+            $0.top.equalTo(instaIdField.snp.bottom).offset(28)
+            $0.left.equalToSuperview().offset(21)
+            $0.right.equalToSuperview().offset(-21)
+        }
+        
+        birthDay.snp.makeConstraints {
+            $0.top.equalTo(coupleDay.snp.bottom).offset(28)
+            $0.left.equalToSuperview().offset(21)
+            $0.right.equalToSuperview().offset(-21)
+            $0.bottom.equalToSuperview().offset(-50)
+        }
+        
+        
+        
     }
 
 }
@@ -96,7 +128,7 @@ extension HomeSettingViewController: PHPickerViewControllerDelegate {
     @objc func pickImage(){
         
             var configuration = PHPickerConfiguration()
-//    이미지 정보를 가지고 올 필요가 있을땐 photolibarary 를 사용해준다. //use when need image file info.
+//            이미지 정보를 가지고 올 필요가 있을땐 photolibarary 를 사용해준다. //use when need image file info.
 //            let photoLibrary = PHPhotoLibrary.shared()
 //            var configuration = PHPickerConfiguration(photoLibrary: photoLibrary)
 
