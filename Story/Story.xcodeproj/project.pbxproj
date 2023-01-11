@@ -7,12 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B96D82EE296EA7A900C29AA9 /* StoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */; };
+		B96D82F1296EAC8400C29AA9 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82F0296EAC8400C29AA9 /* CommonUI.framework */; };
+		B96D82F2296EAC8400C29AA9 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82F0296EAC8400C29AA9 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B96D82F5296EF50900C29AA9 /* StoryDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82F4296EF50900C29AA9 /* StoryDatePicker.swift */; };
 		B9BE5A6C292387FD00E82CFB /* Story.h in Headers */ = {isa = PBXBuildFile; fileRef = B9BE5A6B292387FD00E82CFB /* Story.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9BE5A772923884100E82CFB /* StoryHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE5A762923884100E82CFB /* StoryHomeViewController.swift */; };
 		B9BE5A7A2923BD5D00E82CFB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9BE5A792923BD5D00E82CFB /* SnapKit */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B96D82F3296EAC8400C29AA9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B96D82F2296EAC8400C29AA9 /* CommonUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostViewController.swift; sourceTree = "<group>"; };
+		B96D82F0296EAC8400C29AA9 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B96D82F4296EF50900C29AA9 /* StoryDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDatePicker.swift; sourceTree = "<group>"; };
 		B9BE5A68292387FD00E82CFB /* Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE5A6B292387FD00E82CFB /* Story.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
 		B9BE5A762923884100E82CFB /* StoryHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHomeViewController.swift; sourceTree = "<group>"; };
@@ -24,18 +45,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9BE5A7A2923BD5D00E82CFB /* SnapKit in Frameworks */,
+				B96D82F1296EAC8400C29AA9 /* CommonUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B96D82EF296EAC8400C29AA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B96D82F0296EAC8400C29AA9 /* CommonUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9BE5A5E292387FD00E82CFB = {
 			isa = PBXGroup;
 			children = (
-				B9BE5A752923883700E82CFB /* View */,
 				B9BE5A6A292387FD00E82CFB /* Story */,
+				B9BE5A752923883700E82CFB /* View */,
 				B9BE5A69292387FD00E82CFB /* Products */,
+				B96D82EF296EAC8400C29AA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				B9BE5A762923884100E82CFB /* StoryHomeViewController.swift */,
+				B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */,
+				B96D82F4296EF50900C29AA9 /* StoryDatePicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -85,6 +118,7 @@
 				B9BE5A64292387FD00E82CFB /* Sources */,
 				B9BE5A65292387FD00E82CFB /* Frameworks */,
 				B9BE5A66292387FD00E82CFB /* Resources */,
+				B96D82F3296EAC8400C29AA9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,7 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96D82EE296EA7A900C29AA9 /* StoryPostViewController.swift in Sources */,
 				B9BE5A772923884100E82CFB /* StoryHomeViewController.swift in Sources */,
+				B96D82F5296EF50900C29AA9 /* StoryDatePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
