@@ -12,7 +12,7 @@ import SnapKit
 open class StoryPostViewController: UIViewController {
     
     private var datePicker = StoryDatePicker()
-    private var photoBox = FeedUIView()
+    private var photoBox = PostPhotoView()
     private var textField = UITextField()
 //    private var location = LocationSelector()
     
@@ -26,9 +26,6 @@ open class StoryPostViewController: UIViewController {
     }
     
     func initAttribute(){
-        
-        photoBox.imageView.image = UIImage(named: "select-photo")
-        photoBox.contentMode = .scaleAspectFill
         
         textField = {
           let tf = UITextField()
