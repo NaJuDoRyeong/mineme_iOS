@@ -7,6 +7,7 @@
 
 import UIKit
 import Home
+import Story
 import Onboarding
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -20,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 //        window.rootViewController = HomeSettingViewController()
 //        window.rootViewController = UINavigationController(rootViewController: HomeViewController())
-        
+//        window.rootViewController = ViewController()
+        window.rootViewController = StoryPostViewController()
         
         // MARK - real View
 //        window.rootViewController = ViewController()
