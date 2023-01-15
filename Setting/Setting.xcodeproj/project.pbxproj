@@ -7,126 +7,119 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B905E8F0291AB8490038485D /* FeedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8EF291AB8490038485D /* FeedUIView.swift */; };
-		B905E8F8291B3E960038485D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8F7291B3E960038485D /* UIImageExtension.swift */; };
-		B92A630729740BD00015AEC1 /* CalendarModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A630629740BD00015AEC1 /* CalendarModal.swift */; };
-		B92A63092974403A0015AEC1 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A63082974403A0015AEC1 /* TextBox.swift */; };
-		B96D82E52952F3C400C29AA9 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */; };
-		B96D82EC295306B600C29AA9 /* CustomPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */; };
-		B9F11FD9291A4E7B00CED4C1 /* CommonUI.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9F7A90A293F6E7100619054 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A909293F6E7100619054 /* CommonButton.swift */; };
-		B9F7A90D293F6FCB00619054 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9F7A90C293F6FCB00619054 /* SnapKit */; };
+		B9FDB7E82936176A002DB8B1 /* Setting.h in Headers */ = {isa = PBXBuildFile; fileRef = B9FDB7E72936176A002DB8B1 /* Setting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9FDB7F329362308002DB8B1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FDB7F229362308002DB8B1 /* SettingViewController.swift */; };
+		B9FDB7F529362373002DB8B1 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FDB7F429362373002DB8B1 /* SettingTableViewCell.swift */; };
+		B9FDB7F829362664002DB8B1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9FDB7F729362664002DB8B1 /* SnapKit */; };
+		B9FDB7FA293631A7002DB8B1 /* AccountVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FDB7F9293631A7002DB8B1 /* AccountVIewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B905E8EF291AB8490038485D /* FeedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIView.swift; sourceTree = "<group>"; };
-		B905E8F7291B3E960038485D /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		B92A630629740BD00015AEC1 /* CalendarModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModal.swift; sourceTree = "<group>"; };
-		B92A63082974403A0015AEC1 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
-		B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
-		B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerButton.swift; sourceTree = "<group>"; };
-		B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUI.h; sourceTree = "<group>"; };
-		B9F7A909293F6E7100619054 /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
+		B9FDB7E42936176A002DB8B1 /* Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9FDB7E72936176A002DB8B1 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		B9FDB7F229362308002DB8B1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B9FDB7F429362373002DB8B1 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		B9FDB7F9293631A7002DB8B1 /* AccountVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVIewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B9F11FD2291A4E7B00CED4C1 /* Frameworks */ = {
+		B9FDB7E12936176A002DB8B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F7A90D293F6FCB00619054 /* SnapKit in Frameworks */,
+				B9FDB7F829362664002DB8B1 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B9F11FCB291A4E7B00CED4C1 = {
+		B9FDB7DA2936176A002DB8B1 = {
 			isa = PBXGroup;
 			children = (
-				B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */,
-				B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */,
-				B9F7A909293F6E7100619054 /* CommonButton.swift */,
-				B905E8EF291AB8490038485D /* FeedUIView.swift */,
-				B905E8F7291B3E960038485D /* UIImageExtension.swift */,
-				B9F11FD7291A4E7B00CED4C1 /* CommonUI */,
-				B9F11FD6291A4E7B00CED4C1 /* Products */,
+				B9FDB7F1293622E4002DB8B1 /* View */,
+				B9FDB7E62936176A002DB8B1 /* Setting */,
+				B9FDB7E52936176A002DB8B1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B9F11FD6291A4E7B00CED4C1 /* Products */ = {
+		B9FDB7E52936176A002DB8B1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */,
+				B9FDB7E42936176A002DB8B1 /* Setting.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9F11FD7291A4E7B00CED4C1 /* CommonUI */ = {
+		B9FDB7E62936176A002DB8B1 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */,
-				B9F11FDF291A4EA500CED4C1 /* CommonUIViewController.swift */,
-				B905E8EF291AB8490038485D /* FeedUIView.swift */,
-				B92A630629740BD00015AEC1 /* CalendarModal.swift */,
-				B905E8F7291B3E960038485D /* UIImageExtension.swift */,
-				B92A63082974403A0015AEC1 /* TextBox.swift */,
+				B9FDB7E72936176A002DB8B1 /* Setting.h */,
 			);
-			path = CommonUI;
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		B9FDB7F1293622E4002DB8B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9FDB7F229362308002DB8B1 /* SettingViewController.swift */,
+				B9FDB7F9293631A7002DB8B1 /* AccountVIewController.swift */,
+				B9FDB7F429362373002DB8B1 /* SettingTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B9F11FD0291A4E7B00CED4C1 /* Headers */ = {
+		B9FDB7DF2936176A002DB8B1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F11FD9291A4E7B00CED4C1 /* CommonUI.h in Headers */,
+				B9FDB7E82936176A002DB8B1 /* Setting.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B9F11FD4291A4E7B00CED4C1 /* CommonUI */ = {
+		B9FDB7E32936176A002DB8B1 /* Setting */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9F11FDC291A4E7B00CED4C1 /* Build configuration list for PBXNativeTarget "CommonUI" */;
+			buildConfigurationList = B9FDB7EB2936176A002DB8B1 /* Build configuration list for PBXNativeTarget "Setting" */;
 			buildPhases = (
-				B9F11FD0291A4E7B00CED4C1 /* Headers */,
-				B9F11FD1291A4E7B00CED4C1 /* Sources */,
-				B9F11FD2291A4E7B00CED4C1 /* Frameworks */,
-				B9F11FD3291A4E7B00CED4C1 /* Resources */,
+				B9FDB7DF2936176A002DB8B1 /* Headers */,
+				B9FDB7E02936176A002DB8B1 /* Sources */,
+				B9FDB7E12936176A002DB8B1 /* Frameworks */,
+				B9FDB7E22936176A002DB8B1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CommonUI;
+			name = Setting;
 			packageProductDependencies = (
-				B9F7A90C293F6FCB00619054 /* SnapKit */,
+				B9FDB7F729362664002DB8B1 /* SnapKit */,
 			);
-			productName = CommonUI;
-			productReference = B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */;
+			productName = Setting;
+			productReference = B9FDB7E42936176A002DB8B1 /* Setting.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B9F11FCC291A4E7B00CED4C1 /* Project object */ = {
+		B9FDB7DB2936176A002DB8B1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					B9F11FD4291A4E7B00CED4C1 = {
+					B9FDB7E32936176A002DB8B1 = {
 						CreatedOnToolsVersion = 14.1;
 						LastSwiftMigration = 1410;
 					};
 				};
 			};
-			buildConfigurationList = B9F11FCF291A4E7B00CED4C1 /* Build configuration list for PBXProject "CommonUI" */;
+			buildConfigurationList = B9FDB7DE2936176A002DB8B1 /* Build configuration list for PBXProject "Setting" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -134,21 +127,21 @@
 				en,
 				Base,
 			);
-			mainGroup = B9F11FCB291A4E7B00CED4C1;
+			mainGroup = B9FDB7DA2936176A002DB8B1;
 			packageReferences = (
-				B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B9FDB7F629362664002DB8B1 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
-			productRefGroup = B9F11FD6291A4E7B00CED4C1 /* Products */;
+			productRefGroup = B9FDB7E52936176A002DB8B1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9F11FD4291A4E7B00CED4C1 /* CommonUI */,
+				B9FDB7E32936176A002DB8B1 /* Setting */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B9F11FD3291A4E7B00CED4C1 /* Resources */ = {
+		B9FDB7E22936176A002DB8B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -158,25 +151,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B9F11FD1291A4E7B00CED4C1 /* Sources */ = {
+		B9FDB7E02936176A002DB8B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F11FE0291A4EA500CED4C1 /* CommonUIViewController.swift in Sources */,
-				B92A630729740BD00015AEC1 /* CalendarModal.swift in Sources */,
-				B92A63092974403A0015AEC1 /* TextBox.swift in Sources */,
-				B96D82EC295306B600C29AA9 /* CustomPickerButton.swift in Sources */,
-				B96D82E52952F3C400C29AA9 /* CustomDatePicker.swift in Sources */,
-				B905E8F8291B3E960038485D /* UIImageExtension.swift in Sources */,
-				B9F7A90A293F6E7100619054 /* CommonButton.swift in Sources */,
-				B905E8F0291AB8490038485D /* FeedUIView.swift in Sources */,
+				B9FDB7F529362373002DB8B1 /* SettingTableViewCell.swift in Sources */,
+				B9FDB7FA293631A7002DB8B1 /* AccountVIewController.swift in Sources */,
+				B9FDB7F329362308002DB8B1 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		B9F11FDA291A4E7B00CED4C1 /* Debug */ = {
+		B9FDB7E92936176A002DB8B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -239,7 +227,7 @@
 			};
 			name = Debug;
 		};
-		B9F11FDB291A4E7B00CED4C1 /* Release */ = {
+		B9FDB7EA2936176A002DB8B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -296,7 +284,7 @@
 			};
 			name = Release;
 		};
-		B9F11FDD291A4E7B00CED4C1 /* Debug */ = {
+		B9FDB7EC2936176A002DB8B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -317,17 +305,20 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.CommonUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.Setting;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		B9F11FDE291A4E7B00CED4C1 /* Release */ = {
+		B9FDB7ED2936176A002DB8B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -348,32 +339,35 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.CommonUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.Setting;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9F11FCF291A4E7B00CED4C1 /* Build configuration list for PBXProject "CommonUI" */ = {
+		B9FDB7DE2936176A002DB8B1 /* Build configuration list for PBXProject "Setting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9F11FDA291A4E7B00CED4C1 /* Debug */,
-				B9F11FDB291A4E7B00CED4C1 /* Release */,
+				B9FDB7E92936176A002DB8B1 /* Debug */,
+				B9FDB7EA2936176A002DB8B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9F11FDC291A4E7B00CED4C1 /* Build configuration list for PBXNativeTarget "CommonUI" */ = {
+		B9FDB7EB2936176A002DB8B1 /* Build configuration list for PBXNativeTarget "Setting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9F11FDD291A4E7B00CED4C1 /* Debug */,
-				B9F11FDE291A4E7B00CED4C1 /* Release */,
+				B9FDB7EC2936176A002DB8B1 /* Debug */,
+				B9FDB7ED2936176A002DB8B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -381,7 +375,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		B9FDB7F629362664002DB8B1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -392,12 +386,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B9F7A90C293F6FCB00619054 /* SnapKit */ = {
+		B9FDB7F729362664002DB8B1 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = B9FDB7F629362664002DB8B1 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = B9F11FCC291A4E7B00CED4C1 /* Project object */;
+	rootObject = B9FDB7DB2936176A002DB8B1 /* Project object */;
 }

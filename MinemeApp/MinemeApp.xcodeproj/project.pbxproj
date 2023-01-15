@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B96D82E72952F65400C29AA9 /* TestUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82E62952F65400C29AA9 /* TestUIViewController.swift */; };
+		B96D82E92952FA0700C29AA9 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82E82952FA0700C29AA9 /* CommonUI.framework */; };
+		B96D82EA2952FA0700C29AA9 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82E82952FA0700C29AA9 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9BE5A732923881A00E82CFB /* Story.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BE5A722923881A00E82CFB /* Story.framework */; };
 		B9BE5A742923881A00E82CFB /* Story.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9BE5A722923881A00E82CFB /* Story.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9BE5A7D2923BDA600E82CFB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9BE5A7C2923BDA600E82CFB /* SnapKit */; };
@@ -16,6 +19,11 @@
 		B9F11F8D291696CD00CED4C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F11F8C291696CD00CED4C1 /* Assets.xcassets */; };
 		B9F11FBD2916B48200CED4C1 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F11FBC2916B48200CED4C1 /* Home.framework */; };
 		B9F11FBE2916B48200CED4C1 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9F11FBC2916B48200CED4C1 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9F7A904293F632F00619054 /* Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7A903293F632F00619054 /* Onboarding.framework */; };
+		B9F7A905293F632F00619054 /* Onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7A903293F632F00619054 /* Onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9F7A915293F712B00619054 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F7A914293F712B00619054 /* Color.xcassets */; };
+		B9FDB7EF29361789002DB8B1 /* Setting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FDB7EE29361789002DB8B1 /* Setting.framework */; };
+		B9FDB7F029361789002DB8B1 /* Setting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9FDB7EE29361789002DB8B1 /* Setting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +35,9 @@
 			files = (
 				B9BE5A742923881A00E82CFB /* Story.framework in Embed Frameworks */,
 				B9F11FBE2916B48200CED4C1 /* Home.framework in Embed Frameworks */,
+				B96D82EA2952FA0700C29AA9 /* CommonUI.framework in Embed Frameworks */,
+				B9FDB7F029361789002DB8B1 /* Setting.framework in Embed Frameworks */,
+				B9F7A905293F632F00619054 /* Onboarding.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,6 +45,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B96D82E62952F65400C29AA9 /* TestUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIViewController.swift; sourceTree = "<group>"; };
+		B96D82E82952FA0700C29AA9 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE5A4D2923779E00E82CFB /* Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE5A722923881A00E82CFB /* Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F11F80291696CC00CED4C1 /* MinemeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinemeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +56,9 @@
 		B9F11F8C291696CD00CED4C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9F11F91291696CD00CED4C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9F11FBC2916B48200CED4C1 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F7A903293F632F00619054 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F7A914293F712B00619054 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		B9FDB7EE29361789002DB8B1 /* Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +67,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9BE5A7D2923BDA600E82CFB /* SnapKit in Frameworks */,
+				B9F7A904293F632F00619054 /* Onboarding.framework in Frameworks */,
 				B9BE5A732923881A00E82CFB /* Story.framework in Frameworks */,
+				B96D82E92952FA0700C29AA9 /* CommonUI.framework in Frameworks */,
 				B9F11FBD2916B48200CED4C1 /* Home.framework in Frameworks */,
+				B9FDB7EF29361789002DB8B1 /* Setting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +101,9 @@
 				B9F11F83291696CC00CED4C1 /* AppDelegate.swift */,
 				B9F11F85291696CC00CED4C1 /* SceneDelegate.swift */,
 				B9F11F87291696CC00CED4C1 /* ViewController.swift */,
+				B96D82E62952F65400C29AA9 /* TestUIViewController.swift */,
 				B9F11F8C291696CD00CED4C1 /* Assets.xcassets */,
+				B9F7A914293F712B00619054 /* Color.xcassets */,
 				B9F11F91291696CD00CED4C1 /* Info.plist */,
 			);
 			path = MinemeApp;
@@ -91,6 +112,9 @@
 		B9F11FBB2916B48200CED4C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B96D82E82952FA0700C29AA9 /* CommonUI.framework */,
+				B9F7A903293F632F00619054 /* Onboarding.framework */,
+				B9FDB7EE29361789002DB8B1 /* Setting.framework */,
 				B9BE5A722923881A00E82CFB /* Story.framework */,
 				B9BE5A4D2923779E00E82CFB /* Story.framework */,
 				B9F11FBC2916B48200CED4C1 /* Home.framework */,
@@ -164,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F11F8D291696CD00CED4C1 /* Assets.xcassets in Resources */,
+				B9F7A915293F712B00619054 /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +201,7 @@
 			files = (
 				B9F11F88291696CC00CED4C1 /* ViewController.swift in Sources */,
 				B9F11F84291696CC00CED4C1 /* AppDelegate.swift in Sources */,
+				B96D82E72952F65400C29AA9 /* TestUIViewController.swift in Sources */,
 				B9F11F86291696CC00CED4C1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
