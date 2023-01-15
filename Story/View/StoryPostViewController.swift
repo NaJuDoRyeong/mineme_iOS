@@ -12,9 +12,12 @@ import PhotosUI
 
 open class StoryPostViewController: UIViewController {
     
-    private var datePicker = StoryDatePicker()
+    private var datePicker = DateLabel()
+    private let calendar = CalendarModal()
     private var photoBox = PostPhotoView()
-    private var textField = UITextField()
+    private var textView = UITextView()
+    
+    
 //    private var location = LocationSelector()
     
 
@@ -28,24 +31,34 @@ open class StoryPostViewController: UIViewController {
     
     func initAttribute(){
         
-        textField = {
-          let tf = UITextField()
+        textView = {
+          let tf = UITextView()
             tf.frame.size.height = 151
-            tf.placeholder = "내용을 입력하세요"
             tf.layer.borderWidth = 1
             tf.layer.cornerRadius = 10
             tf.layer.borderColor = UIColor.lightGray.cgColor
+            tf.text = "내용을 입력하세요"
+            tf.textColor = .lightGray
             tf.font = UIFont.systemFont(ofSize: 14)
+            tf.delegate = self
+            tf.layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
             
             return tf
         }()
         
+        //observer DI
+        calendar.observer = datePicker.changeDate
+        calendar.modalPresentationStyle = .popover
+        
         photoBox.postButton.addTarget(self, action: #selector(pickImage), for: .touchUpInside)
+        datePicker.addTarget(self, action: #selector(openDatePicker), for: .touchUpInside)
+        
+//        datePicker.addTarget(self, action: #selector(selectDate(_:)), for: .valueChanged)
         
     }
     
     func initAutolayout(){
-        [photoBox, datePicker, textField].forEach {
+        [photoBox, datePicker, textView].forEach {
             self.view.addSubview($0)
         }
         
@@ -60,16 +73,47 @@ open class StoryPostViewController: UIViewController {
             $0.size.equalTo(photoBox.size.rawValue)
         }
         
-        textField.snp.makeConstraints {
+        textView.snp.makeConstraints {
             $0.top.equalTo(photoBox.snp.bottom).offset(12)
             $0.left.equalTo(photoBox)
             $0.right.equalTo(photoBox)
             $0.height.equalTo(151)
         }
-        
 
     }
 
+}
+
+extension StoryPostViewController {
+    @objc
+    func openDatePicker(){
+        calendar.popoverPresentationController?.permittedArrowDirections = []
+        calendar.popoverPresentationController?.delegate = self
+        calendar.popoverPresentationController?.sourceView = self.datePicker
+        self.present(calendar, animated: true)
+    }
+    
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+    }
+}
+
+extension StoryPostViewController : UITextViewDelegate {
+    
+    public func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    
+    public func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "내용을 입력하세요"
+            textView.textColor = .lightGray
+        }
+        
+    }
 }
 
 extension StoryPostViewController: PHPickerViewControllerDelegate {
@@ -124,8 +168,11 @@ extension StoryPostViewController: PHPickerViewControllerDelegate {
             }
         }
     }
+}
+
+extension StoryPostViewController : UIPopoverPresentationControllerDelegate {
     
-    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            self.view.endEditing(true)
-        }
+    public func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
 }
