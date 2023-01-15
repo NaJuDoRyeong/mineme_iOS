@@ -24,6 +24,11 @@ open class FeedUIView: UIView {
         self.backgroundColor = UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
         self.layer.cornerRadius = 16
         self.frame.size = CGSize(width: size.rawValue, height: size.rawValue)
+        
+        self.imageView.layer.cornerRadius = 16
+        self.imageView.frame.size = CGSize(width: size.rawValue, height: size.rawValue)
+        self.imageView.clipsToBounds = true
+        self.imageView.contentMode = .scaleAspectFill
     }
     
     required public init?(coder: NSCoder) {
