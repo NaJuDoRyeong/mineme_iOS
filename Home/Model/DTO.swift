@@ -32,7 +32,7 @@ struct PersonInfo: Codable {
     func toDomain() -> Profile? {
         
         let name = nickname
-        let image = profileImage
+        let image = URL(string: profileImage)
 //        let birthday = birthday
         guard let instaId = instaId else { return nil }
         guard let comment = description else { return nil }

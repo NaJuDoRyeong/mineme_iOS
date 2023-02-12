@@ -15,7 +15,7 @@ open class HomeSettingViewController: UIViewController {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     
-    private var profileImage = ProfileImageView(url: "profile-my")
+    private var profileImage = ProfileImageView()
     private var editImageButton = UIButton()
     private var nameField = TextFieldWithTitle(title: "이름", placeholder: "이름 입력")
     private var coupleNameField = TextFieldWithTitle(title: "커플이름", placeholder: "이름 입력")

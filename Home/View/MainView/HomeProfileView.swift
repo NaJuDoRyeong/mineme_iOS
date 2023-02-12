@@ -28,7 +28,9 @@ class HomeProfileView: UIView {
     }
     
     func bind(data: Profile){
-        imageView = ProfileImageView(url: data.image)
+        
+        imageView.bind(url: data.image)
+        
         nameLabel.text = data.name
         
         //Optional
@@ -56,6 +58,7 @@ class HomeProfileView: UIView {
             let label = UILabel()
             label.textColor = .black
             label.font = UIFont.systemFont(ofSize: 12)
+            label.textAlignment = .center
 
             label.numberOfLines = 3
             return label

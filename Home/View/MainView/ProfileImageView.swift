@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProfileImageView : UIImageView {
     
-    private var imageURL: String?
+//    private var imageURL: String?
     
     init(image : UIImage){
         super.init(frame: .zero)
@@ -17,10 +18,9 @@ class ProfileImageView : UIImageView {
         initAttribute()
     }
     
-    init(url : String? = nil){
+    init(url : URL? = nil){
         super.init(frame: .zero)
-        self.imageURL = url
-        initAttribute()
+        bind(url: url)
     }
     
     required init?(coder: NSCoder) {
@@ -28,28 +28,30 @@ class ProfileImageView : UIImageView {
     }
     
     
+    func bind(url: URL?){
+        self.kf.setImage(with: url, options: circle())
+    }
+    
     func initAttribute(){
         self.frame.size = CGSize(width: 80, height: 80)
-        if imageURL == nil {
-//            self.image = UIImage(named: imageURL!)
-        }else{
-            //TODO: url image로 수정하기
-//            self.image = LoadImage(url : imageURL)
-            self.image = UIImage(named: imageURL!)
-        }
-        self.circle()
+//        self.circle()
     }
     
     func changeImage(image : UIImage){
         self.image = image.resize(width: 80, height: 80)
-        self.circle()
+//        self.circle()
     }
     
-    func circle(){
-        self.contentMode = .scaleAspectFill
-        self.layer.cornerRadius = self.frame.height/2
-        self.layer.cornerCurve = .circular
-        self.clipsToBounds = true
+    func circle() -> KingfisherOptionsInfo {
+        let roundCorner = RoundCornerImageProcessor(cornerRadius: self.frame.height/2)
+        let resizing = ResizingImageProcessor(referenceSize: CGSize(width: 80, height: 80))
+        
+        return [.processor(roundCorner), .processor(resizing)]
+        
+//        self.contentMode = .scaleAspectFill
+//        self.layer.cornerRadius = self.frame.height/2
+//        self.layer.cornerCurve = .circular
+//        self.clipsToBounds = true
     }
     
 }
