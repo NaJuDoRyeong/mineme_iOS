@@ -7,16 +7,21 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 open class HomeViewController : UIViewController {
+    
+    let vc = HomeViewModel()
+    var disposeBag = DisposeBag()
     
     private var scrollView = UIScrollView()
     private var contentView = UIView()
     
     
     private var coupleTitle = UILabel()
-    private var myProfileView = HomeProfileView(Profile(name: "아무개", image: "profile-my"))
-    private var loverProfileView = HomeProfileView(Profile(name: "아무개", image: "profile-lover"))
+    private var myProfileView = HomeProfileView(Profile(name: "이름없음"))
+    private var loverProfileView = HomeProfileView(Profile(name: "이름없음"))
     private var heartImage = UIImageView()
     private var settingButton = UIButton()
     private var line = UIImageView()
@@ -29,6 +34,24 @@ open class HomeViewController : UIViewController {
         self.view.backgroundColor = .white
         initAttribute()
         initAutolayout()
+        
+        vc.request()
+        bind()
+    }
+    
+    func bind(){
+        
+        vc.myProfile.subscribe(onNext: {
+            self.myProfileView.bind(data: $0)
+        }).disposed(by: disposeBag)
+        
+        vc.loverProfile.subscribe(onNext: {
+            self.loverProfileView.bind(data: $0)
+        }).disposed(by: disposeBag)
+        
+        vc.coupleTitle
+            .bind(to: coupleTitle.rx.text)
+            .disposed(by: disposeBag)
     }
     
     func initAttribute(){

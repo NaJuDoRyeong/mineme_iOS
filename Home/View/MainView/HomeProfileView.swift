@@ -15,13 +15,11 @@ class HomeProfileView: UIView {
     private var commentLabel = UILabel()
     private var instaIdLabel = UILabel()
     
-    private let data : Profile
-    
     init(_ data: Profile){
-        self.data = data
         super.init(frame: .zero)
         initAttribute()
         initAutolayout()
+        bind(data: data)
     }
     
     
@@ -29,40 +27,51 @@ class HomeProfileView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func bind(data: Profile){
+        
+        imageView.bind(url: data.image)
+        
+        nameLabel.text = data.name
+        
+        //Optional
+        if let comment = data.comment {
+            commentLabel.text = comment
+        }
+        
+        //Optional
+        if let instaId = data.instaId {
+            instaIdLabel.text = instaId
+        }
+        
+    }
     
     func initAttribute(){
-        imageView = ProfileImageView(url: data.image)
         
         nameLabel = {
             let label = UILabel()
             label.textColor = .black
             label.font = UIFont.systemFont(ofSize: 18)
-            label.text = data.name
             return label
         }()
         
-        //Optional
-        if let comment = data.comment {
-            commentLabel = {
-                let label = UILabel()
-                label.textColor = .black
-                label.font = UIFont.systemFont(ofSize: 12)
-                label.text = comment
-                label.numberOfLines = 3
-                return label
-            }()
-        }
+        commentLabel = {
+            let label = UILabel()
+            label.textColor = .black
+            label.font = UIFont.systemFont(ofSize: 12)
+            label.textAlignment = .center
+
+            label.numberOfLines = 3
+            return label
+        }()
         
-        //Optional
-        if let instaId = data.instaId {
-            instaIdLabel = {
-                let label = UILabel()
-                label.textColor = .black
-                label.font = UIFont.systemFont(ofSize: 12)
-                label.text = instaId
-                return label
-            }()
-        }
+        instaIdLabel = {
+            let label = UILabel()
+            label.textColor = .black
+            label.font = UIFont.systemFont(ofSize: 12)
+            
+            return label
+        }()
+        
     }
     
     func initAutolayout(){

@@ -9,9 +9,10 @@ import Foundation
 
 struct Profile {
     var name : String
-    var image : String
+    var image : URL?
     var instaId : String?
     var comment : String?
     var gender : String?
     var code : String?
 }
+
