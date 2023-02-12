@@ -15,3 +15,4 @@ struct Profile {
     var gender : String?
     var code : String?
 }
+
