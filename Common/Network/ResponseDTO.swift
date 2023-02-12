@@ -14,7 +14,7 @@ struct ResponseDTO<CommonDataDTO: Decodable> : Decodable {
     
 }
 
-struct ErrorDTO : Decodable {
+struct ErrorDTO : Decodable, Error {
     let code : Int
     let message: String
 }

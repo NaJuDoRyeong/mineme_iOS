@@ -19,6 +19,9 @@ public struct APIResponder<CommonDataDTO: Decodable> {
             do {
                 
                 let commonResponse = try JSONDecoder().decode(ResponseDTO<CommonDataDTO>.self, from: response.data)
+                if let error = commonResponse.error {
+                    return .failure(error)
+                }
                 return .success(commonResponse.data)
             } catch {
                 return .failure(error)
