@@ -14,5 +14,13 @@ struct Profile {
     var comment : String?
     var gender : String?
     var code : String?
+    
+
+    func atInstaId() -> String? {
+        if let instaId = instaId {
+            return "@\(instaId)"
+        }
+        return nil
+    }
 }
 
