@@ -38,10 +38,7 @@ class HomeProfileView: UIView {
             commentLabel.text = comment
         }
         
-        //Optional
-        if let instaId = data.instaId {
-            instaIdLabel.text = instaId
-        }
+        instaIdLabel.text = data.atInstaId()
         
     }
     
@@ -56,7 +53,7 @@ class HomeProfileView: UIView {
         
         commentLabel = {
             let label = UILabel()
-            label.textColor = .black
+            label.textColor = .gray
             label.font = UIFont.systemFont(ofSize: 12)
             label.textAlignment = .center
 
@@ -66,7 +63,7 @@ class HomeProfileView: UIView {
         
         instaIdLabel = {
             let label = UILabel()
-            label.textColor = .black
+            label.textColor = .gray
             label.font = UIFont.systemFont(ofSize: 12)
             
             return label

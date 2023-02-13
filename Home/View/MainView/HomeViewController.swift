@@ -61,16 +61,14 @@ open class HomeViewController : UIViewController {
             let label = UILabel()
             label.textColor = .black
             label.text = "만나서 반가워요"
-            label.font = UIFont.systemFont(ofSize: 24)
+            label.font = UIFont.boldSystemFont(ofSize: 24)
             return label
         }()
         
         settingButton = {
             let button = UIButton()
-            //FIXME: button 클릭이 안됨 ㅠㅠ
-            button.backgroundColor = .black
-            button.frame.size = CGSize(width: 50, height: 50)
-            //            button.setImage(UIImage(named: "icon-setting"), for: .normal)
+//            button.frame.size = CGSize(width: 50, height: 50)
+            button.setImage(UIImage(named: "icon-setting"), for: .normal)
             button.addTarget(self, action: #selector(tapSettingButton), for: .touchUpInside)
             
             return button
@@ -155,7 +153,7 @@ open class HomeViewController : UIViewController {
 extension HomeViewController {
     
     @objc func tapSettingButton(){
-        print("setting button tap")
+        print("👆 setting button tap")
         self.navigationController?.pushViewController(HomeSettingViewController(), animated: false)
         
     }
