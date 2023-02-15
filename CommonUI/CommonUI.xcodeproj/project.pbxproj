@@ -13,6 +13,8 @@
 		B92A63092974403A0015AEC1 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A63082974403A0015AEC1 /* TextBox.swift */; };
 		B96D82E52952F3C400C29AA9 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */; };
 		B96D82EC295306B600C29AA9 /* CustomPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */; };
+		B9B357F5299A35550091DADB /* CommonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B357F4299A35550091DADB /* CommonHeader.swift */; };
+		B9B357F7299A3E530091DADB /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B357F6299A3E530091DADB /* ToastMessage.swift */; };
 		B9F11FD9291A4E7B00CED4C1 /* CommonUI.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9F7A90A293F6E7100619054 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A909293F6E7100619054 /* CommonButton.swift */; };
 		B9F7A90D293F6FCB00619054 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9F7A90C293F6FCB00619054 /* SnapKit */; };
@@ -25,6 +27,8 @@
 		B92A63082974403A0015AEC1 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
 		B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerButton.swift; sourceTree = "<group>"; };
+		B9B357F4299A35550091DADB /* CommonHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHeader.swift; sourceTree = "<group>"; };
+		B9B357F6299A3E530091DADB /* ToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
 		B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUI.h; sourceTree = "<group>"; };
 		B9F7A909293F6E7100619054 /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 		B9F11FCB291A4E7B00CED4C1 = {
 			isa = PBXGroup;
 			children = (
+				B9B357F6299A3E530091DADB /* ToastMessage.swift */,
+				B9B357F4299A35550091DADB /* CommonHeader.swift */,
 				B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */,
 				B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */,
 				B9F7A909293F6E7100619054 /* CommonButton.swift */,
@@ -67,10 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */,
-				B9F11FDF291A4EA500CED4C1 /* CommonUIViewController.swift */,
-				B905E8EF291AB8490038485D /* FeedUIView.swift */,
 				B92A630629740BD00015AEC1 /* CalendarModal.swift */,
-				B905E8F7291B3E960038485D /* UIImageExtension.swift */,
 				B92A63082974403A0015AEC1 /* TextBox.swift */,
 			);
 			path = CommonUI;
@@ -162,7 +165,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F11FE0291A4EA500CED4C1 /* CommonUIViewController.swift in Sources */,
 				B92A630729740BD00015AEC1 /* CalendarModal.swift in Sources */,
 				B92A63092974403A0015AEC1 /* TextBox.swift in Sources */,
 				B96D82EC295306B600C29AA9 /* CustomPickerButton.swift in Sources */,
@@ -170,6 +172,8 @@
 				B905E8F8291B3E960038485D /* UIImageExtension.swift in Sources */,
 				B9F7A90A293F6E7100619054 /* CommonButton.swift in Sources */,
 				B905E8F0291AB8490038485D /* FeedUIView.swift in Sources */,
+				B9B357F7299A3E530091DADB /* ToastMessage.swift in Sources */,
+				B9B357F5299A35550091DADB /* CommonHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
