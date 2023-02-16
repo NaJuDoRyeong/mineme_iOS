@@ -7,132 +7,153 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B905E8F0291AB8490038485D /* FeedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8EF291AB8490038485D /* FeedUIView.swift */; };
-		B905E8F8291B3E960038485D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8F7291B3E960038485D /* UIImageExtension.swift */; };
-		B92A630729740BD00015AEC1 /* CalendarModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A630629740BD00015AEC1 /* CalendarModal.swift */; };
-		B92A63092974403A0015AEC1 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A63082974403A0015AEC1 /* TextBox.swift */; };
-		B95D6459299E028200BCA7E0 /* TextFieldWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D6458299E028200BCA7E0 /* TextFieldWithTitle.swift */; };
-		B96D82E52952F3C400C29AA9 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */; };
-		B96D82EC295306B600C29AA9 /* CustomPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */; };
-		B9B357F5299A35550091DADB /* CommonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B357F4299A35550091DADB /* CommonHeader.swift */; };
-		B9B357F7299A3E530091DADB /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B357F6299A3E530091DADB /* ToastMessage.swift */; };
-		B9F11FD9291A4E7B00CED4C1 /* CommonUI.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9F7A90A293F6E7100619054 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A909293F6E7100619054 /* CommonButton.swift */; };
-		B9F7A90D293F6FCB00619054 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9F7A90C293F6FCB00619054 /* SnapKit */; };
+		B95D6443299DFAD900BCA7E0 /* Login.h in Headers */ = {isa = PBXBuildFile; fileRef = B95D6442299DFAD900BCA7E0 /* Login.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B95D644B299DFB4400BCA7E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D644A299DFB4400BCA7E0 /* LoginViewController.swift */; };
+		B95D644D299DFC2700BCA7E0 /* KakaoLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D644C299DFC2700BCA7E0 /* KakaoLoginButton.swift */; };
+		B95D644F299DFC3300BCA7E0 /* AppleLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D644E299DFC3300BCA7E0 /* AppleLoginButton.swift */; };
+		B95D6455299DFFA600BCA7E0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B95D6454299DFFA600BCA7E0 /* SnapKit */; };
+		B95D6457299E020000BCA7E0 /* LoginInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D6456299E020000BCA7E0 /* LoginInformationViewController.swift */; };
+		B95D645C299E06CA00BCA7E0 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95D645B299E06CA00BCA7E0 /* CommonUI.framework */; };
+		B95D645D299E06CA00BCA7E0 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B95D645B299E06CA00BCA7E0 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B95D6460299E1FB300BCA7E0 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D645F299E1FB300BCA7E0 /* InviteViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B95D645E299E06CA00BCA7E0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B95D645D299E06CA00BCA7E0 /* CommonUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		B905E8EF291AB8490038485D /* FeedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIView.swift; sourceTree = "<group>"; };
-		B905E8F7291B3E960038485D /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		B92A630629740BD00015AEC1 /* CalendarModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModal.swift; sourceTree = "<group>"; };
-		B92A63082974403A0015AEC1 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
-		B95D6458299E028200BCA7E0 /* TextFieldWithTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithTitle.swift; sourceTree = "<group>"; };
-		B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
-		B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerButton.swift; sourceTree = "<group>"; };
-		B9B357F4299A35550091DADB /* CommonHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHeader.swift; sourceTree = "<group>"; };
-		B9B357F6299A3E530091DADB /* ToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
-		B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUI.h; sourceTree = "<group>"; };
-		B9F7A909293F6E7100619054 /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
+		B95D643F299DFAD900BCA7E0 /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95D6442299DFAD900BCA7E0 /* Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		B95D644A299DFB4400BCA7E0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B95D644C299DFC2700BCA7E0 /* KakaoLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginButton.swift; sourceTree = "<group>"; };
+		B95D644E299DFC3300BCA7E0 /* AppleLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginButton.swift; sourceTree = "<group>"; };
+		B95D6456299E020000BCA7E0 /* LoginInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInformationViewController.swift; sourceTree = "<group>"; };
+		B95D645B299E06CA00BCA7E0 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95D645F299E1FB300BCA7E0 /* InviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B9F11FD2291A4E7B00CED4C1 /* Frameworks */ = {
+		B95D643C299DFAD900BCA7E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F7A90D293F6FCB00619054 /* SnapKit in Frameworks */,
+				B95D6455299DFFA600BCA7E0 /* SnapKit in Frameworks */,
+				B95D645C299E06CA00BCA7E0 /* CommonUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B9F11FCB291A4E7B00CED4C1 = {
+		B95D6435299DFAD900BCA7E0 = {
 			isa = PBXGroup;
 			children = (
-				B9B357F6299A3E530091DADB /* ToastMessage.swift */,
-				B9B357F4299A35550091DADB /* CommonHeader.swift */,
-				B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */,
-				B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */,
-				B9F7A909293F6E7100619054 /* CommonButton.swift */,
-				B905E8EF291AB8490038485D /* FeedUIView.swift */,
-				B905E8F7291B3E960038485D /* UIImageExtension.swift */,
-				B95D6458299E028200BCA7E0 /* TextFieldWithTitle.swift */,
-				B9F11FD7291A4E7B00CED4C1 /* CommonUI */,
-				B9F11FD6291A4E7B00CED4C1 /* Products */,
+				B95D6441299DFAD900BCA7E0 /* Login */,
+				B95D6449299DFB0A00BCA7E0 /* View */,
+				B95D6440299DFAD900BCA7E0 /* Products */,
+				B95D645A299E06CA00BCA7E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		B9F11FD6291A4E7B00CED4C1 /* Products */ = {
+		B95D6440299DFAD900BCA7E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */,
+				B95D643F299DFAD900BCA7E0 /* Login.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9F11FD7291A4E7B00CED4C1 /* CommonUI */ = {
+		B95D6441299DFAD900BCA7E0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B9F11FD8291A4E7B00CED4C1 /* CommonUI.h */,
-				B92A630629740BD00015AEC1 /* CalendarModal.swift */,
-				B92A63082974403A0015AEC1 /* TextBox.swift */,
+				B95D6442299DFAD900BCA7E0 /* Login.h */,
 			);
-			path = CommonUI;
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B95D6449299DFB0A00BCA7E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B95D644A299DFB4400BCA7E0 /* LoginViewController.swift */,
+				B95D6456299E020000BCA7E0 /* LoginInformationViewController.swift */,
+				B95D645F299E1FB300BCA7E0 /* InviteViewController.swift */,
+				B95D644C299DFC2700BCA7E0 /* KakaoLoginButton.swift */,
+				B95D644E299DFC3300BCA7E0 /* AppleLoginButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B95D645A299E06CA00BCA7E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B95D645B299E06CA00BCA7E0 /* CommonUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B9F11FD0291A4E7B00CED4C1 /* Headers */ = {
+		B95D643A299DFAD900BCA7E0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F11FD9291A4E7B00CED4C1 /* CommonUI.h in Headers */,
+				B95D6443299DFAD900BCA7E0 /* Login.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B9F11FD4291A4E7B00CED4C1 /* CommonUI */ = {
+		B95D643E299DFAD900BCA7E0 /* Login */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9F11FDC291A4E7B00CED4C1 /* Build configuration list for PBXNativeTarget "CommonUI" */;
+			buildConfigurationList = B95D6446299DFAD900BCA7E0 /* Build configuration list for PBXNativeTarget "Login" */;
 			buildPhases = (
-				B9F11FD0291A4E7B00CED4C1 /* Headers */,
-				B9F11FD1291A4E7B00CED4C1 /* Sources */,
-				B9F11FD2291A4E7B00CED4C1 /* Frameworks */,
-				B9F11FD3291A4E7B00CED4C1 /* Resources */,
+				B95D643A299DFAD900BCA7E0 /* Headers */,
+				B95D643B299DFAD900BCA7E0 /* Sources */,
+				B95D643C299DFAD900BCA7E0 /* Frameworks */,
+				B95D643D299DFAD900BCA7E0 /* Resources */,
+				B95D645E299E06CA00BCA7E0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CommonUI;
+			name = Login;
 			packageProductDependencies = (
-				B9F7A90C293F6FCB00619054 /* SnapKit */,
+				B95D6454299DFFA600BCA7E0 /* SnapKit */,
 			);
-			productName = CommonUI;
-			productReference = B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */;
+			productName = Login;
+			productReference = B95D643F299DFAD900BCA7E0 /* Login.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B9F11FCC291A4E7B00CED4C1 /* Project object */ = {
+		B95D6436299DFAD900BCA7E0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					B9F11FD4291A4E7B00CED4C1 = {
-						CreatedOnToolsVersion = 14.1;
-						LastSwiftMigration = 1410;
+					B95D643E299DFAD900BCA7E0 = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
-			buildConfigurationList = B9F11FCF291A4E7B00CED4C1 /* Build configuration list for PBXProject "CommonUI" */;
+			buildConfigurationList = B95D6439299DFAD900BCA7E0 /* Build configuration list for PBXProject "Login" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -140,21 +161,21 @@
 				en,
 				Base,
 			);
-			mainGroup = B9F11FCB291A4E7B00CED4C1;
+			mainGroup = B95D6435299DFAD900BCA7E0;
 			packageReferences = (
-				B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B95D6453299DFFA600BCA7E0 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
-			productRefGroup = B9F11FD6291A4E7B00CED4C1 /* Products */;
+			productRefGroup = B95D6440299DFAD900BCA7E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9F11FD4291A4E7B00CED4C1 /* CommonUI */,
+				B95D643E299DFAD900BCA7E0 /* Login */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B9F11FD3291A4E7B00CED4C1 /* Resources */ = {
+		B95D643D299DFAD900BCA7E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -164,27 +185,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B9F11FD1291A4E7B00CED4C1 /* Sources */ = {
+		B95D643B299DFAD900BCA7E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B92A630729740BD00015AEC1 /* CalendarModal.swift in Sources */,
-				B92A63092974403A0015AEC1 /* TextBox.swift in Sources */,
-				B96D82EC295306B600C29AA9 /* CustomPickerButton.swift in Sources */,
-				B96D82E52952F3C400C29AA9 /* CustomDatePicker.swift in Sources */,
-				B905E8F8291B3E960038485D /* UIImageExtension.swift in Sources */,
-				B9F7A90A293F6E7100619054 /* CommonButton.swift in Sources */,
-				B905E8F0291AB8490038485D /* FeedUIView.swift in Sources */,
-				B9B357F7299A3E530091DADB /* ToastMessage.swift in Sources */,
-				B95D6459299E028200BCA7E0 /* TextFieldWithTitle.swift in Sources */,
-				B9B357F5299A35550091DADB /* CommonHeader.swift in Sources */,
+				B95D644F299DFC3300BCA7E0 /* AppleLoginButton.swift in Sources */,
+				B95D644B299DFB4400BCA7E0 /* LoginViewController.swift in Sources */,
+				B95D644D299DFC2700BCA7E0 /* KakaoLoginButton.swift in Sources */,
+				B95D6457299E020000BCA7E0 /* LoginInformationViewController.swift in Sources */,
+				B95D6460299E1FB300BCA7E0 /* InviteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		B9F11FDA291A4E7B00CED4C1 /* Debug */ = {
+		B95D6444299DFAD900BCA7E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -235,7 +251,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -247,7 +263,7 @@
 			};
 			name = Debug;
 		};
-		B9F11FDB291A4E7B00CED4C1 /* Release */ = {
+		B95D6445299DFAD900BCA7E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -292,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -304,7 +320,7 @@
 			};
 			name = Release;
 		};
-		B9F11FDD291A4E7B00CED4C1 /* Debug */ = {
+		B95D6447299DFAD900BCA7E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -325,9 +341,12 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.CommonUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.Login;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -335,7 +354,7 @@
 			};
 			name = Debug;
 		};
-		B9F11FDE291A4E7B00CED4C1 /* Release */ = {
+		B95D6448299DFAD900BCA7E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -356,9 +375,12 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.CommonUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.Login;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -368,20 +390,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9F11FCF291A4E7B00CED4C1 /* Build configuration list for PBXProject "CommonUI" */ = {
+		B95D6439299DFAD900BCA7E0 /* Build configuration list for PBXProject "Login" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9F11FDA291A4E7B00CED4C1 /* Debug */,
-				B9F11FDB291A4E7B00CED4C1 /* Release */,
+				B95D6444299DFAD900BCA7E0 /* Debug */,
+				B95D6445299DFAD900BCA7E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9F11FDC291A4E7B00CED4C1 /* Build configuration list for PBXNativeTarget "CommonUI" */ = {
+		B95D6446299DFAD900BCA7E0 /* Build configuration list for PBXNativeTarget "Login" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9F11FDD291A4E7B00CED4C1 /* Debug */,
-				B9F11FDE291A4E7B00CED4C1 /* Release */,
+				B95D6447299DFAD900BCA7E0 /* Debug */,
+				B95D6448299DFAD900BCA7E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -389,7 +411,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		B95D6453299DFFA600BCA7E0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -400,12 +422,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B9F7A90C293F6FCB00619054 /* SnapKit */ = {
+		B95D6454299DFFA600BCA7E0 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = B95D6453299DFFA600BCA7E0 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = B9F11FCC291A4E7B00CED4C1 /* Project object */;
+	rootObject = B95D6436299DFAD900BCA7E0 /* Project object */;
 }

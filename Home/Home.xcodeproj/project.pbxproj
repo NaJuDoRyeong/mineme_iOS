@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B905E8EB291A5FB60038485D /* TextFieldWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8EA291A5FB60038485D /* TextFieldWithTitle.swift */; };
 		B905E8F6291AC14D0038485D /* FeedPriview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8F5291AC14D0038485D /* FeedPriview.swift */; };
 		B951001C2997D0B7002CD38E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B951001B2997D0B7002CD38E /* RxCocoa */; };
 		B9736F64299679F500F20196 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9736F63299679F500F20196 /* HomeViewModel.swift */; };
@@ -44,7 +43,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B905E8EA291A5FB60038485D /* TextFieldWithTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithTitle.swift; sourceTree = "<group>"; };
 		B905E8F5291AC14D0038485D /* FeedPriview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPriview.swift; sourceTree = "<group>"; };
 		B9736F63299679F500F20196 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B9736F6629967A3900F20196 /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				B9F11FC9291A43C900CED4C1 /* HomeSettingViewController.swift */,
-				B905E8EA291A5FB60038485D /* TextFieldWithTitle.swift */,
 			);
 			path = SettingView;
 			sourceTree = "<group>";
@@ -255,7 +252,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F11FC5291769FC00CED4C1 /* Entity.swift in Sources */,
-				B905E8EB291A5FB60038485D /* TextFieldWithTitle.swift in Sources */,
 				B905E8F6291AC14D0038485D /* FeedPriview.swift in Sources */,
 				B9736F6729967A3900F20196 /* DTO.swift in Sources */,
 				B9736F6C29967E6200F20196 /* HomeProvider.swift in Sources */,

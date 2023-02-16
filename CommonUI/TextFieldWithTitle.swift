@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TextFieldWithTitle: UIView{
+public class TextFieldWithTitle: UIView{
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -18,14 +18,14 @@ class TextFieldWithTitle: UIView{
     */
     private var titleLabel = UILabel()
     private var textBox = UIView()
-    var textField = UITextField()
+    public var textField = UITextField()
     
     private var title : String
     var text : String?
     private var textLimit : Int?
     private var placeholder : String?
     
-    init(title: String, textLimit: Int? = nil, placeholder : String? = nil) {
+    public init(title: String, textLimit: Int? = nil, placeholder : String? = nil) {
         self.title = title
         self.textLimit = textLimit
         self.placeholder = placeholder
@@ -96,7 +96,7 @@ class TextFieldWithTitle: UIView{
 
 extension TextFieldWithTitle : UITextFieldDelegate {
     
-    func textFieldDidBeginEditing(_ textField: UITextField){
+    public func textFieldDidBeginEditing(_ textField: UITextField){
         print("textFieldDidBeginEditing")
         
     }
@@ -105,7 +105,7 @@ extension TextFieldWithTitle : UITextFieldDelegate {
 
 
 
-    func textFieldDidEndEditing(_ textField: UITextField){
+    public func textFieldDidEndEditing(_ textField: UITextField){
         print("textFieldDidEndEditing")
         
     }
@@ -114,7 +114,7 @@ extension TextFieldWithTitle : UITextFieldDelegate {
 
 
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
