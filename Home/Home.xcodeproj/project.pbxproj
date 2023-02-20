@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B905E8F6291AC14D0038485D /* FeedPriview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8F5291AC14D0038485D /* FeedPriview.swift */; };
-		B951001C2997D0B7002CD38E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B951001B2997D0B7002CD38E /* RxCocoa */; };
 		B9736F64299679F500F20196 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9736F63299679F500F20196 /* HomeViewModel.swift */; };
 		B9736F6729967A3900F20196 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9736F6629967A3900F20196 /* DTO.swift */; };
 		B9736F6929967C5000F20196 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9736F6829967C5000F20196 /* Common.framework */; };
 		B9736F6A29967C5000F20196 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9736F6829967C5000F20196 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9736F6C29967E6200F20196 /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9736F6B29967E6200F20196 /* HomeProvider.swift */; };
-		B9B357F02997D5890091DADB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B9B357EF2997D5890091DADB /* RxSwift */; };
 		B9B357F32998E8C00091DADB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B9B357F22998E8C00091DADB /* Kingfisher */; };
 		B9BE5A5B292386E800E82CFB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9BE5A5A292386E800E82CFB /* SnapKit */; };
 		B9F11FA5291696DB00CED4C1 /* Home.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F11FA4291696DB00CED4C1 /* Home.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,8 +64,6 @@
 				B9B357F32998E8C00091DADB /* Kingfisher in Frameworks */,
 				B9736F6929967C5000F20196 /* Common.framework in Frameworks */,
 				B9F11FE3291A4F1500CED4C1 /* CommonUI.framework in Frameworks */,
-				B9B357F02997D5890091DADB /* RxSwift in Frameworks */,
-				B951001C2997D0B7002CD38E /* RxCocoa in Frameworks */,
 				B9BE5A5B292386E800E82CFB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,8 +185,6 @@
 			name = Home;
 			packageProductDependencies = (
 				B9BE5A5A292386E800E82CFB /* SnapKit */,
-				B951001B2997D0B7002CD38E /* RxCocoa */,
-				B9B357EF2997D5890091DADB /* RxSwift */,
 				B9B357F22998E8C00091DADB /* Kingfisher */,
 			);
 			productName = Home;
@@ -223,7 +217,6 @@
 			mainGroup = B9F11F97291696DB00CED4C1;
 			packageReferences = (
 				B9F11FC6291A37E600CED4C1 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				B951001A2997D0B7002CD38E /* XCRemoteSwiftPackageReference "RxSwift" */,
 				B951001F2997D1EB002CD38E /* XCRemoteSwiftPackageReference "Moya" */,
 				B9B357F12998E8C00091DADB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
@@ -477,14 +470,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B951001A2997D0B7002CD38E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		B951001F2997D1EB002CD38E /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -512,16 +497,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B951001B2997D0B7002CD38E /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B951001A2997D0B7002CD38E /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		B9B357EF2997D5890091DADB /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B951001A2997D0B7002CD38E /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
 		B9B357F22998E8C00091DADB /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B9B357F12998E8C00091DADB /* XCRemoteSwiftPackageReference "Kingfisher" */;
