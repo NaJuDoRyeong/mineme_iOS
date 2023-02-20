@@ -7,15 +7,17 @@
 
 import UIKit
 import SnapKit
-
+import RxSwift
 
 public class CustomPickerButton: UIButton {
     
     
     // MARK: - UI setting
     private var uiView = UIView()
-    var label = UILabel()
+    private var label = UILabel()
     private var btn = UIImageView()
+    
+    var observable = PublishSubject<String>()
     
     private func initAttribute(placeholder : String){
         
@@ -69,11 +71,10 @@ public class CustomPickerButton: UIButton {
         btn.isUserInteractionEnabled = false
     }
     
-    private let data : [String]
+    private var data : [String]?
 
     /// public init - 외부 호출
-    public init(placeholder : String, width: CGFloat, data: [String]){
-        self.data = data
+    public init(placeholder : String, width: CGFloat){
         super.init(frame: .zero)
         initAttribute(placeholder: placeholder)
         initAutolayout(width: width)
@@ -163,6 +164,16 @@ extension CustomPickerButton {
     
 }
 
+extension CustomPickerButton {
+    
+    func getData() -> String? {
+        return label.text
+    }
+    
+    func setData(data: [String]){
+        self.data = data
+    }
+}
 
 extension CustomPickerButton : UIPickerViewDataSource, UIPickerViewDelegate {
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -170,17 +181,17 @@ extension CustomPickerButton : UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return data.count
+        return data?.count ?? 0
     }
     
     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return data[row]
+        return data?[row]
     }
     
     //data 선택시 동작할 event
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("didSelect", data[row])
-        label.text = data[row]
+        label.text = data?[row]
+        observable.onNext(data?[row] ?? "")
     }
     
 //    public func pickerView(_ pickerView: UIPickerView, titleForRow: Int) {

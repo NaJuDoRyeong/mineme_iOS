@@ -12,6 +12,8 @@
 		B92A630729740BD00015AEC1 /* CalendarModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A630629740BD00015AEC1 /* CalendarModal.swift */; };
 		B92A63092974403A0015AEC1 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A63082974403A0015AEC1 /* TextBox.swift */; };
 		B95D6459299E028200BCA7E0 /* TextFieldWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D6458299E028200BCA7E0 /* TextFieldWithTitle.swift */; };
+		B95D649929A3A67500BCA7E0 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B95D649829A3A67500BCA7E0 /* RxCocoa */; };
+		B95D649B29A3A67500BCA7E0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B95D649A29A3A67500BCA7E0 /* RxSwift */; };
 		B96D82E52952F3C400C29AA9 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */; };
 		B96D82EC295306B600C29AA9 /* CustomPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */; };
 		B9B357F5299A35550091DADB /* CommonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B357F4299A35550091DADB /* CommonHeader.swift */; };
@@ -20,6 +22,19 @@
 		B9F7A90A293F6E7100619054 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A909293F6E7100619054 /* CommonButton.swift */; };
 		B9F7A90D293F6FCB00619054 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9F7A90C293F6FCB00619054 /* SnapKit */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B95D647629A3750200BCA7E0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B905E8EF291AB8490038485D /* FeedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIView.swift; sourceTree = "<group>"; };
@@ -41,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B95D649B29A3A67500BCA7E0 /* RxSwift in Frameworks */,
+				B95D649929A3A67500BCA7E0 /* RxCocoa in Frameworks */,
 				B9F7A90D293F6FCB00619054 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,6 +65,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B95D646D29A3741000BCA7E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9F11FCB291A4E7B00CED4C1 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +85,7 @@
 				B95D6458299E028200BCA7E0 /* TextFieldWithTitle.swift */,
 				B9F11FD7291A4E7B00CED4C1 /* CommonUI */,
 				B9F11FD6291A4E7B00CED4C1 /* Products */,
+				B95D646D29A3741000BCA7E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +129,7 @@
 				B9F11FD1291A4E7B00CED4C1 /* Sources */,
 				B9F11FD2291A4E7B00CED4C1 /* Frameworks */,
 				B9F11FD3291A4E7B00CED4C1 /* Resources */,
+				B95D647629A3750200BCA7E0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -112,6 +138,8 @@
 			name = CommonUI;
 			packageProductDependencies = (
 				B9F7A90C293F6FCB00619054 /* SnapKit */,
+				B95D649829A3A67500BCA7E0 /* RxCocoa */,
+				B95D649A29A3A67500BCA7E0 /* RxSwift */,
 			);
 			productName = CommonUI;
 			productReference = B9F11FD5291A4E7B00CED4C1 /* CommonUI.framework */;
@@ -143,6 +171,7 @@
 			mainGroup = B9F11FCB291A4E7B00CED4C1;
 			packageReferences = (
 				B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B95D649729A3A67500BCA7E0 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = B9F11FD6291A4E7B00CED4C1 /* Products */;
 			projectDirPath = "";
@@ -307,6 +336,7 @@
 		B9F11FDD291A4E7B00CED4C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -328,16 +358,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.CommonUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B9F11FDE291A4E7B00CED4C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -359,9 +393,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mineme.ios.CommonUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -389,6 +426,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B95D649729A3A67500BCA7E0 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -400,6 +445,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B95D649829A3A67500BCA7E0 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B95D649729A3A67500BCA7E0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		B95D649A29A3A67500BCA7E0 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B95D649729A3A67500BCA7E0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		B9F7A90C293F6FCB00619054 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B9F7A90B293F6FCB00619054 /* XCRemoteSwiftPackageReference "SnapKit" */;
