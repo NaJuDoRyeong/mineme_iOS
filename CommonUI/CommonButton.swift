@@ -54,3 +54,19 @@ open class CommonButton: UIButton {
     }
     
 }
+
+extension CommonButton {
+    
+    public func activate(){
+        self.layer.borderWidth = 0
+        self.backgroundColor = UIColor(named: "butter")
+        self.isEnabled = true
+    }
+    
+    public func deactivate(){
+        self.layer.borderWidth = 1.5
+        self.layer.borderColor = .init(gray: 0.5, alpha: 1)
+        self.backgroundColor = .clear
+        self.isEnabled = false
+    }
+}
