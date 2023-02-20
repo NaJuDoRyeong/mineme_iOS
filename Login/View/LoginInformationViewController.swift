@@ -8,6 +8,7 @@
 import UIKit
 import CommonUI
 import SnapKit
+import RxSwift
 
 class LoginInformationViewController: UIViewController {
     
@@ -19,6 +20,7 @@ class LoginInformationViewController: UIViewController {
         super.viewDidLoad()
         initAttribute()
         initAutolayout()
+        bind()
         
     }
     
@@ -32,6 +34,15 @@ class LoginInformationViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    var disposeBag = DisposeBag()
+    
+    func bind(){
+        birthday.observable.subscribe { _ in
+            self.allFill()
+        }.disposed(by: disposeBag)
+    }
+    
     
     func initAttribute(){
         self.view.backgroundColor = .white
@@ -70,28 +81,21 @@ class LoginInformationViewController: UIViewController {
 
 }
 
-extension CommonButton {
-    
-    func activate(){
-        self.layer.borderWidth = 0
-        self.backgroundColor = UIColor(named: "butter")
-        self.isEnabled = true
-    }
-    
-    func deactivate(){
-        self.layer.borderWidth = 1.5
-        self.layer.borderColor = .init(gray: 0.5, alpha: 1)
-        self.backgroundColor = .clear
-        self.isEnabled = false
-    }
-}
-
 extension LoginInformationViewController {
-    
     
     // MARK: - 빈공간 touch -> 키보드 내림
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    func allFill(){
+        if let text = nameField.textField.text {
+            if text != "" && birthday.allCheck {
+                nextButton.activate()
+                return
+            }
+        }
+        nextButton.deactivate()
     }
     
 }
@@ -107,11 +111,16 @@ extension LoginInformationViewController {
     }
     
     func textFieldChange(textField: UITextField) {
-        guard let text = textField.text else {
-            return
+        if let text = textField.text {
+            //띄어쓰기 입력 금지
+            if text.last == " " {
+                textField.text?.removeLast()
+            }
+            if text == " " {
+                return
+            }
         }
-        if text == "" { nextButton.deactivate() }
-        else { nextButton.activate() }
+        allFill()
     }
     
     func keyboardWillShow(_ noti : NSNotification) {
@@ -119,7 +128,7 @@ extension LoginInformationViewController {
             let rect = frame.cgRectValue
             let height = rect.height
             
-            nextButton.transform = CGAffineTransform(translationX: 0, y: -(height-43))
+            nextButton.transform = CGAffineTransform(translationX: 0, y: -(height-nextButton.frame.height)-10)
             
         }
     }

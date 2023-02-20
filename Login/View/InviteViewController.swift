@@ -15,15 +15,28 @@ class InviteViewController: UIViewController {
     var codeIs = UILabel()
     var code = UIButton()
     
+    var codeField = TextFieldWithTitle(title: "상대방의 코드를 입력해주세요")
     var nextButton = CommonButton(text: "다 음")
 
     var toast = ToastMessage(type: .info)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initAttribute()
         initAutoLayout()
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func initAttribute(){
@@ -60,12 +73,16 @@ class InviteViewController: UIViewController {
             return btn
         }()
         
+        codeField.textField.placeholder = "이름 입력"
+        codeField.textField.addTarget(self, action: #selector(textFieldChange(textField:)), for: .editingChanged)
+        
+        nextButton.deactivate()
         
         toast.setText("클립보드에 복사되었습니다")
     }
     
     func initAutoLayout(){
-        [largeLabel, image, codeIs, code, toast, nextButton].forEach {
+        [largeLabel, image, codeIs, code, toast, nextButton, codeField].forEach {
             self.view.addSubview($0)
         }
         
@@ -96,6 +113,12 @@ class InviteViewController: UIViewController {
             $0.bottom.equalTo(additionalSafeAreaInsets).offset(-43)
         }
         
+        codeField.snp.makeConstraints {
+            $0.bottom.equalTo(nextButton.snp.top).offset(-44)
+            $0.left.equalToSuperview().offset(21)
+            $0.right.equalToSuperview().offset(-21)
+        }
+        
         toast.snp.makeConstraints {
             $0.bottom.equalToSuperview().offset(-250)
             $0.centerX.equalToSuperview()
@@ -114,6 +137,36 @@ extension InviteViewController {
         //FIXME: userdefaults에 저장한 코드로 변경
         UIPasteboard.general.string = code.currentTitle
         toast.toast()
+    }
+    
+    func textFieldChange(textField: UITextField) {
+        guard let text = textField.text else {
+            return
+        }
+        if text == "" { nextButton.deactivate() }
+        else { nextButton.activate() }
+    }
+    
+    func keyboardWillShow(_ noti : NSNotification) {
+        if let frame = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let rect = frame.cgRectValue
+            let height = rect.height //키보드 높이구하기
+            
+            self.view.transform = CGAffineTransform(translationX: 0, y: -(height-nextButton.frame.height)-10)
+            
+        }
+    }
+
+    func keyboardWillHide(_ noti : NSNotification) {
+        self.view.transform = .identity //원래 자리로 돌아가기
+    }
+    
+}
+
+extension InviteViewController {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 }
