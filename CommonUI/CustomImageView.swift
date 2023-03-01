@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class FeedUIView: UIView {
+open class CustomImageView: UIView {
     
     public var imageView = UIImageView()
     
@@ -16,10 +16,17 @@ open class FeedUIView: UIView {
         case small = 166
     }
     
-    public var size : Size
+    public enum Shape {
+        case round
+        case rect
+    }
     
-    public init(_ size : Size = .big){
+    public var size : Size
+    public var shape : Shape
+    
+    public init(_ size : Size = .big, _ shape : Shape = .round){
         self.size = size
+        self.shape = shape
         super.init(frame: .zero)
         self.backgroundColor = UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
         self.layer.cornerRadius = 16

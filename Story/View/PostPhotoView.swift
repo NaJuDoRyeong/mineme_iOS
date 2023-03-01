@@ -9,7 +9,7 @@ import UIKit
 import CommonUI
 import PhotosUI
 
-class PostPhotoView: FeedUIView {
+class PostPhotoView: CustomImageView {
 
     let postButton = UIButton()
     let representButton = UIButton()

@@ -71,7 +71,7 @@ class StoryPostWriteContentView: UIView {
             tf.layer.cornerRadius = 10
             tf.layer.borderColor = UIColor.lightGray.cgColor
             tf.backgroundColor = .clear
-            tf.text = "무슨 이야기를 남기고 싶나요?"
+            tf.text = "무슨 이야기를 남기고 싶나요?" //FIXME: placeholder로 동작하게하기
             tf.textColor = .lightGray
             tf.font = UIFont.systemFont(ofSize: 14)
 //            tf.delegate = self
