@@ -7,11 +7,14 @@
 
 import UIKit
 import CommonUI
+import PhotosUI
 
 class PostPhotoView: FeedUIView {
 
     let postButton = UIButton()
     let representButton = UIButton()
+    
+    var picker = PHPickerViewController(configuration: PHPickerConfiguration())
     
     init(image: UIImage? = nil){
         super.init()
@@ -29,6 +32,17 @@ class PostPhotoView: FeedUIView {
         self.representButton.setImage(UIImage(named: "icon-check"), for: .normal)
         self.representButton.tintColor = .white
         self.representButton.isHidden = true
+        
+        var configuration = PHPickerConfiguration()
+//    이미지 정보를 가지고 올 필요가 있을땐 photolibarary 를 사용해준다. //use when need image file info.
+//            let photoLibrary = PHPhotoLibrary.shared()
+//            var configuration = PHPickerConfiguration(photoLibrary: photoLibrary)
+
+        configuration.selectionLimit = 3 //한번에 가지고 올 이미지 갯수 제한 //limit selectable image counts
+        configuration.filter = .any(of: [.images])
+        
+        picker = PHPickerViewController(configuration: configuration)
+        picker.delegate = self
     }
     
     func initAutolayout(){
@@ -69,5 +83,43 @@ extension PostPhotoView {
             self.representButton.tintColor = .white
         }
         
+    }
+}
+
+extension PostPhotoView: PHPickerViewControllerDelegate {
+    
+    //FIXME: 여러장 로직 추가 안함
+    public func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+          
+//        var imgData: Data?
+//        var img: UIImage?
+        
+//        var imgFile = PreviewItem()
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+        let itemProvider = results.first?.itemProvider
+        
+        if let itemProvider = itemProvider,
+           itemProvider.canLoadObject(ofClass: UIImage.self){
+            itemProvider.loadObject(ofClass: UIImage.self) {
+                (image, error) in
+                DispatchQueue.main.async {
+                    if let image = image as? UIImage {
+                        self.setImage(image)
+                        
+                    }
+  
+                    //이미지의 정보가 필요할때 사용하는 코드
+//                    let identifiers = results.compactMap(\.assetIdentifier)
+//                    let fetchResult = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
+
+//                    if let filename = fetchResult.firstObject?.value(forKey: "filename") as? String{
+//                       이미지의 이름을 가지고 옴//get image file name
+//                    }
+                    
+                }
+            }
+        }
     }
 }
