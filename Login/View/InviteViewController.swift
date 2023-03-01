@@ -18,7 +18,7 @@ class InviteViewController: UIViewController {
     var codeField = TextFieldWithTitle(title: "상대방의 코드를 입력해주세요")
     var nextButton = CommonButton(text: "다 음")
 
-    var toast = ToastMessage(type: .info)
+    var toast = ToastMessage()
     
 
     override func viewDidLoad() {
@@ -78,7 +78,7 @@ class InviteViewController: UIViewController {
         
         nextButton.deactivate()
         
-        toast.setText("클립보드에 복사되었습니다")
+        toast.typeSetting(.success(text: "클립보드에 복사되었습니다"))
     }
     
     func initAutoLayout(){
