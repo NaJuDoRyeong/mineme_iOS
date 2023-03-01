@@ -21,7 +21,12 @@ class StoryPostViewModel {
     var location = PublishSubject<String>()
     
     init(viewType: ViewType){
+        print("StoryPostViewModel init")
         self.viewType = viewType
+    }
+    
+    deinit{
+        print("StoryPostViewModel deinit")
     }
     
 }
