@@ -179,4 +179,12 @@ extension CustomDatePicker {
             observable.onNext(allCheck)
         }
     }
+    
+    public func getDate() -> String? {
+        if let y = yearPicker.getData(), let m = monthPicker.getData(), let d = dayPicker.getData() {
+            //FITME: month를 문자열로 수정
+            return "\(y) \(m) \(d)"
+        }
+        return nil
+    }
 }

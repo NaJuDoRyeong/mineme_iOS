@@ -24,12 +24,14 @@ open class CustomImageView: UIView {
     public var size : Size
     public var shape : Shape
     
-    public init(_ size : Size = .big, _ shape : Shape = .round){
+    public init(size : Size = .big, shape : Shape = .round){
         self.size = size
         self.shape = shape
         super.init(frame: .zero)
         self.backgroundColor = UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
-        self.layer.cornerRadius = 16
+        if shape == .round {
+            self.layer.cornerRadius = 16
+        }
         self.frame.size = CGSize(width: size.rawValue, height: size.rawValue)
         
         self.imageView.layer.cornerRadius = 16

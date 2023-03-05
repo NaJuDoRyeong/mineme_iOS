@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B905E8F0291AB8490038485D /* FeedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8EF291AB8490038485D /* FeedUIView.swift */; };
+		B905E8F0291AB8490038485D /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8EF291AB8490038485D /* CustomImageView.swift */; };
 		B905E8F8291B3E960038485D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905E8F7291B3E960038485D /* UIImageExtension.swift */; };
 		B92A630729740BD00015AEC1 /* CalendarModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A630629740BD00015AEC1 /* CalendarModal.swift */; };
 		B92A63092974403A0015AEC1 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A63082974403A0015AEC1 /* TextBox.swift */; };
@@ -37,7 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B905E8EF291AB8490038485D /* FeedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIView.swift; sourceTree = "<group>"; };
+		B905E8EF291AB8490038485D /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		B905E8F7291B3E960038485D /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		B92A630629740BD00015AEC1 /* CalendarModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModal.swift; sourceTree = "<group>"; };
 		B92A63082974403A0015AEC1 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 				B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */,
 				B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */,
 				B9F7A909293F6E7100619054 /* CommonButton.swift */,
-				B905E8EF291AB8490038485D /* FeedUIView.swift */,
+				B905E8EF291AB8490038485D /* CustomImageView.swift */,
 				B905E8F7291B3E960038485D /* UIImageExtension.swift */,
 				B95D6458299E028200BCA7E0 /* TextFieldWithTitle.swift */,
 				B9F11FD7291A4E7B00CED4C1 /* CommonUI */,
@@ -203,7 +203,7 @@
 				B96D82E52952F3C400C29AA9 /* CustomDatePicker.swift in Sources */,
 				B905E8F8291B3E960038485D /* UIImageExtension.swift in Sources */,
 				B9F7A90A293F6E7100619054 /* CommonButton.swift in Sources */,
-				B905E8F0291AB8490038485D /* FeedUIView.swift in Sources */,
+				B905E8F0291AB8490038485D /* CustomImageView.swift in Sources */,
 				B9B357F7299A3E530091DADB /* ToastMessage.swift in Sources */,
 				B95D6459299E028200BCA7E0 /* TextFieldWithTitle.swift in Sources */,
 				B9B357F5299A35550091DADB /* CommonHeader.swift in Sources */,
