@@ -11,16 +11,7 @@ import SnapKit
 import PhotosUI
 
 class StoryPostViewController: UIViewController {
-    
-    
-    // MARK: - Version1
-    private var datePicker = DateLabel()
-    private let calendar = CalendarModal()
-    private var photoBox = PostPhotoView()
-    private var textView = UITextView()
-    
-    
-    // MARK: - Version2
+
     let header = CommonHeader()
     let enterInforView : StoryPostEnterInfoView
     let writeContentView : StoryPostWriteContentView
@@ -59,32 +50,6 @@ class StoryPostViewController: UIViewController {
     
     func initAttribute(){
         
-        
-        // MARK: - Version1
-//        textView = {
-//          let tf = UITextView()
-//            tf.frame.size.height = 151
-//            tf.layer.borderWidth = 1
-//            tf.layer.cornerRadius = 10
-//            tf.layer.borderColor = UIColor.lightGray.cgColor
-//            tf.text = "내용을 입력하세요"
-//            tf.textColor = .lightGray
-//            tf.font = UIFont.systemFont(ofSize: 14)
-//            tf.delegate = self
-//            tf.layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-//
-//            return tf
-//        }()
-//
-//        //observer DI
-//        calendar.observer = datePicker.changeDate
-//        calendar.modalPresentationStyle = .popover
-//
-//        photoBox.postButton.addTarget(self, action: #selector(pickImage), for: .touchUpInside)
-//        datePicker.addTarget(self, action: #selector(openDatePicker), for: .touchUpInside)
-        
-//        datePicker.addTarget(self, action: #selector(selectDate(_:)), for: .valueChanged)
-        
         header.setTitle(string: "스토리 작성")
         header.leftIcon.setImage(UIImage(named: "btn-bottom"), for: .normal)
         header.leftIcon.transform = header.leftIcon.transform.rotated(by: .pi/2)
@@ -100,32 +65,7 @@ class StoryPostViewController: UIViewController {
     }
     
     func initAutolayout(){
-        
-        // MARK: - Version1
-//        [photoBox, datePicker, textView].forEach {
-//            self.view.addSubview($0)
-//        }
-//
-//        datePicker.snp.makeConstraints {
-//            $0.top.equalToSuperview().offset(121)
-//            $0.left.equalToSuperview().offset(27)
-//        }
-//
-//        photoBox.snp.makeConstraints {
-//            $0.top.equalToSuperview().offset(156)
-//            $0.centerX.equalToSuperview()
-//            $0.size.equalTo(photoBox.size.rawValue)
-//        }
-//
-//        textView.snp.makeConstraints {
-//            $0.top.equalTo(photoBox.snp.bottom).offset(12)
-//            $0.left.equalTo(photoBox)
-//            $0.right.equalTo(photoBox)
-//            $0.height.equalTo(151)
-//        }
-        
-        
-        // MARK: - Version2
+
         [header, enterInforView, writeContentView,button].forEach {
             self.view.addSubview($0)
         }
@@ -176,16 +116,6 @@ extension StoryPostViewController {
             }
         }
     }
-    
-    
-    
-//    @objc
-//    func openDatePicker(){
-//        calendar.popoverPresentationController?.permittedArrowDirections = []
-//        calendar.popoverPresentationController?.delegate = self
-//        calendar.popoverPresentationController?.sourceView = self.datePicker
-//        self.present(calendar, animated: true)
-//    }
     
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             self.view.endEditing(true)
@@ -268,13 +198,3 @@ extension StoryPostViewController {
         }
     }
 }
-
-
-
-// FIXME: - calender 때문에 만든거라 지울예정
-//extension StoryPostViewController : UIPopoverPresentationControllerDelegate {
-//
-//    public func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-//        return .none
-//    }
-//}

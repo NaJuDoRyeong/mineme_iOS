@@ -15,6 +15,10 @@ class PostPhotoView: CustomImageView {
     let representButton = UIButton()
     
     var picker = PHPickerViewController(configuration: PHPickerConfiguration())
+    var pageControl = UIPageControl()
+    
+    var images = [UIImage]()
+    var representImage = -1
     
     init(image: UIImage? = nil){
         super.init()
@@ -43,11 +47,21 @@ class PostPhotoView: CustomImageView {
         
         picker = PHPickerViewController(configuration: configuration)
         picker.delegate = self
+        
+        pageControl = {
+            let pg = UIPageControl()
+            pg.numberOfPages = images.count
+            pg.currentPage = 0
+            pg.currentPageIndicatorTintColor = .black
+            pg.pageIndicatorTintColor = .lightGray
+            pg.addTarget(self, action: #selector(pageChange), for: UIControl.Event.valueChanged)
+            return pg
+        }()
     }
     
     func initAutolayout(){
         
-        [imageView, postButton, representButton].forEach { self.addSubview($0) }
+        [imageView, postButton, representButton, pageControl].forEach { self.addSubview($0) }
         
         imageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -61,6 +75,12 @@ class PostPhotoView: CustomImageView {
             $0.top.equalTo(imageView).offset(8)
             $0.right.equalTo(imageView).offset(-11)
         }
+        
+        pageControl.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(-5)
+        }
+        
     }
     
     func setImage(_ image: UIImage){
@@ -76,13 +96,24 @@ class PostPhotoView: CustomImageView {
 extension PostPhotoView {
     //TODO: select event 추가하기
     func selectRepresentImage(){
-        if representButton.tintColor == .white {
+        if representButton.tintColor == .black {
+            representImage = -1
+            representButton.tintColor = .white
+        }
+        else{
+            representImage = pageControl.currentPage
+            representButton.tintColor = .black
+        }
+    }
+    
+    func pageChange(){
+        self.setImage(images[pageControl.currentPage])
+        if representImage == pageControl.currentPage {
             self.representButton.tintColor = .black
         }
-        else {
-            self.representButton.tintColor = .white
+        else{
+            representButton.tintColor = .white
         }
-        
     }
 }
 
@@ -90,36 +121,44 @@ extension PostPhotoView: PHPickerViewControllerDelegate {
     
     //FIXME: 여러장 로직 추가 안함
     public func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-          
-//        var imgData: Data?
-//        var img: UIImage?
         
-//        var imgFile = PreviewItem()
+        //        var imgData: Data?
+        //        var img: UIImage?
+        
+        //        var imgFile = PreviewItem()
         
         picker.dismiss(animated: true, completion: nil)
         
-        let itemProvider = results.first?.itemProvider
-        
-        if let itemProvider = itemProvider,
-           itemProvider.canLoadObject(ofClass: UIImage.self){
-            itemProvider.loadObject(ofClass: UIImage.self) {
-                (image, error) in
-                DispatchQueue.main.async {
+        for result in results {
+            let itemProvider = result.itemProvider
+            
+            if itemProvider.canLoadObject(ofClass: UIImage.self){
+                itemProvider.loadObject(ofClass: UIImage.self) {
+                    (image, error) in
                     if let image = image as? UIImage {
-                        self.setImage(image)
-                        
+                        self.images.append(image)
+                        DispatchQueue.main.async {
+                            self.updateImage()
+                        }
                     }
-  
+                    
                     //이미지의 정보가 필요할때 사용하는 코드
-//                    let identifiers = results.compactMap(\.assetIdentifier)
-//                    let fetchResult = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
-
-//                    if let filename = fetchResult.firstObject?.value(forKey: "filename") as? String{
-//                       이미지의 이름을 가지고 옴//get image file name
-//                    }
+                    //                    let identifiers = results.compactMap(\.assetIdentifier)
+                    //                    let fetchResult = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
+                    
+                    //                    if let filename = fetchResult.firstObject?.value(forKey: "filename") as? String{
+                    //                       이미지의 이름을 가지고 옴//get image file name
+                    //                    }
                     
                 }
             }
         }
     }
+
+    func updateImage(){
+        pageControl.numberOfPages = images.count
+        self.setImage(images[0])
+    }
+    
 }
+
