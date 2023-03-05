@@ -74,6 +74,35 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		B949087B29B4C01900B42BDE /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				B9BE5A762923884100E82CFB /* StoryHomeViewController.swift */,
+				B949083529AF779000B42BDE /* FeedtableView.swift */,
+				B949083329AF714400B42BDE /* FeedCell.swift */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		B949087C29B4C02B00B42BDE /* Calender */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calender;
+			sourceTree = "<group>";
+		};
+		B949087D29B4C03F00B42BDE /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				B949082A29AF3E6D00B42BDE /* StoryPostEnterInfoView.swift */,
+				B949082C29AF3F3600B42BDE /* CustomLocationPicker.swift */,
+				B949082E29AF4C5D00B42BDE /* StoryPostWriteContentView.swift */,
+				B96D82F6296EFBE900C29AA9 /* PostPhotoView.swift */,
+				B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
 		B96D82EF296EAC8400C29AA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,15 +141,10 @@
 		B9BE5A752923883700E82CFB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B9BE5A762923884100E82CFB /* StoryHomeViewController.swift */,
-				B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */,
-				B96D82F6296EFBE900C29AA9 /* PostPhotoView.swift */,
-				B949082E29AF4C5D00B42BDE /* StoryPostWriteContentView.swift */,
+				B949087D29B4C03F00B42BDE /* Post */,
+				B949087B29B4C01900B42BDE /* Story */,
+				B949087C29B4C02B00B42BDE /* Calender */,
 				B96D82F4296EF50900C29AA9 /* DateLabel.swift */,
-				B949082C29AF3F3600B42BDE /* CustomLocationPicker.swift */,
-				B949083529AF779000B42BDE /* FeedtableView.swift */,
-				B949082A29AF3E6D00B42BDE /* StoryPostEnterInfoView.swift */,
-				B949083329AF714400B42BDE /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
