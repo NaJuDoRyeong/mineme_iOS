@@ -8,7 +8,7 @@
 import UIKit
 import CommonUI
 
-class FeedPriview: FeedUIView {
+class FeedPriview: CustomImageView {
     
     private var postButton : UIButton?
     

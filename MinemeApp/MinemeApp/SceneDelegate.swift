@@ -20,10 +20,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-//        window.rootViewController = HomeSettingViewController()
-//        window.rootViewController = UINavigationController(rootViewController: HomeViewController())
-//        window.rootViewController = ViewController()
-        window.rootViewController = StoryPostViewController()
         
         // MARK - real View
         window.rootViewController = ViewController()
