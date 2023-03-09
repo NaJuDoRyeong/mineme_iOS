@@ -45,6 +45,11 @@ public class StoryHomeViewController: UIViewController {
         vc.observable.bind(to: contentCollectionView.rx.items(cellIdentifier: ContentPreviewCell.cellID, cellType: ContentPreviewCell.self)) { index, content, cell in
             cell.bind(content)
         }.disposed(by: disposeBag)
+        
+        contentCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
+        contentCollectionView.rx.itemSelected.bind { indexPath in
+            self.navigationController?.pushViewController(FeedtableView(), animated: true)
+        }.disposed(by: disposeBag)
     }
     
     func initAttribute(){
@@ -69,7 +74,6 @@ public class StoryHomeViewController: UIViewController {
             view.register(ContentPreviewCell.self, forCellWithReuseIdentifier: ContentPreviewCell.cellID)
             return view
         }()
-        contentCollectionView.rx.setDelegate(self)
         
     }
     
