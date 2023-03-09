@@ -13,6 +13,14 @@
 		B949083229AF4FCE00B42BDE /* StoryPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949083129AF4FCE00B42BDE /* StoryPostViewModel.swift */; };
 		B949083429AF714400B42BDE /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949083329AF714400B42BDE /* FeedCell.swift */; };
 		B949083629AF779000B42BDE /* FeedtableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949083529AF779000B42BDE /* FeedtableView.swift */; };
+		B949087F29B4C0E200B42BDE /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949087E29B4C0E200B42BDE /* CalenderViewController.swift */; };
+		B949088129B4C45B00B42BDE /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B949088029B4C45B00B42BDE /* Common.framework */; };
+		B949088229B4C45B00B42BDE /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B949088029B4C45B00B42BDE /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B949088829B5D62E00B42BDE /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949088729B5D62E00B42BDE /* CalendarCollectionViewCell.swift */; };
+		B949089329BA1BC200B42BDE /* WheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089229BA1BC200B42BDE /* WheelPicker.swift */; };
+		B949089529BA1D8400B42BDE /* StoryHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089429BA1D8400B42BDE /* StoryHomeViewModel.swift */; };
+		B949089829BA1E4800B42BDE /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089729BA1E4800B42BDE /* Content.swift */; };
+		B949089A29BA21E400B42BDE /* ContentPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089929BA21E400B42BDE /* ContentPreviewCell.swift */; };
 		B96D82EE296EA7A900C29AA9 /* StoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */; };
 		B96D82F1296EAC8400C29AA9 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82F0296EAC8400C29AA9 /* CommonUI.framework */; };
 		B96D82F2296EAC8400C29AA9 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82F0296EAC8400C29AA9 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -31,6 +39,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B96D82F2296EAC8400C29AA9 /* CommonUI.framework in Embed Frameworks */,
+				B949088229B4C45B00B42BDE /* Common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +53,13 @@
 		B949083129AF4FCE00B42BDE /* StoryPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostViewModel.swift; sourceTree = "<group>"; };
 		B949083329AF714400B42BDE /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		B949083529AF779000B42BDE /* FeedtableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedtableView.swift; sourceTree = "<group>"; };
+		B949087E29B4C0E200B42BDE /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		B949088029B4C45B00B42BDE /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B949088729B5D62E00B42BDE /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		B949089229BA1BC200B42BDE /* WheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPicker.swift; sourceTree = "<group>"; };
+		B949089429BA1D8400B42BDE /* StoryHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHomeViewModel.swift; sourceTree = "<group>"; };
+		B949089729BA1E4800B42BDE /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		B949089929BA21E400B42BDE /* ContentPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPreviewCell.swift; sourceTree = "<group>"; };
 		B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostViewController.swift; sourceTree = "<group>"; };
 		B96D82F0296EAC8400C29AA9 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96D82F4296EF50900C29AA9 /* DateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLabel.swift; sourceTree = "<group>"; };
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B949088129B4C45B00B42BDE /* Common.framework in Frameworks */,
 				B9BE5A7A2923BD5D00E82CFB /* SnapKit in Frameworks */,
 				B96D82F1296EAC8400C29AA9 /* CommonUI.framework in Frameworks */,
 			);
@@ -70,25 +87,30 @@
 			isa = PBXGroup;
 			children = (
 				B949083129AF4FCE00B42BDE /* StoryPostViewModel.swift */,
+				B949089429BA1D8400B42BDE /* StoryHomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B949087B29B4C01900B42BDE /* Story */ = {
+		B949087B29B4C01900B42BDE /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				B9BE5A762923884100E82CFB /* StoryHomeViewController.swift */,
 				B949083529AF779000B42BDE /* FeedtableView.swift */,
 				B949083329AF714400B42BDE /* FeedCell.swift */,
+				B949089929BA21E400B42BDE /* ContentPreviewCell.swift */,
 			);
-			path = Story;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		B949087C29B4C02B00B42BDE /* Calender */ = {
+		B949087C29B4C02B00B42BDE /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				B949087E29B4C0E200B42BDE /* CalenderViewController.swift */,
+				B949088729B5D62E00B42BDE /* CalendarCollectionViewCell.swift */,
+				B949089229BA1BC200B42BDE /* WheelPicker.swift */,
 			);
-			path = Calender;
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		B949087D29B4C03F00B42BDE /* Post */ = {
@@ -103,9 +125,18 @@
 			path = Post;
 			sourceTree = "<group>";
 		};
+		B949089629BA1E3600B42BDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B949089729BA1E4800B42BDE /* Content.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B96D82EF296EAC8400C29AA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B949088029B4C45B00B42BDE /* Common.framework */,
 				B96D82F0296EAC8400C29AA9 /* CommonUI.framework */,
 			);
 			name = Frameworks;
@@ -117,6 +148,7 @@
 				B9BE5A6A292387FD00E82CFB /* Story */,
 				B9BE5A752923883700E82CFB /* View */,
 				B949083029AF4FAC00B42BDE /* ViewModel */,
+				B949089629BA1E3600B42BDE /* Model */,
 				B9BE5A69292387FD00E82CFB /* Products */,
 				B96D82EF296EAC8400C29AA9 /* Frameworks */,
 			);
@@ -141,9 +173,9 @@
 		B9BE5A752923883700E82CFB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B949087B29B4C01900B42BDE /* Home */,
+				B949087C29B4C02B00B42BDE /* Calendar */,
 				B949087D29B4C03F00B42BDE /* Post */,
-				B949087B29B4C01900B42BDE /* Story */,
-				B949087C29B4C02B00B42BDE /* Calender */,
 				B96D82F4296EF50900C29AA9 /* DateLabel.swift */,
 			);
 			path = View;
@@ -236,10 +268,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B949089A29BA21E400B42BDE /* ContentPreviewCell.swift in Sources */,
+				B949088829B5D62E00B42BDE /* CalendarCollectionViewCell.swift in Sources */,
 				B96D82EE296EA7A900C29AA9 /* StoryPostViewController.swift in Sources */,
 				B949083229AF4FCE00B42BDE /* StoryPostViewModel.swift in Sources */,
+				B949087F29B4C0E200B42BDE /* CalenderViewController.swift in Sources */,
 				B949082D29AF3F3600B42BDE /* CustomLocationPicker.swift in Sources */,
+				B949089529BA1D8400B42BDE /* StoryHomeViewModel.swift in Sources */,
+				B949089329BA1BC200B42BDE /* WheelPicker.swift in Sources */,
 				B96D82F7296EFBE900C29AA9 /* PostPhotoView.swift in Sources */,
+				B949089829BA1E4800B42BDE /* Content.swift in Sources */,
 				B9BE5A772923884100E82CFB /* StoryHomeViewController.swift in Sources */,
 				B949083629AF779000B42BDE /* FeedtableView.swift in Sources */,
 				B96D82F5296EF50900C29AA9 /* DateLabel.swift in Sources */,
