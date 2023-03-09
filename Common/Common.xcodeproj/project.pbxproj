@@ -12,6 +12,7 @@
 		B90633D0297805A500476F2A /* APIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90633CF297805A500476F2A /* APIResponder.swift */; };
 		B92A6318297455090015AEC1 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = B92A6317297455090015AEC1 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B92A631F297455260015AEC1 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A631E297455260015AEC1 /* DateFormatter.swift */; };
+		B94908A529BA462600B42BDE /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94908A429BA462600B42BDE /* DayOfWeek.swift */; };
 		B9736F6129952B3E00F20196 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9736F6029952B3E00F20196 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		B92A6314297455090015AEC1 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92A6317297455090015AEC1 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		B92A631E297455260015AEC1 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		B94908A429BA462600B42BDE /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
 		B9736F6029952B3E00F20196 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +44,7 @@
 				B92A6316297455090015AEC1 /* Common */,
 				B9736F5F2994E1ED00F20196 /* Network */,
 				B92A631E297455260015AEC1 /* DateFormatter.swift */,
+				B94908A429BA462600B42BDE /* DayOfWeek.swift */,
 				B92A6315297455090015AEC1 /* Products */,
 				B95100242997D2C9002CD38E /* Frameworks */,
 			);
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B92A631F297455260015AEC1 /* DateFormatter.swift in Sources */,
+				B94908A529BA462600B42BDE /* DayOfWeek.swift in Sources */,
 				B9736F6129952B3E00F20196 /* Constant.swift in Sources */,
 				B90633D0297805A500476F2A /* APIResponder.swift in Sources */,
 				B90633C32977F2C400476F2A /* ResponseDTO.swift in Sources */,
