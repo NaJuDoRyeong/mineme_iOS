@@ -16,7 +16,6 @@ public enum DayOfWeek: CaseIterable{
     case fri
     case sat
     
-//    public let allItems: [Self] = [.sun, .mon, .tue, .wed, .thr, .fri, .sat]
 }
 
 extension DayOfWeek {
