@@ -53,6 +53,9 @@ open class CommonButton: UIButton {
         }
     }
     
+    public func setText(_ text: String){
+        self.text.text = text
+    }
 }
 
 extension CommonButton {
