@@ -7,8 +7,12 @@
 
 import UIKit
 import SnapKit
+import RxSwift
 
 public class LoginViewController: UIViewController {
+    
+    let vm = LoginViewModel()
+    let disposeBag = DisposeBag()
     
     let logo = UIImageView()
     let kakaoButton = KakaoLoginButton()
@@ -18,7 +22,15 @@ public class LoginViewController: UIViewController {
         super.viewDidLoad()
         initAttribute()
         initAutolayout()
-        test()
+        bind()
+    }
+    
+    func bind(){
+        vm.status.subscribe(onNext: { [weak self] in
+            if $0 == .login {
+                self?.nextProcess()
+            }
+        }).disposed(by: disposeBag)
     }
     
     func initAttribute(){
@@ -47,21 +59,31 @@ public class LoginViewController: UIViewController {
             $0.right.equalToSuperview().offset(-21)
         }
         
+        kakaoButton.addTarget(self, action: #selector(kakaoLogin), for: .touchUpInside)
+        appleButton.addTarget(self, action: #selector(appleLogin), for: .touchUpInside)
+        
     }
     
 }
 
 extension LoginViewController {
     
-    func test(){
-        kakaoButton.addTarget(self, action: #selector(nextProcess), for: .touchUpInside)
-        appleButton.addTarget(self, action: #selector(nextProcess), for: .touchUpInside)
-    }
     
     @objc func nextProcess(){
         let presenter = LoginInformationViewController()
         presenter.modalPresentationStyle = .fullScreen
         
         present(presenter, animated: true)
+    }
+}
+
+@objc
+extension LoginViewController {
+    func kakaoLogin(){
+        vm.kakaoLogin()
+    }
+    
+    func appleLogin(){
+        vm.appleLogin()
     }
 }
