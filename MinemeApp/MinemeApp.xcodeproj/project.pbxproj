@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A453AA945F93C2E82D6E9B04 /* Pods_MinemeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6142CDB25D79F7A284EFC470 /* Pods_MinemeApp.framework */; };
 		B95D6451299DFF4600BCA7E0 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95D6450299DFF4600BCA7E0 /* Login.framework */; };
 		B95D6452299DFF4600BCA7E0 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B95D6450299DFF4600BCA7E0 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B96D82E72952F65400C29AA9 /* TestUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82E62952F65400C29AA9 /* TestUIViewController.swift */; };
@@ -14,7 +15,6 @@
 		B96D82EA2952FA0700C29AA9 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82E82952FA0700C29AA9 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9BE5A732923881A00E82CFB /* Story.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BE5A722923881A00E82CFB /* Story.framework */; };
 		B9BE5A742923881A00E82CFB /* Story.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9BE5A722923881A00E82CFB /* Story.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B9BE5A7D2923BDA600E82CFB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9BE5A7C2923BDA600E82CFB /* SnapKit */; };
 		B9F11F84291696CC00CED4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11F83291696CC00CED4C1 /* AppDelegate.swift */; };
 		B9F11F86291696CC00CED4C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11F85291696CC00CED4C1 /* SceneDelegate.swift */; };
 		B9F11F88291696CC00CED4C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11F87291696CC00CED4C1 /* ViewController.swift */; };
@@ -48,6 +48,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		13109AA53D33ADA4F6DFC96B /* Pods-MinemeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinemeApp.release.xcconfig"; path = "Target Support Files/Pods-MinemeApp/Pods-MinemeApp.release.xcconfig"; sourceTree = "<group>"; };
+		6142CDB25D79F7A284EFC470 /* Pods_MinemeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinemeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E576BBC10B960B869A88707 /* Pods-MinemeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinemeApp.debug.xcconfig"; path = "Target Support Files/Pods-MinemeApp/Pods-MinemeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B95D6450299DFF4600BCA7E0 /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96D82E62952F65400C29AA9 /* TestUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIViewController.swift; sourceTree = "<group>"; };
 		B96D82E82952FA0700C29AA9 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,25 +73,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9BE5A7D2923BDA600E82CFB /* SnapKit in Frameworks */,
 				B9F7A904293F632F00619054 /* Onboarding.framework in Frameworks */,
 				B95D6451299DFF4600BCA7E0 /* Login.framework in Frameworks */,
 				B9BE5A732923881A00E82CFB /* Story.framework in Frameworks */,
 				B96D82E92952FA0700C29AA9 /* CommonUI.framework in Frameworks */,
 				B9F11FBD2916B48200CED4C1 /* Home.framework in Frameworks */,
 				B9FDB7EF29361789002DB8B1 /* Setting.framework in Frameworks */,
+				A453AA945F93C2E82D6E9B04 /* Pods_MinemeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		899609219511AF583CA059D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E576BBC10B960B869A88707 /* Pods-MinemeApp.debug.xcconfig */,
+				13109AA53D33ADA4F6DFC96B /* Pods-MinemeApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		B9F11F77291696CC00CED4C1 = {
 			isa = PBXGroup;
 			children = (
 				B9F11F82291696CC00CED4C1 /* MinemeApp */,
 				B9F11F81291696CC00CED4C1 /* Products */,
 				B9F11FBB2916B48200CED4C1 /* Frameworks */,
+				899609219511AF583CA059D7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +138,7 @@
 				B9BE5A722923881A00E82CFB /* Story.framework */,
 				B9BE5A4D2923779E00E82CFB /* Story.framework */,
 				B9F11FBC2916B48200CED4C1 /* Home.framework */,
+				6142CDB25D79F7A284EFC470 /* Pods_MinemeApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,19 +150,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9F11F94291696CD00CED4C1 /* Build configuration list for PBXNativeTarget "MinemeApp" */;
 			buildPhases = (
+				B2560794C2BE88B622A20E28 /* [CP] Check Pods Manifest.lock */,
 				B9F11F7C291696CC00CED4C1 /* Sources */,
 				B9F11F7D291696CC00CED4C1 /* Frameworks */,
 				B9F11F7E291696CC00CED4C1 /* Resources */,
 				B9F11FBF2916B48200CED4C1 /* Embed Frameworks */,
+				2EAF7EC991BDA48FC1E175DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MinemeApp;
-			packageProductDependencies = (
-				B9BE5A7C2923BDA600E82CFB /* SnapKit */,
-			);
 			productName = MinemeApp;
 			productReference = B9F11F80291696CC00CED4C1 /* MinemeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -176,9 +190,6 @@
 				Base,
 			);
 			mainGroup = B9F11F77291696CC00CED4C1;
-			packageReferences = (
-				B9BE5A7B2923BDA600E82CFB /* XCRemoteSwiftPackageReference "SnapKit" */,
-			);
 			productRefGroup = B9F11F81291696CC00CED4C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -199,6 +210,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EAF7EC991BDA48FC1E175DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MinemeApp/Pods-MinemeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MinemeApp/Pods-MinemeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MinemeApp/Pods-MinemeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2560794C2BE88B622A20E28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinemeApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9F11F7C291696CC00CED4C1 /* Sources */ = {
@@ -331,6 +384,7 @@
 		};
 		B9F11F95291696CD00CED4C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E576BBC10B960B869A88707 /* Pods-MinemeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -339,6 +393,7 @@
 				DEVELOPMENT_TEAM = PF6QF5WXTK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MinemeApp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "기록을 위해서 갤러리 및 위치 접근 동의가 필요해요.\n 위치 접근 동의가 필요해요.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -360,6 +415,7 @@
 		};
 		B9F11F96291696CD00CED4C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13109AA53D33ADA4F6DFC96B /* Pods-MinemeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -368,6 +424,7 @@
 				DEVELOPMENT_TEAM = PF6QF5WXTK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MinemeApp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "기록을 위해서 갤러리 및 위치 접근 동의가 필요해요.\n 위치 접근 동의가 필요해요.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -409,25 +466,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B9BE5A7B2923BDA600E82CFB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B9BE5A7C2923BDA600E82CFB /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9BE5A7B2923BDA600E82CFB /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9F11F78291696CC00CED4C1 /* Project object */;
 }
