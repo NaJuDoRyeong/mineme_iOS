@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		277FFBB902267ECE88187A24 /* Pods_Story.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519625ECFD770641EE6F8DA7 /* Pods_Story.framework */; };
 		B949082B29AF3E6D00B42BDE /* StoryPostEnterInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949082A29AF3E6D00B42BDE /* StoryPostEnterInfoView.swift */; };
 		B949082D29AF3F3600B42BDE /* CustomLocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949082C29AF3F3600B42BDE /* CustomLocationPicker.swift */; };
 		B949082F29AF4C5D00B42BDE /* StoryPostWriteContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949082E29AF4C5D00B42BDE /* StoryPostWriteContentView.swift */; };
@@ -46,6 +47,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4332A94F8F73D9B6CAF89894 /* Pods-Story.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Story.debug.xcconfig"; path = "Target Support Files/Pods-Story/Pods-Story.debug.xcconfig"; sourceTree = "<group>"; };
+		48A9566EF5CEDDB22CC0D217 /* Pods-Story.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Story.release.xcconfig"; path = "Target Support Files/Pods-Story/Pods-Story.release.xcconfig"; sourceTree = "<group>"; };
+		519625ECFD770641EE6F8DA7 /* Pods_Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B949082A29AF3E6D00B42BDE /* StoryPostEnterInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostEnterInfoView.swift; sourceTree = "<group>"; };
 		B949082C29AF3F3600B42BDE /* CustomLocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationPicker.swift; sourceTree = "<group>"; };
 		B949082E29AF4C5D00B42BDE /* StoryPostWriteContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostWriteContentView.swift; sourceTree = "<group>"; };
@@ -75,12 +79,23 @@
 			files = (
 				B949088129B4C45B00B42BDE /* Common.framework in Frameworks */,
 				B96D82F1296EAC8400C29AA9 /* CommonUI.framework in Frameworks */,
+				277FFBB902267ECE88187A24 /* Pods_Story.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82E5DDFA21A97D6386728CCD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4332A94F8F73D9B6CAF89894 /* Pods-Story.debug.xcconfig */,
+				48A9566EF5CEDDB22CC0D217 /* Pods-Story.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		B949083029AF4FAC00B42BDE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +151,7 @@
 			children = (
 				B949088029B4C45B00B42BDE /* Common.framework */,
 				B96D82F0296EAC8400C29AA9 /* CommonUI.framework */,
+				519625ECFD770641EE6F8DA7 /* Pods_Story.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,6 +165,7 @@
 				B949089629BA1E3600B42BDE /* Model */,
 				B9BE5A69292387FD00E82CFB /* Products */,
 				B96D82EF296EAC8400C29AA9 /* Frameworks */,
+				82E5DDFA21A97D6386728CCD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9BE5A6F292387FD00E82CFB /* Build configuration list for PBXNativeTarget "Story" */;
 			buildPhases = (
+				88DE8C38D1AE0066CCA44958 /* [CP] Check Pods Manifest.lock */,
 				B9BE5A63292387FD00E82CFB /* Headers */,
 				B9BE5A64292387FD00E82CFB /* Sources */,
 				B9BE5A65292387FD00E82CFB /* Frameworks */,
@@ -208,8 +226,6 @@
 			dependencies = (
 			);
 			name = Story;
-			packageProductDependencies = (
-			);
 			productName = Story;
 			productReference = B9BE5A68292387FD00E82CFB /* Story.framework */;
 			productType = "com.apple.product-type.framework";
@@ -238,8 +254,6 @@
 				Base,
 			);
 			mainGroup = B9BE5A5E292387FD00E82CFB;
-			packageReferences = (
-			);
 			productRefGroup = B9BE5A69292387FD00E82CFB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +272,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88DE8C38D1AE0066CCA44958 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Story-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9BE5A64292387FD00E82CFB /* Sources */ = {
@@ -408,6 +447,7 @@
 		};
 		B9BE5A70292387FD00E82CFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4332A94F8F73D9B6CAF89894 /* Pods-Story.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +479,7 @@
 		};
 		B9BE5A71292387FD00E82CFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48A9566EF5CEDDB22CC0D217 /* Pods-Story.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
