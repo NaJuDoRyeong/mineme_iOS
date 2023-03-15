@@ -1,0 +1,74 @@
+use_frameworks!
+
+workspace 'mineme'
+project 'MinemeApp/MinemeApp.project'
+project 'Onboarding/Onboarding.project'
+project 'Login/Login.project'
+project 'Home/Home.project'
+project 'Story/Story.project'
+project 'Setting/Setting.project'
+project 'Common/Common.project'
+project 'CommonUI/CommonUI.project'
+
+def shared_pods
+	pod "SnapKit"
+	pod "RxSwift"
+	pod "RxCocoa"
+	pod "Moya/RxSwift"
+	pod "Kingfisher"
+end
+
+def kakao_pods
+	pod "KakaoSDKCommon"
+	pod "KakaoSDKAuth"
+	pod "KakaoSDKUser"
+end
+
+
+target "MinemeApp" do
+	project "MinemeApp/MinemeApp.project"
+	shared_pods
+	kakao_pods
+	
+end
+
+target "Onboarding" do
+	project "Onboarding/Onboarding.project"
+	shared_pods
+end
+
+target "Login" do
+	project "Login/Login.project"
+	shared_pods
+	kakao_pods
+end
+
+target "Home" do
+	project "Home/Home.project"
+	shared_pods
+end
+
+target "Story" do
+	project "Story/Story.project"
+	shared_pods
+end
+
+target "Setting" do
+	project "Setting/Setting.project"
+	shared_pods
+end
+
+target "CommonUI" do
+	project "CommonUI/CommonUI.project"
+	pod "SnapKit"
+	pod "RxSwift"
+	pod "RxCocoa"
+	pod "Kingfisher"
+end
+
+target "Common" do
+	project "Common/Common.project"
+	pod "Moya/RxSwift"
+	pod "RxSwift"
+	pod "RxCocoa"
+end
