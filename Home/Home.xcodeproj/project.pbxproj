@@ -13,7 +13,6 @@
 		B9736F6929967C5000F20196 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9736F6829967C5000F20196 /* Common.framework */; };
 		B9736F6A29967C5000F20196 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9736F6829967C5000F20196 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9736F6C29967E6200F20196 /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9736F6B29967E6200F20196 /* HomeProvider.swift */; };
-		B9BE5A5B292386E800E82CFB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9BE5A5A292386E800E82CFB /* SnapKit */; };
 		B9F11FA5291696DB00CED4C1 /* Home.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F11FA4291696DB00CED4C1 /* Home.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9F11FB82916AD0100CED4C1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FB72916AD0100CED4C1 /* HomeViewController.swift */; };
 		B9F11FBA2916B21B00CED4C1 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FB92916B21B00CED4C1 /* ProfileImageView.swift */; };
@@ -62,7 +61,6 @@
 			files = (
 				B9736F6929967C5000F20196 /* Common.framework in Frameworks */,
 				B9F11FE3291A4F1500CED4C1 /* CommonUI.framework in Frameworks */,
-				B9BE5A5B292386E800E82CFB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +180,6 @@
 			);
 			name = Home;
 			packageProductDependencies = (
-				B9BE5A5A292386E800E82CFB /* SnapKit */,
 			);
 			productName = Home;
 			productReference = B9F11FA1291696DB00CED4C1 /* Home.framework */;
@@ -213,8 +210,6 @@
 			);
 			mainGroup = B9F11F97291696DB00CED4C1;
 			packageReferences = (
-				B9F11FC6291A37E600CED4C1 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				B951001F2997D1EB002CD38E /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = B9F11FA2291696DB00CED4C1 /* Products */;
 			projectDirPath = "";
@@ -464,33 +459,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B951001F2997D1EB002CD38E /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		B9F11FC6291A37E600CED4C1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B9BE5A5A292386E800E82CFB /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9F11FC6291A37E600CED4C1 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9F11F98291696DB00CED4C1 /* Project object */;
 }

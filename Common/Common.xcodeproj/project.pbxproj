@@ -7,22 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43D80AADE2F3A2E40D3A8C3B /* Pods_Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A254B241D23A7BDB694594 /* Pods_Common.framework */; };
 		B90633C32977F2C400476F2A /* ResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90633C22977F2C400476F2A /* ResponseDTO.swift */; };
-		B90633CA2978053800476F2A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B90633C92978053800476F2A /* Moya */; };
 		B90633D0297805A500476F2A /* APIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90633CF297805A500476F2A /* APIResponder.swift */; };
 		B92A6318297455090015AEC1 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = B92A6317297455090015AEC1 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B92A631F297455260015AEC1 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A631E297455260015AEC1 /* DateFormatter.swift */; };
 		B94908A529BA462600B42BDE /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94908A429BA462600B42BDE /* DayOfWeek.swift */; };
+		B96A35B729C22F9600AC685F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35B629C22F9600AC685F /* NetworkManager.swift */; };
+		B96A35BD29C252B600AC685F /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35BC29C252B600AC685F /* UserDefault.swift */; };
 		B9736F6129952B3E00F20196 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9736F6029952B3E00F20196 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B27415BB57A0C0093FBC929 /* Pods-Common.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.release.xcconfig"; path = "Target Support Files/Pods-Common/Pods-Common.release.xcconfig"; sourceTree = "<group>"; };
+		66A3B8FE2EEA2ED04E4D643A /* Pods-Common.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.debug.xcconfig"; path = "Target Support Files/Pods-Common/Pods-Common.debug.xcconfig"; sourceTree = "<group>"; };
+		B6A254B241D23A7BDB694594 /* Pods_Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90633C22977F2C400476F2A /* ResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDTO.swift; sourceTree = "<group>"; };
 		B90633CF297805A500476F2A /* APIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponder.swift; sourceTree = "<group>"; };
 		B92A6314297455090015AEC1 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92A6317297455090015AEC1 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		B92A631E297455260015AEC1 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		B94908A429BA462600B42BDE /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
+		B96A35B629C22F9600AC685F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B96A35BC29C252B600AC685F /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		B9736F6029952B3E00F20196 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -31,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B90633CA2978053800476F2A /* Moya in Frameworks */,
+				43D80AADE2F3A2E40D3A8C3B /* Pods_Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,10 +50,12 @@
 			children = (
 				B92A6316297455090015AEC1 /* Common */,
 				B9736F5F2994E1ED00F20196 /* Network */,
+				B96A35BC29C252B600AC685F /* UserDefault.swift */,
 				B92A631E297455260015AEC1 /* DateFormatter.swift */,
 				B94908A429BA462600B42BDE /* DayOfWeek.swift */,
 				B92A6315297455090015AEC1 /* Products */,
 				B95100242997D2C9002CD38E /* Frameworks */,
+				DD28AF960CD8DEE241891DAC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +78,7 @@
 		B95100242997D2C9002CD38E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6A254B241D23A7BDB694594 /* Pods_Common.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -79,8 +89,19 @@
 				B90633C22977F2C400476F2A /* ResponseDTO.swift */,
 				B90633CF297805A500476F2A /* APIResponder.swift */,
 				B9736F6029952B3E00F20196 /* Constant.swift */,
+				B96A35B629C22F9600AC685F /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DD28AF960CD8DEE241891DAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66A3B8FE2EEA2ED04E4D643A /* Pods-Common.debug.xcconfig */,
+				2B27415BB57A0C0093FBC929 /* Pods-Common.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +122,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B92A631B297455090015AEC1 /* Build configuration list for PBXNativeTarget "Common" */;
 			buildPhases = (
+				1E7E878A6B5A536D9A1B8C4E /* [CP] Check Pods Manifest.lock */,
 				B92A630F297455090015AEC1 /* Headers */,
 				B92A6310297455090015AEC1 /* Sources */,
 				B92A6311297455090015AEC1 /* Frameworks */,
@@ -112,7 +134,6 @@
 			);
 			name = Common;
 			packageProductDependencies = (
-				B90633C92978053800476F2A /* Moya */,
 			);
 			productName = Common;
 			productReference = B92A6314297455090015AEC1 /* Common.framework */;
@@ -143,7 +164,6 @@
 			);
 			mainGroup = B92A630A297455090015AEC1;
 			packageReferences = (
-				B90633C62978053800476F2A /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = B92A6315297455090015AEC1 /* Products */;
 			projectDirPath = "";
@@ -164,11 +184,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E7E878A6B5A536D9A1B8C4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Common-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B92A6310297455090015AEC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96A35BD29C252B600AC685F /* UserDefault.swift in Sources */,
+				B96A35B729C22F9600AC685F /* NetworkManager.swift in Sources */,
 				B92A631F297455260015AEC1 /* DateFormatter.swift in Sources */,
 				B94908A529BA462600B42BDE /* DayOfWeek.swift in Sources */,
 				B9736F6129952B3E00F20196 /* Constant.swift in Sources */,
@@ -302,6 +349,7 @@
 		};
 		B92A631C297455090015AEC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66A3B8FE2EEA2ED04E4D643A /* Pods-Common.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -333,6 +381,7 @@
 		};
 		B92A631D297455090015AEC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B27415BB57A0C0093FBC929 /* Pods-Common.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -383,25 +432,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B90633C62978053800476F2A /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B90633C92978053800476F2A /* Moya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B90633C62978053800476F2A /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B92A630B297455090015AEC1 /* Project object */;
 }
