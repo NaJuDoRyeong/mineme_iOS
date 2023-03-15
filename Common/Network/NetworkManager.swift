@@ -1,10 +1,3 @@
-//
-//  NetworkManager.swift
-//  Common
-//
-//  Created by 김민령 on 2023/03/16.
-//
-
 import Foundation
 import Moya
 import RxSwift

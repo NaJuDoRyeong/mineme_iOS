@@ -9,7 +9,7 @@ import Foundation
 
 struct ResponseDTO<CommonDataDTO: Decodable> : Decodable {
     var success : Bool
-    var data : CommonDataDTO
+    var data : CommonDataDTO?
     var error : ErrorDTO?
     
 }
