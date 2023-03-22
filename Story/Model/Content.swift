@@ -14,3 +14,11 @@ struct Content {
     let images :  [String]
     let text: String
 }
+
+
+//FIXME: temporary data set
+struct Post : Encodable {
+    var date : String
+    var title : String
+    var content : String
+}

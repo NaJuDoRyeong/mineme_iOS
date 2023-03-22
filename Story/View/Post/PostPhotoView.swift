@@ -10,6 +10,8 @@ import CommonUI
 import PhotosUI
 
 class PostPhotoView: CustomImageView {
+    
+    let viewModel : StoryPostViewModel
 
     let postButton = UIButton()
     let representButton = UIButton()
@@ -17,15 +19,21 @@ class PostPhotoView: CustomImageView {
     var picker = PHPickerViewController(configuration: PHPickerConfiguration())
     var pageControl = UIPageControl()
     
-    var images = [UIImage]()
     var representImage = -1
     
-    init(image: UIImage? = nil){
+    init(viewModel : StoryPostViewModel, image: UIImage? = nil){
+        self.viewModel = viewModel
         super.init()
         self.imageView.image = image
         initAttribute()
         initAutolayout()
     }
+    
+//    init(image: UIImage? = nil){
+//        self.imageView.image = image
+//        initAttribute()
+//        initAutolayout()
+//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -37,10 +45,12 @@ class PostPhotoView: CustomImageView {
         self.representButton.tintColor = .white
         self.representButton.isHidden = true
         
-        var configuration = PHPickerConfiguration()
-//    이미지 정보를 가지고 올 필요가 있을땐 photolibarary 를 사용해준다. //use when need image file info.
-//            let photoLibrary = PHPhotoLibrary.shared()
-//            var configuration = PHPickerConfiguration(photoLibrary: photoLibrary)
+//        var configuration = PHPickerConfiguration()
+        
+        
+        ///use when need image file info.
+            let photoLibrary = PHPhotoLibrary.shared()
+            var configuration = PHPickerConfiguration(photoLibrary: photoLibrary)
 
         configuration.selectionLimit = 3 //한번에 가지고 올 이미지 갯수 제한 //limit selectable image counts
         configuration.filter = .any(of: [.images])
@@ -50,7 +60,7 @@ class PostPhotoView: CustomImageView {
         
         pageControl = {
             let pg = UIPageControl()
-            pg.numberOfPages = images.count
+            pg.numberOfPages = viewModel.images?.count ?? 0
             pg.currentPage = 0
             pg.currentPageIndicatorTintColor = .black
             pg.pageIndicatorTintColor = .lightGray
@@ -107,7 +117,12 @@ extension PostPhotoView {
     }
     
     func pageChange(){
-        self.setImage(images[pageControl.currentPage])
+        
+        guard let data = viewModel.images?[pageControl.currentPage]
+        else { return }
+        
+        
+        self.setImage(UIImage(data: data)!)
         if representImage == pageControl.currentPage {
             self.representButton.tintColor = .black
         }
@@ -133,12 +148,21 @@ extension PostPhotoView: PHPickerViewControllerDelegate {
             let itemProvider = result.itemProvider
             
             if itemProvider.canLoadObject(ofClass: UIImage.self){
-                itemProvider.loadObject(ofClass: UIImage.self) {
+                itemProvider.loadObject(ofClass: UIImage.self) { [weak self]
                     (image, error) in
                     if let image = image as? UIImage {
-                        self.images.append(image)
-                        DispatchQueue.main.async {
-                            self.updateImage()
+                        
+                        if let data = image.downscaleTOjpegData(maxBytes: 1_000_000) {
+                            if self?.viewModel.images == nil {
+                                self?.viewModel.images = [data]
+                            }
+                            else{
+                                self?.viewModel.images?.append(data)
+                            }
+                            
+                            DispatchQueue.main.async {
+                                self?.updateImage()
+                            }
                         }
                     }
                     
@@ -156,8 +180,9 @@ extension PostPhotoView: PHPickerViewControllerDelegate {
     }
 
     func updateImage(){
-        pageControl.numberOfPages = images.count
-        self.setImage(images[0])
+        pageControl.numberOfPages = viewModel.images?.count ?? 0
+        guard let data = viewModel.images?.first else { return }
+        self.setImage(UIImage(data: data)!)
     }
     
 }
