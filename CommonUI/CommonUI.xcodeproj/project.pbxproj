@@ -13,6 +13,7 @@
 		B92A630729740BD00015AEC1 /* CalendarModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A630629740BD00015AEC1 /* CalendarModal.swift */; };
 		B92A63092974403A0015AEC1 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92A63082974403A0015AEC1 /* TextBox.swift */; };
 		B95D6459299E028200BCA7E0 /* TextFieldWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D6458299E028200BCA7E0 /* TextFieldWithTitle.swift */; };
+		B96A35CF29CB86F000AC685F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35CE29CB86F000AC685F /* UIImage+Extension.swift */; };
 		B96D82E52952F3C400C29AA9 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */; };
 		B96D82EC295306B600C29AA9 /* CustomPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */; };
 		B9B357F5299A35550091DADB /* CommonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B357F4299A35550091DADB /* CommonHeader.swift */; };
@@ -43,6 +44,7 @@
 		B92A630629740BD00015AEC1 /* CalendarModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModal.swift; sourceTree = "<group>"; };
 		B92A63082974403A0015AEC1 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
 		B95D6458299E028200BCA7E0 /* TextFieldWithTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithTitle.swift; sourceTree = "<group>"; };
+		B96A35CE29CB86F000AC685F /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		B96D82E42952F3C400C29AA9 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerButton.swift; sourceTree = "<group>"; };
 		B9B357F4299A35550091DADB /* CommonHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHeader.swift; sourceTree = "<group>"; };
@@ -72,9 +74,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B96A35CD29CB86CF00AC685F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B96A35CE29CB86F000AC685F /* UIImage+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		B9F11FCB291A4E7B00CED4C1 = {
 			isa = PBXGroup;
 			children = (
+				B96A35CD29CB86CF00AC685F /* Extension */,
 				B9B357F6299A3E530091DADB /* ToastMessage.swift */,
 				B9B357F4299A35550091DADB /* CommonHeader.swift */,
 				B96D82EB295306B600C29AA9 /* CustomPickerButton.swift */,
@@ -234,6 +245,7 @@
 				B905E8F0291AB8490038485D /* CustomImageView.swift in Sources */,
 				B9B357F7299A3E530091DADB /* ToastMessage.swift in Sources */,
 				B95D6459299E028200BCA7E0 /* TextFieldWithTitle.swift in Sources */,
+				B96A35CF29CB86F000AC685F /* UIImage+Extension.swift in Sources */,
 				B9B357F5299A35550091DADB /* CommonHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
