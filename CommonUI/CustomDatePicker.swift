@@ -8,10 +8,14 @@
 import UIKit
 import SnapKit
 import RxSwift
+import RxCocoa
 
 open class CustomDatePicker: UIView{
     
+    
+    // MARK: - deprecated value (refactor and remove)
     public var allCheck = false
+    public var observable = PublishSubject<Bool>()
     
     private var Titlelabel = UILabel()
     
@@ -19,7 +23,7 @@ open class CustomDatePicker: UIView{
     private let monthWidth : CGFloat = 103
     private let dayWidth : CGFloat = 103
     
-    public var observable = PublishSubject<Bool>()
+    public var check = BehaviorRelay(value: false)
     
     private lazy var yearPicker = CustomPickerButton(placeholder: "YYYY", width: yearWidth)
     private lazy var monthPicker = CustomPickerButton(placeholder: "MM", width: monthWidth)
@@ -41,15 +45,15 @@ open class CustomDatePicker: UIView{
     var disposeBag = DisposeBag()
     
     func bind(){
-        yearPicker.observable.subscribe {
+        yearPicker.changed.subscribe {
             self.yearCheck($0)
         }.disposed(by: disposeBag)
 
-        monthPicker.observable.subscribe {
+        monthPicker.changed.subscribe {
             self.monthCheck($0)
         }.disposed(by: disposeBag)
         
-        dayPicker.observable.subscribe {
+        dayPicker.changed.subscribe {
             self.dayCheck($0)
         }.disposed(by: disposeBag)
     }
@@ -133,7 +137,7 @@ extension CustomDatePicker {
         for y in 1970...dateFormatter("yyyy") {
             years.append(String(y))
         }
-        yearPicker.setData(data: years)
+        yearPicker.setData(data: years.reversed())
         
         var months = [String]()
         for m in 1...12{
@@ -147,6 +151,7 @@ extension CustomDatePicker {
         let y = yearPicker.getData()
         let m = monthPicker.getData()
         guard let yy = y, let mm = m else {
+            dayPicker.setData(data: [])
             return
         }
         
@@ -161,22 +166,22 @@ extension CustomDatePicker {
     }
     
     func yearCheck(_ year: String){
-        if year != "" {
+        if year != yearPicker.placeholder {
             monthPicker.isEnabled = true
-            allCheck = false
+//            allCheck.accept(false)
+            resetDay()
         }
-        yearPicker.isEnabled = false
     }
     func monthCheck(_ month: String){
-        if month != "" {
-            daySetting()
+        if month != monthPicker.placeholder {
+//            allCheck.accept(false)
+            resetDay()
         }
-        monthPicker.isEnabled = false
     }
+    
     func dayCheck(_ day: String){
-        if day != "" {
-            allCheck = true
-            observable.onNext(allCheck)
+        if day != dayPicker.placeholder {
+//            allCheck.accept(true)
         }
     }
     
@@ -186,5 +191,14 @@ extension CustomDatePicker {
             return "\(y) \(m) \(d)"
         }
         return nil
+    }
+    
+    func resetMonth(){
+        monthPicker.resetData()
+    }
+    
+    func resetDay(){
+        dayPicker.resetData()
+        daySetting()
     }
 }
