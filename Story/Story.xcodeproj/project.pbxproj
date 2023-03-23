@@ -22,6 +22,8 @@
 		B949089529BA1D8400B42BDE /* StoryHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089429BA1D8400B42BDE /* StoryHomeViewModel.swift */; };
 		B949089829BA1E4800B42BDE /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089729BA1E4800B42BDE /* Content.swift */; };
 		B949089A29BA21E400B42BDE /* ContentPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089929BA21E400B42BDE /* ContentPreviewCell.swift */; };
+		B96A35C129C35EE800AC685F /* StoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35C029C35EE800AC685F /* StoryDTO.swift */; };
+		B96A35C329C35F8300AC685F /* StoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35C229C35F8300AC685F /* StoryProvider.swift */; };
 		B96D82EE296EA7A900C29AA9 /* StoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */; };
 		B96D82F1296EAC8400C29AA9 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82F0296EAC8400C29AA9 /* CommonUI.framework */; };
 		B96D82F2296EAC8400C29AA9 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82F0296EAC8400C29AA9 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -63,6 +65,8 @@
 		B949089429BA1D8400B42BDE /* StoryHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHomeViewModel.swift; sourceTree = "<group>"; };
 		B949089729BA1E4800B42BDE /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		B949089929BA21E400B42BDE /* ContentPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPreviewCell.swift; sourceTree = "<group>"; };
+		B96A35C029C35EE800AC685F /* StoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDTO.swift; sourceTree = "<group>"; };
+		B96A35C229C35F8300AC685F /* StoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProvider.swift; sourceTree = "<group>"; };
 		B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostViewController.swift; sourceTree = "<group>"; };
 		B96D82F0296EAC8400C29AA9 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96D82F4296EF50900C29AA9 /* DateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLabel.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				B949089729BA1E4800B42BDE /* Content.swift */,
+				B96A35C029C35EE800AC685F /* StoryDTO.swift */,
+				B96A35C229C35F8300AC685F /* StoryProvider.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 				B949083229AF4FCE00B42BDE /* StoryPostViewModel.swift in Sources */,
 				B949087F29B4C0E200B42BDE /* CalenderViewController.swift in Sources */,
 				B949082D29AF3F3600B42BDE /* CustomLocationPicker.swift in Sources */,
+				B96A35C329C35F8300AC685F /* StoryProvider.swift in Sources */,
 				B949089529BA1D8400B42BDE /* StoryHomeViewModel.swift in Sources */,
 				B949089329BA1BC200B42BDE /* WheelPicker.swift in Sources */,
 				B96D82F7296EFBE900C29AA9 /* PostPhotoView.swift in Sources */,
@@ -319,6 +326,7 @@
 				B949082B29AF3E6D00B42BDE /* StoryPostEnterInfoView.swift in Sources */,
 				B949082F29AF4C5D00B42BDE /* StoryPostWriteContentView.swift in Sources */,
 				B949083429AF714400B42BDE /* FeedCell.swift in Sources */,
+				B96A35C129C35EE800AC685F /* StoryDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,9 +33,9 @@ class StoryPostEnterInfoView: UIView {
     func bind(){
         datePicker.observable.subscribe(onNext: { [weak self] _ in
             if let date = self?.datePicker.getDate() {
-                self?.storyPostVM.date.onNext(date)
+                self?.storyPostVM.date.accept(date)
             }
-            //임시로
+            //FIXME: API변경시 수정
             self?.storyPostVM.location.onNext("경상남도 창원에서")
         }).disposed(by: disposeBag)
         

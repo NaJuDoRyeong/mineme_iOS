@@ -13,17 +13,18 @@ import PhotosUI
 
 class StoryPostWriteContentView: UIView {
     
-    let storyPostVM : StoryPostViewModel
+    let viewModel : StoryPostViewModel
     
     var dateLabel = UILabel()
     var locationLabel = UILabel()
-    var photoBox = PostPhotoView()
+    var photoBox : PostPhotoView
     var textView = UITextView()
     
     var disposeBag = DisposeBag()
     
     init(vm: StoryPostViewModel){
-        self.storyPostVM = vm
+        self.viewModel = vm
+        self.photoBox = PostPhotoView(viewModel: viewModel)
         super.init(frame: .zero)
         initAtrribute()
         initAutolayout()
@@ -37,13 +38,17 @@ class StoryPostWriteContentView: UIView {
     
     func bind(){
         
-        storyPostVM.date
+        viewModel.date
             .bind(to: dateLabel.rx.text)
             .disposed(by: disposeBag)
         
-        storyPostVM.location
+        viewModel.location
             .bind(to: locationLabel.rx.text)
             .disposed(by: disposeBag)
+        
+        textView.rx.text.subscribe(onNext: { [weak self] in
+            self?.viewModel.contents = $0
+        }).disposed(by: disposeBag)
         
     }
     
@@ -71,7 +76,7 @@ class StoryPostWriteContentView: UIView {
             tf.layer.cornerRadius = 10
             tf.layer.borderColor = UIColor.lightGray.cgColor
             tf.backgroundColor = .clear
-            tf.text = "무슨 이야기를 남기고 싶나요?" //FIXME: placeholder로 동작하게하기
+            tf.text = viewModel.defaultContents
             tf.textColor = .lightGray
             tf.font = UIFont.systemFont(ofSize: 14)
 //            tf.delegate = self
