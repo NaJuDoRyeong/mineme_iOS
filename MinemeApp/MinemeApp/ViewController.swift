@@ -10,6 +10,9 @@ import Home
 import Story
 import Setting
 import Onboarding
+import Login
+import RxSwift
+import Common
 
 //class ViewController: UIViewController {
 //
@@ -50,11 +53,25 @@ class ViewController: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         print("rootViewController viewDidAppear")
         
-        
-        // MARK - 온보딩 프로세스 진행 여부 확인하고 View 여부 결정
-        if let onboardingView = onboardingManager.isRead() {
-            onboardingView.modalPresentationStyle = .fullScreen
-            self.present(onboardingView, animated: true)
+        if let startView = startView() {
+            startView.modalPresentationStyle = .fullScreen
+            present(startView, animated: true)
+        }
+
+    }
+    
+    func startView() -> UIViewController? {
+        switch UserdefaultManager.startMode {
+        case .onboarding:
+            return OnboardingViewController()
+        case .oauth:
+            return LoginViewController()
+        case .enterCode:
+            return InviteViewController()
+        case .waitingConnection:
+            return InviteViewController()
+        case .main:
+            return nil
         }
     }
     

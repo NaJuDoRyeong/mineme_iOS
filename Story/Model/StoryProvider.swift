@@ -41,7 +41,7 @@ extension StoryProvider : TargetType {
     }
 
     var headers: [String : String]? {
-        return ["Authorization" : "Bearer \(LoginManager.jwt!)"]
+        return ["Authorization" : "Bearer \(UserdefaultManager.jwt!)"]
     }
 }
 

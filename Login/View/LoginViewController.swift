@@ -26,16 +26,26 @@ public class LoginViewController: UIViewController {
     }
     
     func bind(){
-        vm.status.subscribe(onNext: { [weak self] in
-            if $0 == .login {
+        
+        vm.loginStatus.subscribe(onNext: { [weak self] in
+            if $0 {
                 self?.nextProcess()
             }
+            else {
+                let alert = UIAlertController(title: "알림", message: "로그인에 실패했습니다.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                self?.present(alert, animated: true, completion: nil)
+            }
         }).disposed(by: disposeBag)
+        
     }
     
     func initAttribute(){
         self.view.backgroundColor = .white
         logo.image = UIImage(named: "icon-app-name")
+        
+        kakaoButton.addTarget(self, action: #selector(kakaoLogin), for: .touchUpInside)
+        appleButton.addTarget(self, action: #selector(appleLogin), for: .touchUpInside)
     }
     
     func initAutolayout(){
@@ -59,15 +69,11 @@ public class LoginViewController: UIViewController {
             $0.right.equalToSuperview().offset(-21)
         }
         
-        kakaoButton.addTarget(self, action: #selector(kakaoLogin), for: .touchUpInside)
-        appleButton.addTarget(self, action: #selector(appleLogin), for: .touchUpInside)
-        
     }
     
 }
 
 extension LoginViewController {
-    
     
     @objc func nextProcess(){
         let presenter = LoginInformationViewController()

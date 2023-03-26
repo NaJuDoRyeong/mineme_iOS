@@ -10,6 +10,8 @@
 		A453AA945F93C2E82D6E9B04 /* Pods_MinemeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6142CDB25D79F7A284EFC470 /* Pods_MinemeApp.framework */; };
 		B95D6451299DFF4600BCA7E0 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95D6450299DFF4600BCA7E0 /* Login.framework */; };
 		B95D6452299DFF4600BCA7E0 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B95D6450299DFF4600BCA7E0 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B96A35E729D072F900AC685F /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96A35E629D072F900AC685F /* Common.framework */; };
+		B96A35E829D072F900AC685F /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96A35E629D072F900AC685F /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B96D82E72952F65400C29AA9 /* TestUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82E62952F65400C29AA9 /* TestUIViewController.swift */; };
 		B96D82E92952FA0700C29AA9 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82E82952FA0700C29AA9 /* CommonUI.framework */; };
 		B96D82EA2952FA0700C29AA9 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82E82952FA0700C29AA9 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -40,6 +42,7 @@
 				B96D82EA2952FA0700C29AA9 /* CommonUI.framework in Embed Frameworks */,
 				B9FDB7F029361789002DB8B1 /* Setting.framework in Embed Frameworks */,
 				B95D6452299DFF4600BCA7E0 /* Login.framework in Embed Frameworks */,
+				B96A35E829D072F900AC685F /* Common.framework in Embed Frameworks */,
 				B9F7A905293F632F00619054 /* Onboarding.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -52,6 +55,7 @@
 		6142CDB25D79F7A284EFC470 /* Pods_MinemeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinemeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E576BBC10B960B869A88707 /* Pods-MinemeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinemeApp.debug.xcconfig"; path = "Target Support Files/Pods-MinemeApp/Pods-MinemeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B95D6450299DFF4600BCA7E0 /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B96A35E629D072F900AC685F /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96D82E62952F65400C29AA9 /* TestUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIViewController.swift; sourceTree = "<group>"; };
 		B96D82E82952FA0700C29AA9 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE5A4D2923779E00E82CFB /* Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +82,7 @@
 				B9BE5A732923881A00E82CFB /* Story.framework in Frameworks */,
 				B96D82E92952FA0700C29AA9 /* CommonUI.framework in Frameworks */,
 				B9F11FBD2916B48200CED4C1 /* Home.framework in Frameworks */,
+				B96A35E729D072F900AC685F /* Common.framework in Frameworks */,
 				B9FDB7EF29361789002DB8B1 /* Setting.framework in Frameworks */,
 				A453AA945F93C2E82D6E9B04 /* Pods_MinemeApp.framework in Frameworks */,
 			);
@@ -131,6 +136,7 @@
 		B9F11FBB2916B48200CED4C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B96A35E629D072F900AC685F /* Common.framework */,
 				B95D6450299DFF4600BCA7E0 /* Login.framework */,
 				B96D82E82952FA0700C29AA9 /* CommonUI.framework */,
 				B9F7A903293F632F00619054 /* Onboarding.framework */,
