@@ -2,17 +2,13 @@
 import Foundation
 import Common
 import Moya
-import Login
 
 enum StoryProvider {
     case postContents(postModel : PostDTO)
     case postPhotos(photos: [Data])
 }
 
-extension StoryProvider : TargetType {
-    var baseURL: URL {
-        return URL(string: API.baseURL)!
-    }
+extension StoryProvider : CommonTargetType {
 
     var path: String {
         switch self {
@@ -41,9 +37,8 @@ extension StoryProvider : TargetType {
     }
 
     var headers: [String : String]? {
-        return ["Authorization" : "Bearer \(UserdefaultManager.jwt!)"]
+        return Authorization
     }
 }
 
-//eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyNjk5ODQ3MjIyIiwic3RhdGUiOiJQRU5ESU5HIiwiaWF0IjoxNjc5NTAyMTQxLCJleHAiOjE2Nzk3NjEzNDF9.qDNp9E-i000n31yJ-RyrUHMjC8Li-Eztm5CiJu1Ymy0
 

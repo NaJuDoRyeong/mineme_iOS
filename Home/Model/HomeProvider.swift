@@ -13,11 +13,8 @@ enum HomeProvider {
     case mainInfo
 }
 
-extension HomeProvider : TargetType {
-    var baseURL: URL {
-        return URL(string: "\(API.baseURL):\(API.port.development)")!
-    }
-
+extension HomeProvider : CommonTargetType {
+    
     var path: String {
         switch self {
         case .mainInfo:
@@ -37,8 +34,7 @@ extension HomeProvider : TargetType {
     }
 
     var headers: [String : String]? {
-        return API.header
+        return Authorization
     }
-
 
 }

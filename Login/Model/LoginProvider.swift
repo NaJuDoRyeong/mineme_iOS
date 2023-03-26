@@ -15,10 +15,7 @@ enum LoginProvider {
 //    case resign
 }
 
-extension LoginProvider : TargetType {
-    var baseURL: URL {
-        return URL(string: API.baseURL)!
-    }
+extension LoginProvider : CommonTargetType {
 
     var path: String {
         switch self {
@@ -48,7 +45,7 @@ extension LoginProvider : TargetType {
     }
 
     var headers: [String : String]? {
-        return API.header
+        return Authorization
     }
 }
 
