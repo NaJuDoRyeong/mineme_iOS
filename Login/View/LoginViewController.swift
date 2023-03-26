@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import RxSwift
+import Common
 
 public class LoginViewController: UIViewController {
     
@@ -76,10 +77,8 @@ public class LoginViewController: UIViewController {
 extension LoginViewController {
     
     @objc func nextProcess(){
-        let presenter = LoginInformationViewController()
-        presenter.modalPresentationStyle = .fullScreen
-        
-        present(presenter, animated: true)
+        UserdefaultManager.startMode = .initUserInfo
+        dismiss(animated: false)
     }
 }
 

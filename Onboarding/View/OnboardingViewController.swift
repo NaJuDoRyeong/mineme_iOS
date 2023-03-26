@@ -8,8 +8,11 @@
 import UIKit
 import CommonUI
 import CoreLocation
+import Common
 
 open class OnboardingViewController: UIViewController {
+    
+    private var viewModel = OnboardingViewModel()
     
     private var progress = OnboardingProgessBar(size: 230)
     
@@ -19,8 +22,6 @@ open class OnboardingViewController: UIViewController {
     private var nextButton = UIButton()
     
     private var contentNumber = 0
-    
-    var locationManager : CLLocationManager?
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,22 +107,15 @@ extension OnboardingViewController {
         // MARK - 권한허용 팝업 부분
         switch contentNumber {
         case 1 :
-            locationManager = CLLocationManager()
-            locationManager?.requestWhenInUseAuthorization()
-            locationManager?.startUpdatingLocation()
+            LocationManager.shared.delegate = self
             loadContent()
         case 2 :
-            UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge], completionHandler: {didAllow,Error in
-                if didAllow {
-                    print("Push: 권한 허용")
-                } else {
-                    print("Push: 권한 거부")
-                }
-            })
+            viewModel.notificationPermission()
             loadContent()
         default:
             OnboardingManager.read()
-            self.dismiss(animated: true)
+            viewModel.readOnboarding()
+            self.dismiss(animated: false)
         }
     }
     
@@ -131,5 +125,29 @@ extension OnboardingViewController {
         content.append(OnboardingData(title: "둘만의 소식을 빠르게 전해줄게요", subTitle: "기념일이나 피드 올라온걸 몰라서 곤란하지 않게 마인미가 알려줄게요!", imageName: "onboarding-2"))
         
         content.append(OnboardingData(title: "사랑스러운 사진으로 하루하루 기억해봐요", subTitle: "캘린더를 우리의 사진으로 꾸며서 한 달을 추억으로 가득채워요.", imageName: "onboarding-3"))
+    }
+}
+
+extension OnboardingViewController : CLLocationManagerDelegate {
+    public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if let permission = LocationManager.shared.locationPermission() {
+            if permission {
+                /// implements when location permssion
+            }
+            else{
+                let alert = UIAlertController(title: "마인미",
+                                              message: "권한을 허용해주세요. \n 설정 -> 위치",
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "안함", style: .default))
+                alert.addAction(UIAlertAction(title: "설정", style: .default) { _ in
+                    guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+
+                    if UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url)
+                    }
+                })
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
 }

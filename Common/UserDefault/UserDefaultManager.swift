@@ -10,11 +10,15 @@ public class UserdefaultManager {
     
     @UserDefault(key: "code", defaultValue: nil)
     public static var code : String?
+    
+    @UserDefault(key: "loverCode", defaultValue: nil)
+    public static var loverCode : String?
 }
 
 public enum StartMode : String {
     case onboarding
     case oauth
+    case initUserInfo
     case enterCode
     case waitingConnection
     case main

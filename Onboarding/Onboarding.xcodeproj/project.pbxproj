@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		40C0C78D97D2607499B87B1C /* Pods_Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B76D7C00CDBF9638EE9267 /* Pods_Onboarding.framework */; };
+		B96A35EE29D07CE300AC685F /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35ED29D07CE300AC685F /* OnboardingViewModel.swift */; };
+		B96A35F029D081A400AC685F /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96A35EF29D081A400AC685F /* Common.framework */; };
+		B96A35F129D081A400AC685F /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96A35EF29D081A400AC685F /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B96D82E3294F353D00C29AA9 /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82E2294F353D00C29AA9 /* OnboardingManager.swift */; };
 		B9F7A6F0293E6FBE00619054 /* Onboarding.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F7A6EF293E6FBE00619054 /* Onboarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9F7A6F8293E700D00619054 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A6F7293E700D00619054 /* OnboardingViewController.swift */; };
@@ -26,6 +29,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B9F7A911293F701B00619054 /* CommonUI.framework in Embed Frameworks */,
+				B96A35F129D081A400AC685F /* Common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		7B54E63F306A91123C681A1B /* Pods-Onboarding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onboarding.debug.xcconfig"; path = "Target Support Files/Pods-Onboarding/Pods-Onboarding.debug.xcconfig"; sourceTree = "<group>"; };
+		B96A35ED29D07CE300AC685F /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		B96A35EF29D081A400AC685F /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96D82E2294F353D00C29AA9 /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
 		B9F7A6EC293E6FBE00619054 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F7A6EF293E6FBE00619054 /* Onboarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Onboarding.h; sourceTree = "<group>"; };
@@ -51,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96A35F029D081A400AC685F /* Common.framework in Frameworks */,
 				B9F7A910293F701B00619054 /* CommonUI.framework in Frameworks */,
 				40C0C78D97D2607499B87B1C /* Pods_Onboarding.framework in Frameworks */,
 			);
@@ -59,11 +66,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B96A35EC29D07CCB00AC685F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B96A35ED29D07CE300AC685F /* OnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B9F7A6E2293E6FBE00619054 = {
 			isa = PBXGroup;
 			children = (
 				B9F7A6EE293E6FBE00619054 /* Onboarding */,
 				B9F7A6F6293E6FCB00619054 /* View */,
+				B96A35EC29D07CCB00AC685F /* ViewModel */,
 				B9F7A8FF293F60D000619054 /* Model */,
 				B9F7A6ED293E6FBE00619054 /* Products */,
 				B9F7A90E293F701B00619054 /* Frameworks */,
@@ -110,6 +126,7 @@
 		B9F7A90E293F701B00619054 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B96A35EF29D081A400AC685F /* Common.framework */,
 				B9F7A90F293F701B00619054 /* CommonUI.framework */,
 				C5B76D7C00CDBF9638EE9267 /* Pods_Onboarding.framework */,
 			);
@@ -234,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F7A919293F8F6E00619054 /* OnboardingProgessBar.swift in Sources */,
+				B96A35EE29D07CE300AC685F /* OnboardingViewModel.swift in Sources */,
 				B9F7A6F8293E700D00619054 /* OnboardingViewController.swift in Sources */,
 				B96D82E3294F353D00C29AA9 /* OnboardingManager.swift in Sources */,
 				B9F7A8FD293F60C000619054 /* OnboardingContentView.swift in Sources */,

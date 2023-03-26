@@ -7,6 +7,7 @@
 
 import UIKit
 import CommonUI
+import Common
 
 public class InviteViewController: UIViewController {
     
@@ -14,6 +15,7 @@ public class InviteViewController: UIViewController {
     var image = UIImageView()
     var codeIs = UILabel()
     var code = UIButton()
+    var bubble = UIImageView()
     
     var codeField = TextFieldWithTitle(title: "상대방의 코드를 입력해주세요")
     var nextButton = CommonButton(text: "다 음")
@@ -53,7 +55,7 @@ public class InviteViewController: UIViewController {
             return label
         }()
         
-        image.image = UIImage(named: "icon-breads")
+        image.image = UIImage(named: "image-breads")
         
         codeIs = {
             let label = UILabel()
@@ -73,16 +75,19 @@ public class InviteViewController: UIViewController {
             return btn
         }()
         
+        bubble.image = UIImage(named: "speech-bubble")
+        
         codeField.textField.placeholder = "이름 입력"
         codeField.textField.addTarget(self, action: #selector(textFieldChange(textField:)), for: .editingChanged)
         
         nextButton.deactivate()
+        nextButton.addTarget(self, action: #selector(enterLoverCode), for: .touchUpInside)
         
         toast.typeSetting(.success(text: "클립보드에 복사되었습니다"))
     }
     
     func initAutoLayout(){
-        [largeLabel, image, codeIs, code, toast, nextButton, codeField].forEach {
+        [largeLabel, image, codeIs, code, toast, nextButton, codeField, bubble].forEach {
             self.view.addSubview($0)
         }
         
@@ -119,6 +124,11 @@ public class InviteViewController: UIViewController {
             $0.right.equalToSuperview().offset(-21)
         }
         
+        bubble.snp.makeConstraints {
+            $0.top.equalTo(code.snp.bottom).offset(3)
+            $0.centerX.equalTo(code).offset(20)
+        }
+        
         toast.snp.makeConstraints {
             $0.bottom.equalToSuperview().offset(-250)
             $0.centerX.equalToSuperview()
@@ -139,12 +149,27 @@ extension InviteViewController {
         toast.toast()
     }
     
+    func enterLoverCode(){
+        print(codeField.textField.text)
+        //FIXME: edit later
+        UserdefaultManager.startMode = .main
+        dismiss(animated: true)
+        
+    }
+    
     func textFieldChange(textField: UITextField) {
-        guard let text = textField.text else {
-            return
+        if let text = textField.text {
+            //띄어쓰기 입력 금지
+            if text.last == " " {
+                textField.text?.removeLast()
+            }
+            if text == " " {
+                nextButton.deactivate()
+            }
+            else{
+                nextButton.activate()
+            }
         }
-        if text == "" { nextButton.deactivate() }
-        else { nextButton.activate() }
     }
     
     func keyboardWillShow(_ noti : NSNotification) {

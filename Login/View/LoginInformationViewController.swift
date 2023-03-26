@@ -9,14 +9,16 @@ import UIKit
 import CommonUI
 import SnapKit
 import RxSwift
+import Common
 
-class LoginInformationViewController: UIViewController {
+final public class LoginInformationViewController: UIViewController {
     
     let nameField = TextFieldWithTitle(title: "이름", textLimit: 6, placeholder: "이름 입력")
     let birthday = CustomDatePicker(title: "생년월일")
+    let imageView = UIImageView()
     let nextButton = CommonButton(text: "다 음")
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         initAttribute()
         initAutolayout()
@@ -24,13 +26,13 @@ class LoginInformationViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    public override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -38,8 +40,14 @@ class LoginInformationViewController: UIViewController {
     var disposeBag = DisposeBag()
     
     func bind(){
-        birthday.observable.subscribe { _ in
-            self.allFill()
+        birthday.allCheck.subscribe { [unowned self] check in
+            print("check : \(check)")
+            if check {
+                self.allFill()
+            }
+            else {
+                self.nextButton.deactivate()
+            }
         }.disposed(by: disposeBag)
     }
     
@@ -48,13 +56,15 @@ class LoginInformationViewController: UIViewController {
         self.view.backgroundColor = .white
         nameField.textField.addTarget(self, action: #selector(textFieldChange(textField:)), for: .editingChanged)
         
+        imageView.image = UIImage(named: "login-information")
+        
         nextButton.addTarget(self, action: #selector(tapNextButton), for: .touchUpInside)
         
         nextButton.deactivate()
     }
     
     func initAutolayout(){
-        [nameField, birthday, nextButton].forEach {
+        [nameField, birthday, imageView, nextButton].forEach {
             self.view.addSubview($0)
         }
         
@@ -76,6 +86,15 @@ class LoginInformationViewController: UIViewController {
             $0.bottom.equalTo(additionalSafeAreaInsets.bottom).offset(-43)
         }
         
+        imageView.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(-192)
+        }
+        
+    }
+    
+    deinit {
+        nextButton.transform = .identity
     }
     
 
@@ -84,13 +103,13 @@ class LoginInformationViewController: UIViewController {
 extension LoginInformationViewController {
     
     // MARK: - 빈공간 touch -> 키보드 내림
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
     func allFill(){
         if let text = nameField.textField.text {
-            if text != "" && birthday.allCheck {
+            if text != "" && birthday.allCheck.value {
                 nextButton.activate()
                 return
             }
@@ -104,10 +123,8 @@ extension LoginInformationViewController {
 extension LoginInformationViewController {
     
     func tapNextButton(){
-        //FIXME: data binding
-        let presenter = InviteViewController()
-        presenter.modalPresentationStyle = .fullScreen
-        present(presenter, animated: true)
+        UserdefaultManager.startMode = .enterCode
+        dismiss(animated: false)
     }
     
     func textFieldChange(textField: UITextField) {

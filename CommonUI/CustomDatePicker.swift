@@ -14,7 +14,7 @@ open class CustomDatePicker: UIView{
     
     
     // MARK: - deprecated value (refactor and remove)
-    public var allCheck = false
+//    public var allCheck = false
     public var observable = PublishSubject<Bool>()
     
     private var Titlelabel = UILabel()
@@ -23,7 +23,7 @@ open class CustomDatePicker: UIView{
     private let monthWidth : CGFloat = 103
     private let dayWidth : CGFloat = 103
     
-    public var check = BehaviorRelay(value: false)
+    public var allCheck = BehaviorRelay(value: false)
     
     private lazy var yearPicker = CustomPickerButton(placeholder: "YYYY", width: yearWidth)
     private lazy var monthPicker = CustomPickerButton(placeholder: "MM", width: monthWidth)
@@ -168,20 +168,20 @@ extension CustomDatePicker {
     func yearCheck(_ year: String){
         if year != yearPicker.placeholder {
             monthPicker.isEnabled = true
-//            allCheck.accept(false)
+            allCheck.accept(false)
             resetDay()
         }
     }
     func monthCheck(_ month: String){
         if month != monthPicker.placeholder {
-//            allCheck.accept(false)
+            allCheck.accept(false)
             resetDay()
         }
     }
     
     func dayCheck(_ day: String){
         if day != dayPicker.placeholder {
-//            allCheck.accept(true)
+            allCheck.accept(true)
         }
     }
     

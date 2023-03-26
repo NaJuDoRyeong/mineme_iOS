@@ -26,16 +26,15 @@ import Common
 
 class ViewController: UITabBarController {
     
-    private let onboardingManager = OnboardingManager()
+    private let HomeTab = UINavigationController(rootViewController: HomeViewController())
+    private let StoryTab = UINavigationController(rootViewController: StoryHomeViewController())
+    private let SettingTab = UINavigationController(rootViewController: SettingViewController())
 
     override func viewDidLoad() {
         print("rootViewController viewDidLoad")
-        
         super.viewDidLoad()
-        
-        let HomeTab = UINavigationController(rootViewController: HomeViewController())
-        let StoryTab = UINavigationController(rootViewController: StoryHomeViewController())
-        let SettingTab = UINavigationController(rootViewController: SettingViewController())
+//        UserdefaultManager.startMode = .onboarding
+        view.backgroundColor = .white
         
         HomeTab.setNavigationBarHidden(true, animated: false)
         StoryTab.setNavigationBarHidden(true, animated: false)
@@ -46,16 +45,18 @@ class ViewController: UITabBarController {
         SettingTab.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "default-setting"), selectedImage: UIImage(named: "selected-setting"))
         
         //필요한 탭 위와 같은 방식으로 추가하기
-        self.viewControllers = [HomeTab, StoryTab, SettingTab]
-        initAttribute()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         print("rootViewController viewDidAppear")
-        
         if let startView = startView() {
             startView.modalPresentationStyle = .fullScreen
             present(startView, animated: true)
+        }
+        else{
+            self.viewControllers = [HomeTab, StoryTab, SettingTab]
+            initAttribute()
         }
 
     }
@@ -66,6 +67,8 @@ class ViewController: UITabBarController {
             return OnboardingViewController()
         case .oauth:
             return LoginViewController()
+        case .initUserInfo:
+            return LoginInformationViewController()
         case .enterCode:
             return InviteViewController()
         case .waitingConnection:

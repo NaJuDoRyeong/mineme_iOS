@@ -54,7 +54,10 @@ public class ToastMessage: UIView {
     func initAttribute(){
         
         self.backgroundColor = UIColor(red: 1, green: 0.978, blue: 0.952, alpha: 1)
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = 20
+        self.layer.shadowOffset = CGSize(width: 0, height: 4)
+        self.layer.shadowRadius = 4
+        self.layer.shadowOpacity = 0.25
         
         text = {
             let label = UILabel()
@@ -74,16 +77,16 @@ public class ToastMessage: UIView {
         
         self.snp.makeConstraints {
             $0.width.equalTo(348)
-            $0.height.equalTo(80)
+            $0.height.equalTo(52)
         }
         
         icon.snp.makeConstraints {
-            $0.left.equalToSuperview().offset(20)
+            $0.left.equalToSuperview().offset(28)
             $0.centerY.equalToSuperview()
         }
         
         text.snp.makeConstraints {
-            $0.left.equalTo(icon.snp.right).offset(10)
+            $0.left.equalTo(icon.snp.right).offset(18)
             $0.right.equalToSuperview()
             $0.centerY.equalToSuperview()
         }

@@ -69,7 +69,7 @@ extension CommonButton {
     public func deactivate(){
         self.layer.borderWidth = 1.5
         self.layer.borderColor = .init(gray: 0.5, alpha: 1)
-        self.backgroundColor = .clear
+        self.backgroundColor = .white
         self.isEnabled = false
     }
 }

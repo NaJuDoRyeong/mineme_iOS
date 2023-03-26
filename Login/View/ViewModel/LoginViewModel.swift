@@ -61,6 +61,7 @@ extension LoginViewModel {
         if (UserApi.isKakaoTalkLoginAvailable()) {
             UserApi.shared.loginWithKakaoTalk { [weak self] (oauthToken, error) in
                 if let error = error {
+                    self?.loginStatus.onNext(false)
                     print(error)
                 }
                 else {

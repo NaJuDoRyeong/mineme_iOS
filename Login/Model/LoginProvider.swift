@@ -45,7 +45,7 @@ extension LoginProvider : CommonTargetType {
     }
 
     var headers: [String : String]? {
-        return Authorization
+        return nil
     }
 }
 
