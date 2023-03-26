@@ -17,9 +17,11 @@ public class CustomPickerButton: UIButton {
     private var label = UILabel()
     private var btn = UIImageView()
     
-    var observable = PublishSubject<String>()
+    private var data : [String]?
+    let placeholder : String
+    var changed = PublishSubject<String>()
     
-    private func initAttribute(placeholder : String){
+    private func initAttribute(){
         
         uiView = {
             let uiView = UIView()
@@ -70,13 +72,12 @@ public class CustomPickerButton: UIButton {
         label.isUserInteractionEnabled = false
         btn.isUserInteractionEnabled = false
     }
-    
-    private var data : [String]?
 
     /// public init - 외부 호출
     public init(placeholder : String, width: CGFloat){
+        self.placeholder = placeholder
         super.init(frame: .zero)
-        initAttribute(placeholder: placeholder)
+        initAttribute()
         initAutolayout(width: width)
         configureView()
     }
@@ -167,11 +168,19 @@ extension CustomPickerButton {
 extension CustomPickerButton {
     
     func getData() -> String? {
-        return label.text
+        if label.text == placeholder {
+            return nil
+        } else {
+            return label.text
+        }
     }
     
     func setData(data: [String]){
-        self.data = data
+        self.data = [""]+data
+    }
+    
+    func resetData(){
+        label.text = placeholder
     }
 }
 
@@ -190,8 +199,13 @@ extension CustomPickerButton : UIPickerViewDataSource, UIPickerViewDelegate {
     
     //data 선택시 동작할 event
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        label.text = data?[row]
-        observable.onNext(data?[row] ?? "")
+        if data?[row] == "" {
+            label.text = placeholder
+        }
+        else{
+            label.text = data?[row]
+        }
+        changed.onNext(label.text ?? placeholder)
     }
     
 //    public func pickerView(_ pickerView: UIPickerView, titleForRow: Int) {
