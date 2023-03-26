@@ -19,7 +19,6 @@
 		B96A35D629CCBE7B00AC685F /* CommonTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35D529CCBE7B00AC685F /* CommonTargetType.swift */; };
 		B96A35D829CCC19100AC685F /* Resource.plist in Resources */ = {isa = PBXBuildFile; fileRef = B96A35D729CCC19100AC685F /* Resource.plist */; };
 		B96A35DB29CCC5B800AC685F /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35DA29CCC5B800AC685F /* ResourceManager.swift */; };
-		B9736F6129952B3E00F20196 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9736F6029952B3E00F20196 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +37,6 @@
 		B96A35D529CCBE7B00AC685F /* CommonTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTargetType.swift; sourceTree = "<group>"; };
 		B96A35D729CCC19100AC685F /* Resource.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resource.plist; sourceTree = "<group>"; };
 		B96A35DA29CCC5B800AC685F /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
-		B9736F6029952B3E00F20196 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +113,6 @@
 			children = (
 				B90633C22977F2C400476F2A /* ResponseDTO.swift */,
 				B90633CF297805A500476F2A /* APIResponder.swift */,
-				B9736F6029952B3E00F20196 /* Constant.swift */,
 				B96A35B629C22F9600AC685F /* NetworkManager.swift */,
 				B96A35D529CCBE7B00AC685F /* CommonTargetType.swift */,
 			);
@@ -248,7 +245,6 @@
 				B96A35D429CC92EB00AC685F /* UserDefaultManager.swift in Sources */,
 				B92A631F297455260015AEC1 /* DateFormatter.swift in Sources */,
 				B94908A529BA462600B42BDE /* DayOfWeek.swift in Sources */,
-				B9736F6129952B3E00F20196 /* Constant.swift in Sources */,
 				B90633D0297805A500476F2A /* APIResponder.swift in Sources */,
 				B96A35D629CCBE7B00AC685F /* CommonTargetType.swift in Sources */,
 				B90633C32977F2C400476F2A /* ResponseDTO.swift in Sources */,
