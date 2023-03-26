@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "온보딩2 이미지 (3).png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "온보딩2 이미지 (4).png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "온보딩2 이미지 (5).png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "onboarding-2.svg",
+      "idiom" : "universal"
     }
   ],
   "info" : {
