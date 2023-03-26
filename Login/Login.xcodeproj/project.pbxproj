@@ -22,7 +22,6 @@
 		B95D645C299E06CA00BCA7E0 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95D645B299E06CA00BCA7E0 /* CommonUI.framework */; };
 		B95D645D299E06CA00BCA7E0 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B95D645B299E06CA00BCA7E0 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B95D6460299E1FB300BCA7E0 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D645F299E1FB300BCA7E0 /* InviteViewController.swift */; };
-		B96A35BF29C2530400AC685F /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35BE29C2530400AC685F /* LoginManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,7 +54,6 @@
 		B95D6456299E020000BCA7E0 /* LoginInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInformationViewController.swift; sourceTree = "<group>"; };
 		B95D645B299E06CA00BCA7E0 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95D645F299E1FB300BCA7E0 /* InviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
-		B96A35BE29C2530400AC685F /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		C8A4EF18DAAA0EA3FEAE3D65 /* Pods_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBE81311C68D89E56A55572 /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +97,6 @@
 				B94908C629BA624100B42BDE /* LoginProvider.swift */,
 				B94908C829BA634500B42BDE /* LoginModel.swift */,
 				B94908CA29BA66F600B42BDE /* LoginDTO.swift */,
-				B96A35BE29C2530400AC685F /* LoginManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,7 +264,6 @@
 				B95D644B299DFB4400BCA7E0 /* LoginViewController.swift in Sources */,
 				B94908C429BA59FE00B42BDE /* LoginViewModel.swift in Sources */,
 				B95D644D299DFC2700BCA7E0 /* KakaoLoginButton.swift in Sources */,
-				B96A35BF29C2530400AC685F /* LoginManager.swift in Sources */,
 				B94908C929BA634500B42BDE /* LoginModel.swift in Sources */,
 				B95D6457299E020000BCA7E0 /* LoginInformationViewController.swift in Sources */,
 				B94908CB29BA66F600B42BDE /* LoginDTO.swift in Sources */,

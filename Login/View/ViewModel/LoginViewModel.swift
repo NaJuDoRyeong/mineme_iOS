@@ -33,8 +33,8 @@ class LoginViewModel {
                 case let .success(data):
                     do {
                         let loginDTO = try data.get()
-                        LoginManager.jwt = loginDTO.jwt
-                        LoginManager.code = loginDTO.code
+                        UserdefaultManager.jwt = loginDTO.jwt
+                        UserdefaultManager.code = loginDTO.code
                     }
                     catch {
                         print("Login Error : \(error.localizedDescription)")
