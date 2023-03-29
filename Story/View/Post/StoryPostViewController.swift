@@ -82,7 +82,7 @@ class StoryPostViewController: UIViewController {
         }
         
         header.snp.makeConstraints {
-            $0.top.equalTo(self.view.safeAreaLayoutGuide)
+            $0.top.equalToSuperview()
         }
         
         writeContentView.snp.makeConstraints {

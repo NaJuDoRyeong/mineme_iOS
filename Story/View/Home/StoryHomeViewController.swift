@@ -83,7 +83,7 @@ public class StoryHomeViewController: UIViewController {
         [noImageView, header, contentCollectionView].forEach { self.view.addSubview($0) }
         
         header.snp.makeConstraints {
-            $0.top.equalTo(self.view.safeAreaLayoutGuide)
+            $0.top.equalToSuperview()
         }
         
         noImageView.snp.makeConstraints {
@@ -91,7 +91,7 @@ public class StoryHomeViewController: UIViewController {
         }
         
         contentCollectionView.snp.makeConstraints {
-            $0.top.equalTo(header.snp.bottom).offset(50)
+            $0.top.equalTo(header.snp.bottom)
             $0.left.equalToSuperview().offset(21)
             $0.right.equalToSuperview().offset(-21)
             $0.bottom.equalToSuperview()

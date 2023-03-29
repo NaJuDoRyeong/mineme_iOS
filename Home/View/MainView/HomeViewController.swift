@@ -76,11 +76,17 @@ open class HomeViewController : UIViewController {
     
     func initAutolayout(){
         
+        self.view.addSubview(header)
         self.view.addSubview(scrollView)
         self.scrollView.addSubview(contentView)
         
+        header.snp.makeConstraints {
+            $0.top.equalToSuperview()
+        }
+        
         scrollView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalTo(header.snp.bottom)
+            $0.left.right.bottom.equalToSuperview()
         }
         
         contentView.snp.makeConstraints {
@@ -88,11 +94,7 @@ open class HomeViewController : UIViewController {
             $0.width.equalToSuperview()
         }
         
-        [coupleTitle, settingButton, myProfileView, loverProfileView, heartImage, line, previewComment, previewImage, header].forEach { self.contentView.addSubview($0) }
-        
-        header.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide)
-        }
+        [coupleTitle, settingButton, myProfileView, loverProfileView, heartImage, line, previewComment, previewImage].forEach { self.contentView.addSubview($0) }
         
         myProfileView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(92)

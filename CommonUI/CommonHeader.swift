@@ -25,6 +25,7 @@ open class CommonHeader : UIView {
     }
     
     func initAttribute(){
+        backgroundColor = .white
         title = {
             let label = UILabel()
             label.textColor = .black
@@ -45,22 +46,23 @@ open class CommonHeader : UIView {
         }
         
         title.snp.makeConstraints {
-            $0.center.equalToSuperview()
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(-16)
         }
         
         leftIcon.snp.makeConstraints {
             $0.left.equalToSuperview().offset(20)
-            $0.centerY.equalToSuperview()
+            $0.centerY.equalTo(title)
         }
         
         rightIcon.snp.makeConstraints {
             $0.right.equalToSuperview().offset(-20)
-            $0.centerY.equalToSuperview()
+            $0.centerY.equalTo(title)
         }
         
         self.snp.makeConstraints {
             $0.width.equalTo(bounds.width)
-            $0.height.equalTo(60)
+            $0.height.equalTo(110)
         }
     }
     

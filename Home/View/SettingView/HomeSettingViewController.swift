@@ -68,14 +68,14 @@ public class HomeSettingViewController: UIViewController {
         self.view.addSubview(header)
         
         header.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.top.equalToSuperview()
         }
         
         scrollView.snp.makeConstraints {
             $0.top.equalTo(header.snp.bottom)
             $0.left.equalToSuperview()
             $0.right.equalToSuperview()
-            $0.bottom.equalToSuperview()
+            $0.bottom.equalTo(view.safeAreaLayoutGuide)
         }
         
         scrollView.addSubview(contentView)
@@ -152,6 +152,7 @@ extension HomeSettingViewController {
             let height = rect.height //키보드 높이구하기
             
             scrollView.transform = CGAffineTransform(translationX: 0, y: -(height-43))
+            
 
         }
     }
