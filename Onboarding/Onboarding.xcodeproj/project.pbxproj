@@ -11,7 +11,6 @@
 		B96A35EE29D07CE300AC685F /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35ED29D07CE300AC685F /* OnboardingViewModel.swift */; };
 		B96A35F029D081A400AC685F /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96A35EF29D081A400AC685F /* Common.framework */; };
 		B96A35F129D081A400AC685F /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96A35EF29D081A400AC685F /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B96D82E3294F353D00C29AA9 /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82E2294F353D00C29AA9 /* OnboardingManager.swift */; };
 		B9F7A6F0293E6FBE00619054 /* Onboarding.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F7A6EF293E6FBE00619054 /* Onboarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9F7A6F8293E700D00619054 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A6F7293E700D00619054 /* OnboardingViewController.swift */; };
 		B9F7A8FD293F60C000619054 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A8FC293F60C000619054 /* OnboardingContentView.swift */; };
@@ -40,7 +39,6 @@
 		7B54E63F306A91123C681A1B /* Pods-Onboarding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onboarding.debug.xcconfig"; path = "Target Support Files/Pods-Onboarding/Pods-Onboarding.debug.xcconfig"; sourceTree = "<group>"; };
 		B96A35ED29D07CE300AC685F /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		B96A35EF29D081A400AC685F /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B96D82E2294F353D00C29AA9 /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
 		B9F7A6EC293E6FBE00619054 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F7A6EF293E6FBE00619054 /* Onboarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Onboarding.h; sourceTree = "<group>"; };
 		B9F7A6F7293E700D00619054 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				B9F7A901293F610000619054 /* Entity.swift */,
-				B96D82E2294F353D00C29AA9 /* OnboardingManager.swift */,
 			);
 			name = Model;
 			path = /Users/sladuf/Desktop/Developer/mineme/Onboarding/View/Model;
@@ -253,7 +250,6 @@
 				B9F7A919293F8F6E00619054 /* OnboardingProgessBar.swift in Sources */,
 				B96A35EE29D07CE300AC685F /* OnboardingViewModel.swift in Sources */,
 				B9F7A6F8293E700D00619054 /* OnboardingViewController.swift in Sources */,
-				B96D82E3294F353D00C29AA9 /* OnboardingManager.swift in Sources */,
 				B9F7A8FD293F60C000619054 /* OnboardingContentView.swift in Sources */,
 				B9F7A902293F610000619054 /* Entity.swift in Sources */,
 			);

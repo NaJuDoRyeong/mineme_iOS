@@ -113,7 +113,6 @@ extension OnboardingViewController {
             viewModel.notificationPermission()
             loadContent()
         default:
-            OnboardingManager.read()
             viewModel.readOnboarding()
             self.dismiss(animated: false)
         }
