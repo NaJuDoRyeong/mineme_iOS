@@ -9,16 +9,17 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
+import CommonUI
 
 open class HomeViewController : UIViewController {
     
-    let vc = HomeViewModel()
+    let viewModel = HomeViewModel()
     var disposeBag = DisposeBag()
     
     private var scrollView = UIScrollView()
     private var contentView = UIView()
     
-    
+    private var header = CommonHeader()
     private var coupleTitle = UILabel()
     private var myProfileView = HomeProfileView(Profile(name: "이름없음"))
     private var loverProfileView = HomeProfileView(Profile(name: "이름없음"))
@@ -35,21 +36,21 @@ open class HomeViewController : UIViewController {
         initAttribute()
         initAutolayout()
         
-        vc.request()
+        viewModel.request()
         bind()
     }
-    
+
     func bind(){
         
-        vc.myProfile.subscribe(onNext: {
+        viewModel.myProfile.subscribe(onNext: {
             self.myProfileView.bind(data: $0)
         }).disposed(by: disposeBag)
         
-        vc.loverProfile.subscribe(onNext: {
+        viewModel.loverProfile.subscribe(onNext: {
             self.loverProfileView.bind(data: $0)
         }).disposed(by: disposeBag)
         
-        vc.coupleTitle
+        viewModel.coupleTitle
             .bind(to: coupleTitle.rx.text)
             .disposed(by: disposeBag)
     }
@@ -57,22 +58,9 @@ open class HomeViewController : UIViewController {
     func initAttribute(){
         heartImage.image = UIImage(named: "heart")
         
-        coupleTitle = {
-            let label = UILabel()
-            label.textColor = .black
-            label.text = "만나서 반가워요"
-            label.font = UIFont.boldSystemFont(ofSize: 24)
-            return label
-        }()
-        
-        settingButton = {
-            let button = UIButton()
-//            button.frame.size = CGSize(width: 50, height: 50)
-            button.setImage(UIImage(named: "icon-setting"), for: .normal)
-            button.addTarget(self, action: #selector(tapSettingButton), for: .touchUpInside)
-            
-            return button
-        }()
+        header.setTitle(string: "만나서 반가워요")
+        header.rightIcon.setImage(UIImage(named: "icon-setting"), for: .normal)
+        header.rightIcon.addTarget(self, action: #selector(tapSettingButton), for: .touchUpInside)
         
         line.image = UIImage(named: "line")
         
@@ -100,16 +88,10 @@ open class HomeViewController : UIViewController {
             $0.width.equalToSuperview()
         }
         
-        [coupleTitle, settingButton, myProfileView, loverProfileView, heartImage, line, previewComment, previewImage].forEach { self.contentView.addSubview($0) }
+        [coupleTitle, settingButton, myProfileView, loverProfileView, heartImage, line, previewComment, previewImage, header].forEach { self.contentView.addSubview($0) }
         
-        coupleTitle.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(16)
-            $0.centerX.equalToSuperview()
-        }
-        
-        settingButton.snp.makeConstraints {
-            $0.centerY.equalTo(coupleTitle)
-            $0.right.equalToSuperview().offset(-23)
+        header.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide)
         }
         
         myProfileView.snp.makeConstraints {

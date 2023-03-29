@@ -10,11 +10,12 @@ import CommonUI
 import Photos
 import PhotosUI
 
-open class HomeSettingViewController: UIViewController {
+public class HomeSettingViewController: UIViewController {
     
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     
+    private var header = CommonHeader()
     private var profileImage = ProfileImageView()
     private var editImageButton = UIButton()
     private var nameField = TextFieldWithTitle(title: "이름", placeholder: "이름 입력")
@@ -30,31 +31,54 @@ open class HomeSettingViewController: UIViewController {
         self.view.backgroundColor = .white
         initAttribute()
         initAutolayout()
-
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-        // Do any additional setup after loading the view.
     }
     
-    open override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    public override func viewWillAppear(_ animated: Bool) {
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+
     }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
     
     func initAttribute() {
         
-        self.navigationController?.navigationBar.tintColor = .lightGray
+        header.setTitle(string: "프로필 설정")
+        header.leftIcon.setImage(UIImage(named: "icon-arrow-left"), for: .normal)
+        header.leftIcon.addTarget(self, action: #selector(tapBackButton), for: .touchUpInside)
+        
+        profileImage.image = UIImage(named: "image-profile")
         
         editImageButton.setImage(UIImage(named: "icon-camera"), for: .normal)
         editImageButton.addTarget(self, action: #selector(pickImage), for: .touchUpInside)
+        
+        scrollView.delegate = self
     }
     
     func initAutolayout() {
         
+        
         self.view.addSubview(scrollView)
-        scrollView.addSubview(contentView)
+        self.view.addSubview(header)
+        
+        header.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+        }
         
         scrollView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalTo(header.snp.bottom)
+            $0.left.equalToSuperview()
+            $0.right.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
+        
+        scrollView.addSubview(contentView)
         
         contentView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -64,7 +88,7 @@ open class HomeSettingViewController: UIViewController {
         [profileImage, editImageButton, nameField, coupleNameField, loverCommnetField, instaIdField, coupleDay, birthDay].forEach { contentView.addSubview($0) }
         
         profileImage.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(133)
+            $0.top.equalToSuperview().offset(21)
             $0.centerX.equalToSuperview()
         }
         
@@ -116,7 +140,29 @@ open class HomeSettingViewController: UIViewController {
 
 }
 
-extension HomeSettingViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+@objc
+extension HomeSettingViewController {
+    func tapBackButton(){
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func keyboardWillShow(_ noti : NSNotification) {
+        if let frame = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let rect = frame.cgRectValue
+            let height = rect.height //키보드 높이구하기
+            
+            scrollView.transform = CGAffineTransform(translationX: 0, y: -(height-43))
+
+        }
+    }
+
+    func keyboardWillHide(_ noti : NSNotification) {
+        scrollView.transform = .identity //원래 자리로 돌아가기
+    }
+    
+}
+
+extension HomeSettingViewController{
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -174,4 +220,12 @@ extension HomeSettingViewController: PHPickerViewControllerDelegate {
         }
        
     }
+}
+
+
+extension HomeSettingViewController : UIScrollViewDelegate {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            // 키보드 내리기
+            view.endEditing(true)
+        }
 }
