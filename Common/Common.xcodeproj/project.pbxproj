@@ -28,6 +28,15 @@
 		B6A254B241D23A7BDB694594 /* Pods_Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90633C22977F2C400476F2A /* ResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDTO.swift; sourceTree = "<group>"; };
 		B90633CF297805A500476F2A /* APIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponder.swift; sourceTree = "<group>"; };
+		B92411C129D473E5006DC123 /* CommonHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHeader.swift; sourceTree = "<group>"; };
+		B92411C229D473E5006DC123 /* CustomPickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerButton.swift; sourceTree = "<group>"; };
+		B92411C329D473E5006DC123 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		B92411C429D473E5006DC123 /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
+		B92411C529D473E5006DC123 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		B92411C729D473E5006DC123 /* TextFieldWithTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithTitle.swift; sourceTree = "<group>"; };
+		B92411C929D473E5006DC123 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
+		B92411CA29D473E5006DC123 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		B92411CC29D473E5006DC123 /* ToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
 		B92A6314297455090015AEC1 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92A6317297455090015AEC1 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		B92A631E297455260015AEC1 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
@@ -53,16 +62,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B92411CB29D473E5006DC123 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B92411CA29D473E5006DC123 /* UIImage+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B92411CD29D473E5006DC123 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B92411CB29D473E5006DC123 /* Extension */,
+				B92411D129D475CC006DC123 /* CommonUI */,
+				B92411D329D47691006DC123 /* Custom */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B92411D129D475CC006DC123 /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				B92411C129D473E5006DC123 /* CommonHeader.swift */,
+				B92411C429D473E5006DC123 /* CommonButton.swift */,
+				B92411CC29D473E5006DC123 /* ToastMessage.swift */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		B92411D329D47691006DC123 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				B92411C529D473E5006DC123 /* CustomImageView.swift */,
+				B92411C329D473E5006DC123 /* CustomDatePicker.swift */,
+				B92411C229D473E5006DC123 /* CustomPickerButton.swift */,
+				B92411C729D473E5006DC123 /* TextFieldWithTitle.swift */,
+				B92411C929D473E5006DC123 /* TextBox.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		B92411D429D47729006DC123 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				B94908A429BA462600B42BDE /* DayOfWeek.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		B92A630A297455090015AEC1 = {
 			isa = PBXGroup;
 			children = (
 				B92A6316297455090015AEC1 /* Common */,
-				B96A35D229CC92C300AC685F /* UserDefault */,
+				B92411CD29D473E5006DC123 /* View */,
 				B9736F5F2994E1ED00F20196 /* Network */,
 				B96A35E929D07C3D00AC685F /* Source */,
 				B96A35D929CCC59E00AC685F /* Resource */,
-				B92A631E297455260015AEC1 /* DateFormatter.swift */,
-				B94908A429BA462600B42BDE /* DayOfWeek.swift */,
 				B92A6315297455090015AEC1 /* Products */,
 				B95100242997D2C9002CD38E /* Frameworks */,
 				DD28AF960CD8DEE241891DAC /* Pods */,
@@ -93,13 +148,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B96A35D229CC92C300AC685F /* UserDefault */ = {
+		B96A35D229CC92C300AC685F /* PropertyWrapper */ = {
 			isa = PBXGroup;
 			children = (
 				B96A35BC29C252B600AC685F /* UserDefault.swift */,
-				B96A35D329CC92EB00AC685F /* UserDefaultManager.swift */,
 			);
-			path = UserDefault;
+			path = PropertyWrapper;
 			sourceTree = "<group>";
 		};
 		B96A35D929CCC59E00AC685F /* Resource */ = {
@@ -114,7 +168,11 @@
 		B96A35E929D07C3D00AC685F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B92411D429D47729006DC123 /* Constant */,
+				B96A35D229CC92C300AC685F /* PropertyWrapper */,
 				B96A35EA29D07C5C00AC685F /* LocationManager.swift */,
+				B96A35D329CC92EB00AC685F /* UserDefaultManager.swift */,
+				B92A631E297455260015AEC1 /* DateFormatter.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
