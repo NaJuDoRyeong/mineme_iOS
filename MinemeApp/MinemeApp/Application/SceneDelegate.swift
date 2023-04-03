@@ -21,11 +21,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        // MARK - real View
-        window.rootViewController = ViewController()
-        
         window.makeKeyAndVisible()
         self.window = window
+        
+        /// open splash 2 seconds
+        window.rootViewController = SplashViewController()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            window.rootViewController = ViewController()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

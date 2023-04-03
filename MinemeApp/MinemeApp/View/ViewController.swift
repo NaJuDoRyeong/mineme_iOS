@@ -62,19 +62,6 @@ class ViewController: UITabBarController {
             self.viewControllers = [HomeTab, StoryTab, SettingTab]
             initAttribute()
         }
-        
-        /// open splash 2 seconds
-        let splash = SplashViewController()
-        splash.modalPresentationStyle = .overFullScreen
-        present(splash, animated: false)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            UIView.animate(withDuration: 0.5, animations: {
-                splash.view.alpha = 0.0
-            }, completion: { [weak self] finished in
-                self?.dismiss(animated: false)
-            })
-        }
 
     }
     
