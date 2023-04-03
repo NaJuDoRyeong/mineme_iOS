@@ -6,12 +6,13 @@
 //
 
 import UIKit
-//import CommonUI
 import SnapKit
 import RxSwift
 import Common
 
 final public class LoginInformationViewController: UIViewController {
+    
+    let viewModel = LoginInformationViewModel()
     
     let nameField = TextFieldWithTitle(title: "이름", textLimit: 6, placeholder: "이름 입력")
     let birthday = CustomDatePicker(title: "생년월일")
@@ -49,6 +50,13 @@ final public class LoginInformationViewController: UIViewController {
                 self.nextButton.deactivate()
             }
         }.disposed(by: disposeBag)
+        
+        viewModel.startMode.subscribe { [weak self] startMode in
+            if startMode == .enterCode{
+                self?.dismiss(animated: true)
+            }
+        }.disposed(by: disposeBag)
+        
     }
     
     
@@ -123,8 +131,7 @@ extension LoginInformationViewController {
 extension LoginInformationViewController {
     
     func tapNextButton(){
-        UserdefaultManager.startMode = .enterCode
-        dismiss(animated: false)
+        viewModel.setUserInfo(name: nameField.textField.text, birthday: birthday.getDate())
     }
     
     func textFieldChange(textField: UITextField) {

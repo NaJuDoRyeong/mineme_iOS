@@ -20,6 +20,8 @@
 		B95D644F299DFC3300BCA7E0 /* AppleLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D644E299DFC3300BCA7E0 /* AppleLoginButton.swift */; };
 		B95D6457299E020000BCA7E0 /* LoginInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D6456299E020000BCA7E0 /* LoginInformationViewController.swift */; };
 		B95D6460299E1FB300BCA7E0 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D645F299E1FB300BCA7E0 /* InviteViewController.swift */; };
+		B97D44C429DABD930033586B /* PreUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44C329DABD930033586B /* PreUserInfo.swift */; };
+		B97D44C629DABE720033586B /* LoginInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44C529DABE720033586B /* LoginInformationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +52,8 @@
 		B95D644E299DFC3300BCA7E0 /* AppleLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginButton.swift; sourceTree = "<group>"; };
 		B95D6456299E020000BCA7E0 /* LoginInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInformationViewController.swift; sourceTree = "<group>"; };
 		B95D645F299E1FB300BCA7E0 /* InviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
+		B97D44C329DABD930033586B /* PreUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreUserInfo.swift; sourceTree = "<group>"; };
+		B97D44C529DABE720033586B /* LoginInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInformationViewModel.swift; sourceTree = "<group>"; };
 		C8A4EF18DAAA0EA3FEAE3D65 /* Pods_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBE81311C68D89E56A55572 /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				B94908C329BA59FE00B42BDE /* LoginViewModel.swift */,
+				B97D44C529DABE720033586B /* LoginInformationViewModel.swift */,
 			);
 			name = ViewModel;
 			path = View/ViewModel;
@@ -92,6 +97,7 @@
 				B94908C629BA624100B42BDE /* LoginProvider.swift */,
 				B94908C829BA634500B42BDE /* LoginModel.swift */,
 				B94908CA29BA66F600B42BDE /* LoginDTO.swift */,
+				B97D44C329DABD930033586B /* PreUserInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,8 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97D44C429DABD930033586B /* PreUserInfo.swift in Sources */,
 				B94908C729BA624100B42BDE /* LoginProvider.swift in Sources */,
 				B95D644F299DFC3300BCA7E0 /* AppleLoginButton.swift in Sources */,
+				B97D44C629DABE720033586B /* LoginInformationViewModel.swift in Sources */,
 				B95D644B299DFB4400BCA7E0 /* LoginViewController.swift in Sources */,
 				B94908C429BA59FE00B42BDE /* LoginViewModel.swift in Sources */,
 				B95D644D299DFC2700BCA7E0 /* KakaoLoginButton.swift in Sources */,
