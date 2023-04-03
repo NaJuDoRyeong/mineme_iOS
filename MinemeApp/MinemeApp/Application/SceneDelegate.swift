@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KakaoSDKAuth
 import Home
 import Story
 import Onboarding
@@ -29,6 +30,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             window.rootViewController = ViewController()
+        }
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                _ = AuthController.handleOpenUrl(url: url)
+            }
         }
     }
 
