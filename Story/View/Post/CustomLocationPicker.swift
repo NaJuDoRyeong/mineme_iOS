@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import CommonUI
+import Common
 import RxSwift
 
 class CustomLocationPicker: UIView {

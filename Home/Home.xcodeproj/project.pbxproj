@@ -21,8 +21,6 @@
 		B9F11FC32917693200CED4C1 /* HomeProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FC22917693200CED4C1 /* HomeProfileView.swift */; };
 		B9F11FC5291769FC00CED4C1 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FC4291769FC00CED4C1 /* Entity.swift */; };
 		B9F11FCA291A43C900CED4C1 /* HomeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FC9291A43C900CED4C1 /* HomeSettingViewController.swift */; };
-		B9F11FE3291A4F1500CED4C1 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F11FE2291A4F1500CED4C1 /* CommonUI.framework */; };
-		B9F11FE4291A4F1500CED4C1 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9F11FE2291A4F1500CED4C1 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,7 +30,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B9F11FE4291A4F1500CED4C1 /* CommonUI.framework in Embed Frameworks */,
 				B9736F6A29967C5000F20196 /* Common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -57,7 +54,6 @@
 		B9F11FC22917693200CED4C1 /* HomeProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileView.swift; sourceTree = "<group>"; };
 		B9F11FC4291769FC00CED4C1 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		B9F11FC9291A43C900CED4C1 /* HomeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettingViewController.swift; sourceTree = "<group>"; };
-		B9F11FE2291A4F1500CED4C1 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +62,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9736F6929967C5000F20196 /* Common.framework in Frameworks */,
-				B9F11FE3291A4F1500CED4C1 /* CommonUI.framework in Frameworks */,
 				9BB99EB1EC2695FB4FAB9757 /* Pods_Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				B9736F6829967C5000F20196 /* Common.framework */,
-				B9F11FE2291A4F1500CED4C1 /* CommonUI.framework */,
 				2ABAA130A5A3ABE01276CA79 /* Pods_Home.framework */,
 			);
 			name = Frameworks;
@@ -425,7 +419,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 91A3993D1705B95705903FAC /* Pods-Home.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -460,7 +453,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 655502723FC67C8AD7F7E21E /* Pods-Home.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

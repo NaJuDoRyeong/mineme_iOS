@@ -15,8 +15,6 @@
 		B9F7A6F8293E700D00619054 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A6F7293E700D00619054 /* OnboardingViewController.swift */; };
 		B9F7A8FD293F60C000619054 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A8FC293F60C000619054 /* OnboardingContentView.swift */; };
 		B9F7A902293F610000619054 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A901293F610000619054 /* Entity.swift */; };
-		B9F7A910293F701B00619054 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7A90F293F701B00619054 /* CommonUI.framework */; };
-		B9F7A911293F701B00619054 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7A90F293F701B00619054 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F7A919293F8F6E00619054 /* OnboardingProgessBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A918293F8F6E00619054 /* OnboardingProgessBar.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +25,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B9F7A911293F701B00619054 /* CommonUI.framework in Embed Frameworks */,
 				B96A35F129D081A400AC685F /* Common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -44,7 +41,6 @@
 		B9F7A6F7293E700D00619054 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		B9F7A8FC293F60C000619054 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
 		B9F7A901293F610000619054 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
-		B9F7A90F293F701B00619054 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F7A918293F8F6E00619054 /* OnboardingProgessBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgessBar.swift; sourceTree = "<group>"; };
 		C5B76D7C00CDBF9638EE9267 /* Pods_Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B3C626F76D10F731BFB94D /* Pods-Onboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onboarding.release.xcconfig"; path = "Target Support Files/Pods-Onboarding/Pods-Onboarding.release.xcconfig"; sourceTree = "<group>"; };
@@ -56,7 +52,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B96A35F029D081A400AC685F /* Common.framework in Frameworks */,
-				B9F7A910293F701B00619054 /* CommonUI.framework in Frameworks */,
 				40C0C78D97D2607499B87B1C /* Pods_Onboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				B96A35EF29D081A400AC685F /* Common.framework */,
-				B9F7A90F293F701B00619054 /* CommonUI.framework */,
 				C5B76D7C00CDBF9638EE9267 /* Pods_Onboarding.framework */,
 			);
 			name = Frameworks;

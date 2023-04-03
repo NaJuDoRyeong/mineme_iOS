@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import CommonUI
+//import CommonUI
 import CoreLocation
 import Common
 

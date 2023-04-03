@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import CommonUI
+//import CommonUI
 import Common
 
 public class InviteViewController: UIViewController {

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import CommonUI
+import Common
 import PhotosUI
 
 class PostPhotoView: CustomImageView {

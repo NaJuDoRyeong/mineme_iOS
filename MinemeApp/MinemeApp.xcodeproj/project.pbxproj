@@ -13,8 +13,6 @@
 		B95D6452299DFF4600BCA7E0 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B95D6450299DFF4600BCA7E0 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B96A35E729D072F900AC685F /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96A35E629D072F900AC685F /* Common.framework */; };
 		B96A35E829D072F900AC685F /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96A35E629D072F900AC685F /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B96D82E92952FA0700C29AA9 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82E82952FA0700C29AA9 /* CommonUI.framework */; };
-		B96D82EA2952FA0700C29AA9 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D82E82952FA0700C29AA9 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9BE5A732923881A00E82CFB /* Story.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BE5A722923881A00E82CFB /* Story.framework */; };
 		B9BE5A742923881A00E82CFB /* Story.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9BE5A722923881A00E82CFB /* Story.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F11F84291696CC00CED4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11F83291696CC00CED4C1 /* AppDelegate.swift */; };
@@ -39,7 +37,6 @@
 			files = (
 				B9BE5A742923881A00E82CFB /* Story.framework in Embed Frameworks */,
 				B9F11FBE2916B48200CED4C1 /* Home.framework in Embed Frameworks */,
-				B96D82EA2952FA0700C29AA9 /* CommonUI.framework in Embed Frameworks */,
 				B9FDB7F029361789002DB8B1 /* Setting.framework in Embed Frameworks */,
 				B95D6452299DFF4600BCA7E0 /* Login.framework in Embed Frameworks */,
 				B96A35E829D072F900AC685F /* Common.framework in Embed Frameworks */,
@@ -58,7 +55,6 @@
 		B95D6450299DFF4600BCA7E0 /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96A35E629D072F900AC685F /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96A35F229D08F6E00AC685F /* MinemeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MinemeApp.entitlements; sourceTree = "<group>"; };
-		B96D82E82952FA0700C29AA9 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE5A4D2923779E00E82CFB /* Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE5A722923881A00E82CFB /* Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F11F80291696CC00CED4C1 /* MinemeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinemeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,7 +77,6 @@
 				B9F7A904293F632F00619054 /* Onboarding.framework in Frameworks */,
 				B95D6451299DFF4600BCA7E0 /* Login.framework in Frameworks */,
 				B9BE5A732923881A00E82CFB /* Story.framework in Frameworks */,
-				B96D82E92952FA0700C29AA9 /* CommonUI.framework in Frameworks */,
 				B9F11FBD2916B48200CED4C1 /* Home.framework in Frameworks */,
 				B96A35E729D072F900AC685F /* Common.framework in Frameworks */,
 				B9FDB7EF29361789002DB8B1 /* Setting.framework in Frameworks */,
@@ -164,7 +159,6 @@
 			children = (
 				B96A35E629D072F900AC685F /* Common.framework */,
 				B95D6450299DFF4600BCA7E0 /* Login.framework */,
-				B96D82E82952FA0700C29AA9 /* CommonUI.framework */,
 				B9F7A903293F632F00619054 /* Onboarding.framework */,
 				B9FDB7EE29361789002DB8B1 /* Setting.framework */,
 				B9BE5A722923881A00E82CFB /* Story.framework */,

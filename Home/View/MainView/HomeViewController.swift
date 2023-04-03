@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
-import CommonUI
+import Common
 
 open class HomeViewController : UIViewController {
     

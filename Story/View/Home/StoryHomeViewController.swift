@@ -7,7 +7,7 @@
 
 import UIKit
 import SnapKit
-import CommonUI
+import Common
 import RxSwift
 import RxCocoa
 

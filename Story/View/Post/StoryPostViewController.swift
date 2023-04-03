@@ -5,7 +5,7 @@
 //  Created by 김민령 on 2023/01/11.
 //
 
-import CommonUI
+import Common
 import UIKit
 import SnapKit
 import PhotosUI

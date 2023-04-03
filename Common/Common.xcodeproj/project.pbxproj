@@ -20,6 +20,15 @@
 		B96A35D829CCC19100AC685F /* Resource.plist in Resources */ = {isa = PBXBuildFile; fileRef = B96A35D729CCC19100AC685F /* Resource.plist */; };
 		B96A35DB29CCC5B800AC685F /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35DA29CCC5B800AC685F /* ResourceManager.swift */; };
 		B96A35EB29D07C5C00AC685F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35EA29D07C5C00AC685F /* LocationManager.swift */; };
+		B97D44BA29D9D5D00033586B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411CA29D473E5006DC123 /* UIImage+Extension.swift */; };
+		B97D44BB29D9D5D50033586B /* CommonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C129D473E5006DC123 /* CommonHeader.swift */; };
+		B97D44BC29D9D5D80033586B /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C429D473E5006DC123 /* CommonButton.swift */; };
+		B97D44BD29D9D5DA0033586B /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411CC29D473E5006DC123 /* ToastMessage.swift */; };
+		B97D44BE29D9D5DF0033586B /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C529D473E5006DC123 /* CustomImageView.swift */; };
+		B97D44BF29D9D5E10033586B /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C329D473E5006DC123 /* CustomDatePicker.swift */; };
+		B97D44C029D9D5E30033586B /* CustomPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C229D473E5006DC123 /* CustomPickerButton.swift */; };
+		B97D44C129D9D5E60033586B /* TextFieldWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C729D473E5006DC123 /* TextFieldWithTitle.swift */; };
+		B97D44C229D9D5E70033586B /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C929D473E5006DC123 /* TextBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -309,15 +318,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97D44C129D9D5E60033586B /* TextFieldWithTitle.swift in Sources */,
 				B96A35BD29C252B600AC685F /* UserDefault.swift in Sources */,
 				B96A35B729C22F9600AC685F /* NetworkManager.swift in Sources */,
 				B96A35D429CC92EB00AC685F /* UserDefaultManager.swift in Sources */,
+				B97D44BD29D9D5DA0033586B /* ToastMessage.swift in Sources */,
+				B97D44BE29D9D5DF0033586B /* CustomImageView.swift in Sources */,
 				B92A631F297455260015AEC1 /* DateFormatter.swift in Sources */,
 				B94908A529BA462600B42BDE /* DayOfWeek.swift in Sources */,
 				B90633D0297805A500476F2A /* APIResponder.swift in Sources */,
+				B97D44BF29D9D5E10033586B /* CustomDatePicker.swift in Sources */,
 				B96A35EB29D07C5C00AC685F /* LocationManager.swift in Sources */,
+				B97D44BB29D9D5D50033586B /* CommonHeader.swift in Sources */,
 				B96A35D629CCBE7B00AC685F /* CommonTargetType.swift in Sources */,
 				B90633C32977F2C400476F2A /* ResponseDTO.swift in Sources */,
+				B97D44C229D9D5E70033586B /* TextBox.swift in Sources */,
+				B97D44C029D9D5E30033586B /* CustomPickerButton.swift in Sources */,
+				B97D44BA29D9D5D00033586B /* UIImage+Extension.swift in Sources */,
+				B97D44BC29D9D5D80033586B /* CommonButton.swift in Sources */,
 				B96A35DB29CCC5B800AC685F /* ResourceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
