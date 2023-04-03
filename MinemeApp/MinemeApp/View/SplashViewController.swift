@@ -10,6 +10,8 @@ import SnapKit
 
 class SplashViewController: UIViewController {
     
+    private let viewModel = SplashViewModel()
+    
     private let appIcon = UIImageView()
     private let appTitle = UIImageView()
     
