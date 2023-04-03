@@ -8,7 +8,6 @@ project 'Home/Home.project'
 project 'Story/Story.project'
 project 'Setting/Setting.project'
 project 'Common/Common.project'
-project 'CommonUI/CommonUI.project'
 
 def shared_pods
 	pod "SnapKit"
@@ -58,17 +57,11 @@ target "Setting" do
 	shared_pods
 end
 
-target "CommonUI" do
-	project "CommonUI/CommonUI.project"
+target "Common" do
+	project "Common/Common.project"
+	pod "Moya/RxSwift"
 	pod "SnapKit"
 	pod "RxSwift"
 	pod "RxCocoa"
 	pod "Kingfisher"
-end
-
-target "Common" do
-	project "Common/Common.project"
-	pod "Moya/RxSwift"
-	pod "RxSwift"
-	pod "RxCocoa"
 end
