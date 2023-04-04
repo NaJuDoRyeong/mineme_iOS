@@ -27,6 +27,7 @@
 		B96D82EE296EA7A900C29AA9 /* StoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */; };
 		B96D82F5296EF50900C29AA9 /* DateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82F4296EF50900C29AA9 /* DateLabel.swift */; };
 		B96D82F7296EFBE900C29AA9 /* PostPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82F6296EFBE900C29AA9 /* PostPhotoView.swift */; };
+		B97D44D829DB4A4F0033586B /* StoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44D729DB4A4F0033586B /* StoryCoordinator.swift */; };
 		B9BE5A6C292387FD00E82CFB /* Story.h in Headers */ = {isa = PBXBuildFile; fileRef = B9BE5A6B292387FD00E82CFB /* Story.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9BE5A772923884100E82CFB /* StoryHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE5A762923884100E82CFB /* StoryHomeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostViewController.swift; sourceTree = "<group>"; };
 		B96D82F4296EF50900C29AA9 /* DateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLabel.swift; sourceTree = "<group>"; };
 		B96D82F6296EFBE900C29AA9 /* PostPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPhotoView.swift; sourceTree = "<group>"; };
+		B97D44D729DB4A4F0033586B /* StoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCoordinator.swift; sourceTree = "<group>"; };
 		B9BE5A68292387FD00E82CFB /* Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE5A6B292387FD00E82CFB /* Story.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
 		B9BE5A762923884100E82CFB /* StoryHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHomeViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B97D44D629DB4A3B0033586B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B97D44D729DB4A4F0033586B /* StoryCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		B9BE5A5E292387FD00E82CFB = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 				B9BE5A752923883700E82CFB /* View */,
 				B949083029AF4FAC00B42BDE /* ViewModel */,
 				B949089629BA1E3600B42BDE /* Model */,
+				B97D44D629DB4A3B0033586B /* Coordinator */,
 				B9BE5A69292387FD00E82CFB /* Products */,
 				B96D82EF296EAC8400C29AA9 /* Frameworks */,
 				82E5DDFA21A97D6386728CCD /* Pods */,
@@ -316,6 +327,7 @@
 				B949089829BA1E4800B42BDE /* Content.swift in Sources */,
 				B9BE5A772923884100E82CFB /* StoryHomeViewController.swift in Sources */,
 				B949083629AF779000B42BDE /* FeedtableView.swift in Sources */,
+				B97D44D829DB4A4F0033586B /* StoryCoordinator.swift in Sources */,
 				B96D82F5296EF50900C29AA9 /* DateLabel.swift in Sources */,
 				B949082B29AF3E6D00B42BDE /* StoryPostEnterInfoView.swift in Sources */,
 				B949082F29AF4C5D00B42BDE /* StoryPostWriteContentView.swift in Sources */,

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B97D44DB29DB4AD70033586B /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44DA29DB4AD70033586B /* SettingCoordinator.swift */; };
+		B97D44E029DB56FE0033586B /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97D44DF29DB56FE0033586B /* Common.framework */; };
+		B97D44E129DB56FE0033586B /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B97D44DF29DB56FE0033586B /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9FDB7E82936176A002DB8B1 /* Setting.h in Headers */ = {isa = PBXBuildFile; fileRef = B9FDB7E72936176A002DB8B1 /* Setting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9FDB7F329362308002DB8B1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FDB7F229362308002DB8B1 /* SettingViewController.swift */; };
 		B9FDB7F529362373002DB8B1 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FDB7F429362373002DB8B1 /* SettingTableViewCell.swift */; };
@@ -14,10 +17,26 @@
 		F3DB2B217715ABC2C8B6E242 /* Pods_Setting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE34CF922D615405F668702 /* Pods_Setting.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B97D44E229DB56FE0033586B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B97D44E129DB56FE0033586B /* Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		849A6F6301D2B9DA08683BA5 /* Pods-Setting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Setting.debug.xcconfig"; path = "Target Support Files/Pods-Setting/Pods-Setting.debug.xcconfig"; sourceTree = "<group>"; };
 		9AD5883461FF7076B597979E /* Pods-Setting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Setting.release.xcconfig"; path = "Target Support Files/Pods-Setting/Pods-Setting.release.xcconfig"; sourceTree = "<group>"; };
 		9DE34CF922D615405F668702 /* Pods_Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B97D44DA29DB4AD70033586B /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
+		B97D44DF29DB56FE0033586B /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FDB7E42936176A002DB8B1 /* Setting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Setting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FDB7E72936176A002DB8B1 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		B9FDB7F229362308002DB8B1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +50,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3DB2B217715ABC2C8B6E242 /* Pods_Setting.framework in Frameworks */,
+				B97D44E029DB56FE0033586B /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,16 +70,26 @@
 		7F100C3B7964886174B0E2D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B97D44DF29DB56FE0033586B /* Common.framework */,
 				9DE34CF922D615405F668702 /* Pods_Setting.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B97D44D929DB4AC60033586B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B97D44DA29DB4AD70033586B /* SettingCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		B9FDB7DA2936176A002DB8B1 = {
 			isa = PBXGroup;
 			children = (
-				B9FDB7F1293622E4002DB8B1 /* View */,
 				B9FDB7E62936176A002DB8B1 /* Setting */,
+				B9FDB7F1293622E4002DB8B1 /* View */,
+				B97D44D929DB4AC60033586B /* Coordinator */,
 				B9FDB7E52936176A002DB8B1 /* Products */,
 				217E69A176170FEC18F8E4BB /* Pods */,
 				7F100C3B7964886174B0E2D7 /* Frameworks */,
@@ -115,6 +145,7 @@
 				B9FDB7E02936176A002DB8B1 /* Sources */,
 				B9FDB7E12936176A002DB8B1 /* Frameworks */,
 				B9FDB7E22936176A002DB8B1 /* Resources */,
+				B97D44E229DB56FE0033586B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9FDB7F529362373002DB8B1 /* SettingTableViewCell.swift in Sources */,
+				B97D44DB29DB4AD70033586B /* SettingCoordinator.swift in Sources */,
 				B9FDB7FA293631A7002DB8B1 /* AccountVIewController.swift in Sources */,
 				B9FDB7F329362308002DB8B1 /* SettingViewController.swift in Sources */,
 			);

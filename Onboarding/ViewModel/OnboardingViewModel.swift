@@ -14,8 +14,4 @@ class OnboardingViewModel : NSObject {
             }
         })
     }
-    
-    public func readOnboarding(){
-        UserdefaultManager.startMode = .oauth
-    }
 }

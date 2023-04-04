@@ -29,6 +29,8 @@
 		B97D44C029D9D5E30033586B /* CustomPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C229D473E5006DC123 /* CustomPickerButton.swift */; };
 		B97D44C129D9D5E60033586B /* TextFieldWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C729D473E5006DC123 /* TextFieldWithTitle.swift */; };
 		B97D44C229D9D5E70033586B /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C929D473E5006DC123 /* TextBox.swift */; };
+		B97D44CC29DB39D10033586B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44CB29DB39D10033586B /* Coordinator.swift */; };
+		B97D44E929DBFDD80033586B /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44E829DBFDD80033586B /* TabBarCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		B96A35D729CCC19100AC685F /* Resource.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resource.plist; sourceTree = "<group>"; };
 		B96A35DA29CCC5B800AC685F /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
 		B96A35EA29D07C5C00AC685F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B97D44CB29DB39D10033586B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B97D44E829DBFDD80033586B /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 		B96A35E929D07C3D00AC685F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B97D44CA29DB39BF0033586B /* Protocol */,
 				B92411D429D47729006DC123 /* Constant */,
 				B96A35D229CC92C300AC685F /* PropertyWrapper */,
 				B96A35EA29D07C5C00AC685F /* LocationManager.swift */,
@@ -195,6 +200,15 @@
 				B96A35D529CCBE7B00AC685F /* CommonTargetType.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B97D44CA29DB39BF0033586B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B97D44CB29DB39D10033586B /* Coordinator.swift */,
+				B97D44E829DBFDD80033586B /* TabBarCoordinator.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		DD28AF960CD8DEE241891DAC /* Pods */ = {
@@ -330,12 +344,14 @@
 				B97D44BF29D9D5E10033586B /* CustomDatePicker.swift in Sources */,
 				B96A35EB29D07C5C00AC685F /* LocationManager.swift in Sources */,
 				B97D44BB29D9D5D50033586B /* CommonHeader.swift in Sources */,
+				B97D44CC29DB39D10033586B /* Coordinator.swift in Sources */,
 				B96A35D629CCBE7B00AC685F /* CommonTargetType.swift in Sources */,
 				B90633C32977F2C400476F2A /* ResponseDTO.swift in Sources */,
 				B97D44C229D9D5E70033586B /* TextBox.swift in Sources */,
 				B97D44C029D9D5E30033586B /* CustomPickerButton.swift in Sources */,
 				B97D44BA29D9D5D00033586B /* UIImage+Extension.swift in Sources */,
 				B97D44BC29D9D5D80033586B /* CommonButton.swift in Sources */,
+				B97D44E929DBFDD80033586B /* TabBarCoordinator.swift in Sources */,
 				B96A35DB29CCC5B800AC685F /* ResourceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

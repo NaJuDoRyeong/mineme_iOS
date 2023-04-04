@@ -15,6 +15,8 @@
 		B9736F6929967C5000F20196 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9736F6829967C5000F20196 /* Common.framework */; };
 		B9736F6A29967C5000F20196 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9736F6829967C5000F20196 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9736F6C29967E6200F20196 /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9736F6B29967E6200F20196 /* HomeProvider.swift */; };
+		B97D44D229DB3D9E0033586B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44D129DB3D9E0033586B /* HomeCoordinator.swift */; };
+		B97D44E729DB5D830033586B /* DefaultHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44E629DB5D830033586B /* DefaultHomeCoordinator.swift */; };
 		B9F11FA5291696DB00CED4C1 /* Home.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F11FA4291696DB00CED4C1 /* Home.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9F11FB82916AD0100CED4C1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FB72916AD0100CED4C1 /* HomeViewController.swift */; };
 		B9F11FBA2916B21B00CED4C1 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11FB92916B21B00CED4C1 /* ProfileImageView.swift */; };
@@ -47,6 +49,8 @@
 		B9736F6629967A3900F20196 /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
 		B9736F6829967C5000F20196 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9736F6B29967E6200F20196 /* HomeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProvider.swift; sourceTree = "<group>"; };
+		B97D44D129DB3D9E0033586B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		B97D44E629DB5D830033586B /* DefaultHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHomeCoordinator.swift; sourceTree = "<group>"; };
 		B9F11FA1291696DB00CED4C1 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F11FA4291696DB00CED4C1 /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
 		B9F11FB72916AD0100CED4C1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B97D44D029DB3D880033586B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B97D44E529DB5D2E0033586B /* Protocol */,
+				B97D44E629DB5D830033586B /* DefaultHomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B97D44E529DB5D2E0033586B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B97D44D129DB3D9E0033586B /* HomeCoordinator.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		B9F11F97291696DB00CED4C1 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +133,7 @@
 				B95100052997CA6C002CD38E /* View */,
 				B9F11FB52916AC4900CED4C1 /* ViewModel */,
 				B9F11FB42916AC4400CED4C1 /* Model */,
+				B97D44D029DB3D880033586B /* Coordinator */,
 				B9F11FA2291696DB00CED4C1 /* Products */,
 				B9F11FE1291A4F1500CED4C1 /* Frameworks */,
 				4AEFFF127EADB9F1E73138A6 /* Pods */,
@@ -288,7 +310,9 @@
 				B9F11FC32917693200CED4C1 /* HomeProfileView.swift in Sources */,
 				B9F11FB82916AD0100CED4C1 /* HomeViewController.swift in Sources */,
 				B9F11FCA291A43C900CED4C1 /* HomeSettingViewController.swift in Sources */,
+				B97D44E729DB5D830033586B /* DefaultHomeCoordinator.swift in Sources */,
 				B9F11FBA2916B21B00CED4C1 /* ProfileImageView.swift in Sources */,
+				B97D44D229DB3D9E0033586B /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

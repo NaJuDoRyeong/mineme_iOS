@@ -28,7 +28,6 @@ class LoginInformationViewModel {
                 switch result{
                 case .success(_):
                     print("success")
-                    UserdefaultManager.startMode = .enterCode
                     self?.startMode.accept(.enterCode)
                 case .failure(_):
                     print("fail")

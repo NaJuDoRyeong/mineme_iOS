@@ -13,6 +13,7 @@ import Common
 open class OnboardingViewController: UIViewController {
     
     private var viewModel = OnboardingViewModel()
+    weak var delegate : OnboardingViewControllerDelegate?
     
     private var progress = OnboardingProgessBar(size: 230)
     
@@ -113,7 +114,7 @@ extension OnboardingViewController {
             viewModel.notificationPermission()
             loadContent()
         default:
-            viewModel.readOnboarding()
+            delegate?.readOnboarding()
             self.dismiss(animated: false)
         }
     }

@@ -6,10 +6,11 @@
 //
 
 import UIKit
-//import CommonUI
 import Common
 
 public class InviteViewController: UIViewController {
+    
+    weak var delegate: LoginViewControllerDelegate?
     
     var largeLabel = UILabel()
     var image = UIImageView()
@@ -31,6 +32,8 @@ public class InviteViewController: UIViewController {
     }
     
     public override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -150,11 +153,10 @@ extension InviteViewController {
     }
     
     func enterLoverCode(){
-        print(codeField.textField.text)
-        //FIXME: edit later
-        UserdefaultManager.startMode = .main
-        dismiss(animated: true)
-        
+        print(codeField.textField.text ?? "no code")
+        //FIXME: network check
+        UserdefaultManager.startMode = .waitingConnection
+        delegate?.nextProcess()
     }
     
     func textFieldChange(textField: UITextField) {

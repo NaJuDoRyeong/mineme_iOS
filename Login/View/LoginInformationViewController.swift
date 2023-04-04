@@ -12,6 +12,8 @@ import Common
 
 final public class LoginInformationViewController: UIViewController {
     
+    weak var delegate: LoginViewControllerDelegate?
+    
     let viewModel = LoginInformationViewModel()
     
     let nameField = TextFieldWithTitle(title: "이름", textLimit: 6, placeholder: "이름 입력")
@@ -28,6 +30,7 @@ final public class LoginInformationViewController: UIViewController {
     }
     
     public override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -53,7 +56,7 @@ final public class LoginInformationViewController: UIViewController {
         
         viewModel.startMode.subscribe { [weak self] startMode in
             if startMode == .enterCode{
-                self?.dismiss(animated: true)
+                self?.delegate?.nextProcess()
             }
         }.disposed(by: disposeBag)
         
