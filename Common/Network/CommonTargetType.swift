@@ -11,7 +11,7 @@ public protocol CommonTargetType : TargetType {
 
 extension CommonTargetType {
     public var baseURL: URL {
-        let url = ResourceManager.valueForKey(key: TargetResource.developURL.rawValue) as! String
+        let url = ResourceManager.plistForKey(key: TargetResource.developURL.rawValue) as! String
         return URL(string: url)!
     }
     

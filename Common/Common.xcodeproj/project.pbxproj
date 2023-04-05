@@ -29,6 +29,11 @@
 		B97D44C029D9D5E30033586B /* CustomPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C229D473E5006DC123 /* CustomPickerButton.swift */; };
 		B97D44C129D9D5E60033586B /* TextFieldWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C729D473E5006DC123 /* TextFieldWithTitle.swift */; };
 		B97D44C229D9D5E70033586B /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92411C929D473E5006DC123 /* TextBox.swift */; };
+		B97D44CC29DB39D10033586B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44CB29DB39D10033586B /* Coordinator.swift */; };
+		B97D44E929DBFDD80033586B /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44E829DBFDD80033586B /* TabBarCoordinator.swift */; };
+		B97D450429DD56FA0033586B /* CommonAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D450329DD56FA0033586B /* CommonAssets.swift */; };
+		B97D450829DD60DC0033586B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B97D450729DD60DC0033586B /* Assets.xcassets */; };
+		B97D450E29DD68860033586B /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D450D29DD68860033586B /* Bundle+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +62,11 @@
 		B96A35D729CCC19100AC685F /* Resource.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resource.plist; sourceTree = "<group>"; };
 		B96A35DA29CCC5B800AC685F /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
 		B96A35EA29D07C5C00AC685F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B97D44CB29DB39D10033586B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B97D44E829DBFDD80033586B /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		B97D450329DD56FA0033586B /* CommonAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAssets.swift; sourceTree = "<group>"; };
+		B97D450729DD60DC0033586B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B97D450D29DD68860033586B /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,14 +121,6 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
-		B92411D429D47729006DC123 /* Constant */ = {
-			isa = PBXGroup;
-			children = (
-				B94908A429BA462600B42BDE /* DayOfWeek.swift */,
-			);
-			path = Constant;
-			sourceTree = "<group>";
-		};
 		B92A630A297455090015AEC1 = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				B96A35D729CCC19100AC685F /* Resource.plist */,
-				B96A35DA29CCC5B800AC685F /* ResourceManager.swift */,
+				B97D450729DD60DC0033586B /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -177,10 +179,11 @@
 		B96A35E929D07C3D00AC685F /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B92411D429D47729006DC123 /* Constant */,
+				B97D450529DD57020033586B /* Constant */,
+				B97D450A29DD685E0033586B /* Extension */,
+				B97D44CA29DB39BF0033586B /* Protocol */,
+				B97D450629DD582B0033586B /* Helpers */,
 				B96A35D229CC92C300AC685F /* PropertyWrapper */,
-				B96A35EA29D07C5C00AC685F /* LocationManager.swift */,
-				B96A35D329CC92EB00AC685F /* UserDefaultManager.swift */,
 				B92A631E297455260015AEC1 /* DateFormatter.swift */,
 			);
 			path = Source;
@@ -195,6 +198,42 @@
 				B96A35D529CCBE7B00AC685F /* CommonTargetType.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B97D44CA29DB39BF0033586B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B97D44CB29DB39D10033586B /* Coordinator.swift */,
+				B97D44E829DBFDD80033586B /* TabBarCoordinator.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B97D450529DD57020033586B /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				B94908A429BA462600B42BDE /* DayOfWeek.swift */,
+				B97D450329DD56FA0033586B /* CommonAssets.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		B97D450629DD582B0033586B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B96A35EA29D07C5C00AC685F /* LocationManager.swift */,
+				B96A35D329CC92EB00AC685F /* UserDefaultManager.swift */,
+				B96A35DA29CCC5B800AC685F /* ResourceManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B97D450A29DD685E0033586B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B97D450D29DD68860033586B /* Bundle+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		DD28AF960CD8DEE241891DAC /* Pods */ = {
@@ -282,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97D450829DD60DC0033586B /* Assets.xcassets in Resources */,
 				B96A35D829CCC19100AC685F /* Resource.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,15 +367,19 @@
 				B92A631F297455260015AEC1 /* DateFormatter.swift in Sources */,
 				B94908A529BA462600B42BDE /* DayOfWeek.swift in Sources */,
 				B90633D0297805A500476F2A /* APIResponder.swift in Sources */,
+				B97D450E29DD68860033586B /* Bundle+Extension.swift in Sources */,
 				B97D44BF29D9D5E10033586B /* CustomDatePicker.swift in Sources */,
 				B96A35EB29D07C5C00AC685F /* LocationManager.swift in Sources */,
 				B97D44BB29D9D5D50033586B /* CommonHeader.swift in Sources */,
+				B97D44CC29DB39D10033586B /* Coordinator.swift in Sources */,
 				B96A35D629CCBE7B00AC685F /* CommonTargetType.swift in Sources */,
+				B97D450429DD56FA0033586B /* CommonAssets.swift in Sources */,
 				B90633C32977F2C400476F2A /* ResponseDTO.swift in Sources */,
 				B97D44C229D9D5E70033586B /* TextBox.swift in Sources */,
 				B97D44C029D9D5E30033586B /* CustomPickerButton.swift in Sources */,
 				B97D44BA29D9D5D00033586B /* UIImage+Extension.swift in Sources */,
 				B97D44BC29D9D5D80033586B /* CommonButton.swift in Sources */,
+				B97D44E929DBFDD80033586B /* TabBarCoordinator.swift in Sources */,
 				B96A35DB29CCC5B800AC685F /* ResourceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

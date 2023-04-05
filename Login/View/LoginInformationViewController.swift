@@ -6,12 +6,15 @@
 //
 
 import UIKit
-//import CommonUI
 import SnapKit
 import RxSwift
 import Common
 
 final public class LoginInformationViewController: UIViewController {
+    
+    weak var delegate: LoginViewControllerDelegate?
+    
+    let viewModel = LoginInformationViewModel()
     
     let nameField = TextFieldWithTitle(title: "이름", textLimit: 6, placeholder: "이름 입력")
     let birthday = CustomDatePicker(title: "생년월일")
@@ -27,6 +30,7 @@ final public class LoginInformationViewController: UIViewController {
     }
     
     public override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -49,6 +53,13 @@ final public class LoginInformationViewController: UIViewController {
                 self.nextButton.deactivate()
             }
         }.disposed(by: disposeBag)
+        
+        viewModel.startMode.subscribe { [weak self] startMode in
+            if startMode == .enterCode{
+                self?.delegate?.nextProcess()
+            }
+        }.disposed(by: disposeBag)
+        
     }
     
     
@@ -56,7 +67,7 @@ final public class LoginInformationViewController: UIViewController {
         self.view.backgroundColor = .white
         nameField.textField.addTarget(self, action: #selector(textFieldChange(textField:)), for: .editingChanged)
         
-        imageView.image = UIImage(named: "login-information")
+        imageView.image = LoginAssets.initUserInfo
         
         nextButton.addTarget(self, action: #selector(tapNextButton), for: .touchUpInside)
         
@@ -123,8 +134,7 @@ extension LoginInformationViewController {
 extension LoginInformationViewController {
     
     func tapNextButton(){
-        UserdefaultManager.startMode = .enterCode
-        dismiss(animated: false)
+        viewModel.setUserInfo(name: nameField.textField.text, birthday: birthday.getDate())
     }
     
     func textFieldChange(textField: UITextField) {

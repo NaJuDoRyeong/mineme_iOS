@@ -12,6 +12,8 @@ import Common
 
 public class LoginViewController: UIViewController {
     
+    weak var delegate : LoginViewControllerDelegate?
+    
     let vm = LoginViewModel()
     let disposeBag = DisposeBag()
     
@@ -77,8 +79,9 @@ public class LoginViewController: UIViewController {
 extension LoginViewController {
     
     @objc func nextProcess(){
-        UserdefaultManager.startMode = .initUserInfo
-        dismiss(animated: false)
+//        UserdefaultManager.startMode = .initUserInfo
+//        dismiss(animated: false)
+        delegate?.nextProcess()
     }
 }
 

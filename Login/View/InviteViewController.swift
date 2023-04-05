@@ -6,10 +6,11 @@
 //
 
 import UIKit
-//import CommonUI
 import Common
 
 public class InviteViewController: UIViewController {
+    
+    weak var delegate: LoginViewControllerDelegate?
     
     var largeLabel = UILabel()
     var image = UIImageView()
@@ -31,6 +32,8 @@ public class InviteViewController: UIViewController {
     }
     
     public override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -55,7 +58,7 @@ public class InviteViewController: UIViewController {
             return label
         }()
         
-        image.image = UIImage(named: "image-breads")
+        image.image = LoginAssets.inviteCode
         
         codeIs = {
             let label = UILabel()
@@ -67,7 +70,7 @@ public class InviteViewController: UIViewController {
         
         code = {
             let btn = UIButton()
-            btn.setBackgroundImage(UIImage(named: "highlighter"), for: .normal)
+            btn.setBackgroundImage(LoginAssets.highlighter, for: .normal)
             //FIXME: title -> userdefaults에 저장한 코드로 변경
             btn.setTitle("DUMMY0427", for: .normal)
             btn.setTitleColor(.black, for: .normal)
@@ -75,7 +78,7 @@ public class InviteViewController: UIViewController {
             return btn
         }()
         
-        bubble.image = UIImage(named: "speech-bubble")
+        bubble.image = LoginAssets.speechBubble
         
         codeField.textField.placeholder = "이름 입력"
         codeField.textField.addTarget(self, action: #selector(textFieldChange(textField:)), for: .editingChanged)
@@ -150,11 +153,10 @@ extension InviteViewController {
     }
     
     func enterLoverCode(){
-        print(codeField.textField.text)
-        //FIXME: edit later
-        UserdefaultManager.startMode = .main
-        dismiss(animated: true)
-        
+        print(codeField.textField.text ?? "no code")
+        //FIXME: network check
+        UserdefaultManager.startMode = .waitingConnection
+        delegate?.nextProcess()
     }
     
     func textFieldChange(textField: UITextField) {

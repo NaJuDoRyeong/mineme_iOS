@@ -50,12 +50,12 @@ public class HomeSettingViewController: UIViewController {
     func initAttribute() {
         
         header.setTitle(string: "프로필 설정")
-        header.leftIcon.setImage(UIImage(named: "icon-arrow-left"), for: .normal)
+        header.leftIcon.setImage(CommonAssets.arrowLeft, for: .normal)
         header.leftIcon.addTarget(self, action: #selector(tapBackButton), for: .touchUpInside)
         
-        profileImage.image = UIImage(named: "image-profile")
+        profileImage.image = CommonAssets.defaultProfile
         
-        editImageButton.setImage(UIImage(named: "icon-camera"), for: .normal)
+        editImageButton.setImage(CommonAssets.camera, for: .normal)
         editImageButton.addTarget(self, action: #selector(pickImage), for: .touchUpInside)
         
         scrollView.delegate = self

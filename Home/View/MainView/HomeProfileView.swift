@@ -7,19 +7,19 @@
 
 import UIKit
 import SnapKit
+import Common
 
 class HomeProfileView: UIView {
     
-    private var imageView = ProfileImageView()
-    private var nameLabel = UILabel()
-    private var commentLabel = UILabel()
-    private var instaIdLabel = UILabel()
+    private lazy var imageView = ProfileImageView()
+    private lazy var nameLabel = UILabel()
+    private lazy var commentLabel = UILabel()
+    private lazy var instaIdLabel = UILabel()
     
-    init(_ data: Profile){
+    init(){
         super.init(frame: .zero)
         initAttribute()
         initAutolayout()
-        bind(data: data)
     }
     
     
@@ -43,6 +43,8 @@ class HomeProfileView: UIView {
     }
     
     func initAttribute(){
+        
+        imageView.changeImage(image: CommonAssets.defaultProfile)
         
         nameLabel = {
             let label = UILabel()

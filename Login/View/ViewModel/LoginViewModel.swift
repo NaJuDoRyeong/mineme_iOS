@@ -25,14 +25,15 @@ class LoginViewModel : NSObject {
             .kakao(loginModel: model) : .apple(loginModel: model)
         
         networkManager.request(request)
-            .subscribe({ result in
+            .subscribe({ [weak self] result in
                 switch result {
                 case let .success(data):
                     do {
                         let loginDTO = try data.get()
-                        UserdefaultManager.jwt = loginDTO.jwt
-                        UserdefaultManager.code = loginDTO.code
+                        UserdefaultManager.jwt = loginDTO?.jwt
+                        UserdefaultManager.code = loginDTO?.code
                         print("⭐️NEW JWT : \( UserdefaultManager.jwt!)")
+                        self?.loginStatus.onNext(true)
                     }
                     catch {
                         print("Login Error : \(error.localizedDescription)")
@@ -41,8 +42,6 @@ class LoginViewModel : NSObject {
                     print("Login Error : \(error.localizedDescription)")
                 }
             }).disposed(by: disposeBag)
-        
-        loginStatus.onNext(true)
     }
     
     func logout(){
@@ -62,7 +61,7 @@ extension LoginViewModel {
             UserApi.shared.loginWithKakaoTalk { [weak self] (oauthToken, error) in
                 if let error = error {
                     self?.loginStatus.onNext(false)
-                    print(error)
+                    print("kakaoLogin error : \(error)")
                 }
                 else {
                     print("loginWithKakaoTalk() success.")

@@ -5,10 +5,10 @@
 //  Created by 김민령 on 2022/12/06.
 //
 
-import Foundation
+import UIKit
 
 struct OnboardingData {
     let title: String
     let subTitle: String
-    let imageName: String
+    let image: UIImage?
 }

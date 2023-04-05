@@ -27,6 +27,10 @@
 		B96D82EE296EA7A900C29AA9 /* StoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */; };
 		B96D82F5296EF50900C29AA9 /* DateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82F4296EF50900C29AA9 /* DateLabel.swift */; };
 		B96D82F7296EFBE900C29AA9 /* PostPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82F6296EFBE900C29AA9 /* PostPhotoView.swift */; };
+		B97D44D829DB4A4F0033586B /* StoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44D729DB4A4F0033586B /* StoryCoordinator.swift */; };
+		B97D453929DD70610033586B /* StoryAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D453829DD70610033586B /* StoryAssets.swift */; };
+		B97D453B29DD71240033586B /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D453A29DD71240033586B /* Bundle+Extension.swift */; };
+		B97D453D29DD718B0033586B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B97D453C29DD718B0033586B /* Assets.xcassets */; };
 		B9BE5A6C292387FD00E82CFB /* Story.h in Headers */ = {isa = PBXBuildFile; fileRef = B9BE5A6B292387FD00E82CFB /* Story.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9BE5A772923884100E82CFB /* StoryHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE5A762923884100E82CFB /* StoryHomeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +71,10 @@
 		B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostViewController.swift; sourceTree = "<group>"; };
 		B96D82F4296EF50900C29AA9 /* DateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLabel.swift; sourceTree = "<group>"; };
 		B96D82F6296EFBE900C29AA9 /* PostPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPhotoView.swift; sourceTree = "<group>"; };
+		B97D44D729DB4A4F0033586B /* StoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCoordinator.swift; sourceTree = "<group>"; };
+		B97D453829DD70610033586B /* StoryAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryAssets.swift; sourceTree = "<group>"; };
+		B97D453A29DD71240033586B /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		B97D453C29DD718B0033586B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9BE5A68292387FD00E82CFB /* Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE5A6B292387FD00E82CFB /* Story.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
 		B9BE5A762923884100E82CFB /* StoryHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHomeViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +164,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B97D44D629DB4A3B0033586B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B97D44D729DB4A4F0033586B /* StoryCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B97D453429DD70290033586B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B97D453C29DD718B0033586B /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B97D453529DD702E0033586B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B97D453729DD70400033586B /* Extension */,
+				B97D453629DD70370033586B /* Constant */,
+				B97D44D629DB4A3B0033586B /* Coordinator */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B97D453629DD70370033586B /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				B97D453829DD70610033586B /* StoryAssets.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		B97D453729DD70400033586B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B97D453A29DD71240033586B /* Bundle+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		B9BE5A5E292387FD00E82CFB = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +213,8 @@
 				B9BE5A752923883700E82CFB /* View */,
 				B949083029AF4FAC00B42BDE /* ViewModel */,
 				B949089629BA1E3600B42BDE /* Model */,
+				B97D453529DD702E0033586B /* Source */,
+				B97D453429DD70290033586B /* Resource */,
 				B9BE5A69292387FD00E82CFB /* Products */,
 				B96D82EF296EAC8400C29AA9 /* Frameworks */,
 				82E5DDFA21A97D6386728CCD /* Pods */,
@@ -268,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97D453D29DD718B0033586B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B949089A29BA21E400B42BDE /* ContentPreviewCell.swift in Sources */,
+				B97D453B29DD71240033586B /* Bundle+Extension.swift in Sources */,
 				B949088829B5D62E00B42BDE /* CalendarCollectionViewCell.swift in Sources */,
 				B96D82EE296EA7A900C29AA9 /* StoryPostViewController.swift in Sources */,
 				B949083229AF4FCE00B42BDE /* StoryPostViewModel.swift in Sources */,
@@ -316,8 +370,10 @@
 				B949089829BA1E4800B42BDE /* Content.swift in Sources */,
 				B9BE5A772923884100E82CFB /* StoryHomeViewController.swift in Sources */,
 				B949083629AF779000B42BDE /* FeedtableView.swift in Sources */,
+				B97D44D829DB4A4F0033586B /* StoryCoordinator.swift in Sources */,
 				B96D82F5296EF50900C29AA9 /* DateLabel.swift in Sources */,
 				B949082B29AF3E6D00B42BDE /* StoryPostEnterInfoView.swift in Sources */,
+				B97D453929DD70610033586B /* StoryAssets.swift in Sources */,
 				B949082F29AF4C5D00B42BDE /* StoryPostWriteContentView.swift in Sources */,
 				B949083429AF714400B42BDE /* FeedCell.swift in Sources */,
 				B96A35C129C35EE800AC685F /* StoryDTO.swift in Sources */,

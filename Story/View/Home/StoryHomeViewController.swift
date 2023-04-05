@@ -53,13 +53,13 @@ public class StoryHomeViewController: UIViewController {
     }
     
     func initAttribute(){
-        noImageView.image = UIImage(named: "no-image-bread") //FIXME: 데이터 오면 로직 설정
+        noImageView.image = StoryAssets.noStory //FIXME: 데이터 오면 로직 설정
         
         header.setTitle(string: "스토리")
-        header.rightIcon.setImage(UIImage(named: "icon-post"), for: .normal)
+        header.rightIcon.setImage(CommonAssets.post, for: .normal)
         header.rightIcon.addTarget(self, action: #selector(tapPostBtn), for: .touchUpInside)
         
-        header.leftIcon.setImage(UIImage(named: "story-change"), for: .normal)
+        header.leftIcon.setImage(StoryAssets.storyButton, for: .normal)
         header.leftIcon.addTarget(self, action: #selector(changeVC), for: .touchUpInside)
         
         contentCollectionView = {

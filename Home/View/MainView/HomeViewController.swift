@@ -21,8 +21,8 @@ open class HomeViewController : UIViewController {
     
     private var header = CommonHeader()
     private var coupleTitle = UILabel()
-    private var myProfileView = HomeProfileView(Profile(name: "이름없음"))
-    private var loverProfileView = HomeProfileView(Profile(name: "이름없음"))
+    private var myProfileView = HomeProfileView()
+    private var loverProfileView = HomeProfileView()
     private var heartImage = UIImageView()
     private var settingButton = UIButton()
     private var line = UIImageView()
@@ -59,10 +59,10 @@ open class HomeViewController : UIViewController {
         heartImage.image = UIImage(named: "heart")
         
         header.setTitle(string: "만나서 반가워요")
-        header.rightIcon.setImage(UIImage(named: "icon-setting"), for: .normal)
+        header.rightIcon.setImage(CommonAssets.setting, for: .normal)
         header.rightIcon.addTarget(self, action: #selector(tapSettingButton), for: .touchUpInside)
         
-        line.image = UIImage(named: "line")
+        line.image = HomeAssets.line
         
         previewComment = {
             let label = UILabel()

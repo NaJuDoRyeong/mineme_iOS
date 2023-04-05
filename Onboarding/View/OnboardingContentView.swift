@@ -31,7 +31,7 @@ class OnboardingContentView: UIView {
         self.content = content
         title.text = content.title
         subTitle.text = content.subTitle
-        imageView.image = UIImage(named: content.imageName)
+        imageView.image = content.image
     }
     
     private func initAttribute(){
