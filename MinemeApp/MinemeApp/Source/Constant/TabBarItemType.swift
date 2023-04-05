@@ -7,11 +7,11 @@ enum TabBarItemType : CaseIterable{
     var tabBarItem : UITabBarItem {
         switch self {
         case .home:
-            return UITabBarItem(title: "", image: AppAssets.homeTab , selectedImage: AppAssets.selectedHomeTab)
+            return UITabBarItem(title: "", image: AppImages.homeTab.image , selectedImage: AppImages.selectedHomeTab.image)
         case .story:
-            return UITabBarItem(title: "", image: AppAssets.storyTab, selectedImage: AppAssets.selectedStoryTab)
+            return UITabBarItem(title: "", image: AppImages.storyTab.image, selectedImage: AppImages.selectedStoryTab.image)
         case .setting:
-            return UITabBarItem(title: "", image: AppAssets.settingTab , selectedImage: AppAssets.selectedSettingTab)
+            return UITabBarItem(title: "", image: AppImages.settingTab.image , selectedImage: AppImages.selectedSettingTab.image)
         }
     }
 }

@@ -10,6 +10,7 @@ import SnapKit
 
 class OnboardingContentView: UIView {
 
+    var content : OnboardingData?
     private var title = UILabel()
     private var subTitle = UILabel()
     private var imageView = UIImageView()
@@ -27,9 +28,10 @@ class OnboardingContentView: UIView {
     }
     
     func initData(content: OnboardingData){
+        self.content = content
         title.text = content.title
         subTitle.text = content.subTitle
-        imageView.image = OnboardingImages.image(string: content.image)
+        imageView.image = content.image
     }
     
     private func initAttribute(){

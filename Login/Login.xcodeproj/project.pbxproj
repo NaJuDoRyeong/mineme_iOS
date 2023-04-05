@@ -27,7 +27,7 @@
 		B97D450029DC30D60033586B /* LoginCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44FF29DC30D60033586B /* LoginCoordinatorDelegate.swift */; };
 		B97D452429DD6DF20033586B /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D452329DD6DF20033586B /* Bundle+Extension.swift */; };
 		B97D452729DD6E470033586B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B97D452629DD6E470033586B /* Assets.xcassets */; };
-		B97D452929DD6E570033586B /* LoginAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D452829DD6E570033586B /* LoginAssets.swift */; };
+		B97D452929DD6E570033586B /* LoginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D452829DD6E570033586B /* LoginImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,7 +65,7 @@
 		B97D44FF29DC30D60033586B /* LoginCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		B97D452329DD6DF20033586B /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		B97D452629DD6E470033586B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B97D452829DD6E570033586B /* LoginAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssets.swift; sourceTree = "<group>"; };
+		B97D452829DD6E570033586B /* LoginImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImages.swift; sourceTree = "<group>"; };
 		C8A4EF18DAAA0EA3FEAE3D65 /* Pods_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBE81311C68D89E56A55572 /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,7 +100,7 @@
 				B97D44C529DABE720033586B /* LoginInformationViewModel.swift */,
 			);
 			name = ViewModel;
-			path = View/ViewModel;
+			path = ../View/ViewModel;
 			sourceTree = "<group>";
 		};
 		B94908C529BA612C00B42BDE /* Model */ = {
@@ -111,18 +111,14 @@
 				B94908CA29BA66F600B42BDE /* LoginDTO.swift */,
 				B97D44C329DABD930033586B /* PreUserInfo.swift */,
 			);
-			path = Model;
+			name = Model;
+			path = ../View/Model;
 			sourceTree = "<group>";
 		};
 		B95D6435299DFAD900BCA7E0 = {
 			isa = PBXGroup;
 			children = (
 				B95D6441299DFAD900BCA7E0 /* Login */,
-				B95D6449299DFB0A00BCA7E0 /* View */,
-				B94908C229BA59EE00B42BDE /* ViewModel */,
-				B94908C529BA612C00B42BDE /* Model */,
-				B97D452029DD6DCE0033586B /* Source */,
-				B97D452529DD6E370033586B /* Resource */,
 				B95D6440299DFAD900BCA7E0 /* Products */,
 				B95D645A299E06CA00BCA7E0 /* Frameworks */,
 				9249888421E7809E03037449 /* Pods */,
@@ -141,6 +137,11 @@
 			isa = PBXGroup;
 			children = (
 				B95D6442299DFAD900BCA7E0 /* Login.h */,
+				B95D6449299DFB0A00BCA7E0 /* View */,
+				B94908C229BA59EE00B42BDE /* ViewModel */,
+				B94908C529BA612C00B42BDE /* Model */,
+				B97D452029DD6DCE0033586B /* Source */,
+				B97D452529DD6E370033586B /* Resource */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -155,7 +156,8 @@
 				B95D644C299DFC2700BCA7E0 /* KakaoLoginButton.swift */,
 				B95D644E299DFC3300BCA7E0 /* AppleLoginButton.swift */,
 			);
-			path = View;
+			name = View;
+			path = ../View;
 			sourceTree = "<group>";
 		};
 		B95D645A299E06CA00BCA7E0 /* Frameworks */ = {
@@ -199,7 +201,8 @@
 				B97D452129DD6DD60033586B /* Extension */,
 				B97D44F229DC0E210033586B /* Coordinator */,
 			);
-			path = Source;
+			name = Source;
+			path = ../View/Source;
 			sourceTree = "<group>";
 		};
 		B97D452129DD6DD60033586B /* Extension */ = {
@@ -213,7 +216,7 @@
 		B97D452229DD6DE20033586B /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				B97D452829DD6E570033586B /* LoginAssets.swift */,
+				B97D452829DD6E570033586B /* LoginImages.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -223,7 +226,8 @@
 			children = (
 				B97D452629DD6E470033586B /* Assets.xcassets */,
 			);
-			path = Resource;
+			name = Resource;
+			path = ../View/Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +346,7 @@
 				B97D44C629DABE720033586B /* LoginInformationViewModel.swift in Sources */,
 				B95D644B299DFB4400BCA7E0 /* LoginViewController.swift in Sources */,
 				B94908C429BA59FE00B42BDE /* LoginViewModel.swift in Sources */,
-				B97D452929DD6E570033586B /* LoginAssets.swift in Sources */,
+				B97D452929DD6E570033586B /* LoginImages.swift in Sources */,
 				B97D44F429DC0E300033586B /* LoginCoordinator.swift in Sources */,
 				B95D644D299DFC2700BCA7E0 /* KakaoLoginButton.swift in Sources */,
 				B97D44FD29DC2E180033586B /* LoginViewControllerDelegate.swift in Sources */,

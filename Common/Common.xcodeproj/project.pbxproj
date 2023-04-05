@@ -125,10 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				B92A6316297455090015AEC1 /* Common */,
-				B92411CD29D473E5006DC123 /* View */,
-				B9736F5F2994E1ED00F20196 /* Network */,
-				B96A35E929D07C3D00AC685F /* Source */,
-				B96A35D929CCC59E00AC685F /* Resource */,
 				B92A6315297455090015AEC1 /* Products */,
 				B95100242997D2C9002CD38E /* Frameworks */,
 				DD28AF960CD8DEE241891DAC /* Pods */,
@@ -147,6 +143,10 @@
 			isa = PBXGroup;
 			children = (
 				B92A6317297455090015AEC1 /* Common.h */,
+				B92411CD29D473E5006DC123 /* View */,
+				B9736F5F2994E1ED00F20196 /* Network */,
+				B96A35E929D07C3D00AC685F /* Source */,
+				B96A35D929CCC59E00AC685F /* Resource */,
 			);
 			path = Common;
 			sourceTree = "<group>";

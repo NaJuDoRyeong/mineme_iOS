@@ -88,8 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				B9FDB7E62936176A002DB8B1 /* Setting */,
-				B9FDB7F1293622E4002DB8B1 /* View */,
-				B97D44D929DB4AC60033586B /* Coordinator */,
 				B9FDB7E52936176A002DB8B1 /* Products */,
 				217E69A176170FEC18F8E4BB /* Pods */,
 				7F100C3B7964886174B0E2D7 /* Frameworks */,
@@ -108,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				B9FDB7E72936176A002DB8B1 /* Setting.h */,
+				B9FDB7F1293622E4002DB8B1 /* View */,
+				B97D44D929DB4AC60033586B /* Coordinator */,
 			);
 			path = Setting;
 			sourceTree = "<group>";

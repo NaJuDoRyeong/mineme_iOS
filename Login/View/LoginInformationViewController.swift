@@ -67,7 +67,7 @@ final public class LoginInformationViewController: UIViewController {
         self.view.backgroundColor = .white
         nameField.textField.addTarget(self, action: #selector(textFieldChange(textField:)), for: .editingChanged)
         
-        imageView.image = LoginAssets.initUserInfo
+        imageView.image = LoginImages.initUserInfo.image
         
         nextButton.addTarget(self, action: #selector(tapNextButton), for: .touchUpInside)
         

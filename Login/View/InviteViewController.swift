@@ -58,7 +58,7 @@ public class InviteViewController: UIViewController {
             return label
         }()
         
-        image.image = LoginAssets.inviteCode
+        image.image = LoginImages.inviteCode.image
         
         codeIs = {
             let label = UILabel()
@@ -70,7 +70,7 @@ public class InviteViewController: UIViewController {
         
         code = {
             let btn = UIButton()
-            btn.setBackgroundImage(LoginAssets.highlighter, for: .normal)
+            btn.setBackgroundImage(LoginImages.highlighter.image, for: .normal)
             //FIXME: title -> userdefaults에 저장한 코드로 변경
             btn.setTitle("DUMMY0427", for: .normal)
             btn.setTitleColor(.black, for: .normal)
@@ -78,7 +78,7 @@ public class InviteViewController: UIViewController {
             return btn
         }()
         
-        bubble.image = LoginAssets.speechBubble
+        bubble.image = LoginImages.speechBubble.image
         
         codeField.textField.placeholder = "이름 입력"
         codeField.textField.addTarget(self, action: #selector(textFieldChange(textField:)), for: .editingChanged)
