@@ -10,24 +10,24 @@
 		234ED98AA10E6A90F47544AB /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A4EF18DAAA0EA3FEAE3D65 /* Pods_Login.framework */; };
 		B9002D3629D9CEE900EA7F00 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94908CC29BA69C700B42BDE /* Common.framework */; };
 		B9002D3729D9CEE900EA7F00 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B94908CC29BA69C700B42BDE /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B94908C429BA59FE00B42BDE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94908C329BA59FE00B42BDE /* LoginViewModel.swift */; };
-		B94908C729BA624100B42BDE /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94908C629BA624100B42BDE /* LoginProvider.swift */; };
-		B94908C929BA634500B42BDE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94908C829BA634500B42BDE /* LoginModel.swift */; };
-		B94908CB29BA66F600B42BDE /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94908CA29BA66F600B42BDE /* LoginDTO.swift */; };
 		B95D6443299DFAD900BCA7E0 /* Login.h in Headers */ = {isa = PBXBuildFile; fileRef = B95D6442299DFAD900BCA7E0 /* Login.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B95D644B299DFB4400BCA7E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D644A299DFB4400BCA7E0 /* LoginViewController.swift */; };
-		B95D644D299DFC2700BCA7E0 /* KakaoLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D644C299DFC2700BCA7E0 /* KakaoLoginButton.swift */; };
-		B95D644F299DFC3300BCA7E0 /* AppleLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D644E299DFC3300BCA7E0 /* AppleLoginButton.swift */; };
-		B95D6457299E020000BCA7E0 /* LoginInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D6456299E020000BCA7E0 /* LoginInformationViewController.swift */; };
-		B95D6460299E1FB300BCA7E0 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95D645F299E1FB300BCA7E0 /* InviteViewController.swift */; };
-		B97D44C429DABD930033586B /* PreUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44C329DABD930033586B /* PreUserInfo.swift */; };
-		B97D44C629DABE720033586B /* LoginInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44C529DABE720033586B /* LoginInformationViewModel.swift */; };
-		B97D44F429DC0E300033586B /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44F329DC0E300033586B /* LoginCoordinator.swift */; };
-		B97D44FD29DC2E180033586B /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44FC29DC2E180033586B /* LoginViewControllerDelegate.swift */; };
-		B97D450029DC30D60033586B /* LoginCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44FF29DC30D60033586B /* LoginCoordinatorDelegate.swift */; };
-		B97D452429DD6DF20033586B /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D452329DD6DF20033586B /* Bundle+Extension.swift */; };
-		B97D452729DD6E470033586B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B97D452629DD6E470033586B /* Assets.xcassets */; };
-		B97D452929DD6E570033586B /* LoginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D452829DD6E570033586B /* LoginImages.swift */; };
+		B97D458C29DDD2F20033586B /* LoginInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D458529DDD2F20033586B /* LoginInformationViewController.swift */; };
+		B97D458D29DDD2F20033586B /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D458729DDD2F20033586B /* LoginViewControllerDelegate.swift */; };
+		B97D458E29DDD2F20033586B /* KakaoLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D458829DDD2F20033586B /* KakaoLoginButton.swift */; };
+		B97D458F29DDD2F20033586B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D458929DDD2F20033586B /* LoginViewController.swift */; };
+		B97D459029DDD2F20033586B /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D458A29DDD2F20033586B /* InviteViewController.swift */; };
+		B97D459129DDD2F20033586B /* AppleLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D458B29DDD2F20033586B /* AppleLoginButton.swift */; };
+		B97D459529DDD2F80033586B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D459329DDD2F80033586B /* LoginViewModel.swift */; };
+		B97D459629DDD2F80033586B /* LoginInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D459429DDD2F80033586B /* LoginInformationViewModel.swift */; };
+		B97D459C29DDD2FE0033586B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D459829DDD2FE0033586B /* LoginModel.swift */; };
+		B97D459D29DDD2FE0033586B /* PreUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D459929DDD2FE0033586B /* PreUserInfo.swift */; };
+		B97D459E29DDD2FE0033586B /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D459A29DDD2FE0033586B /* LoginProvider.swift */; };
+		B97D459F29DDD2FE0033586B /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D459B29DDD2FE0033586B /* LoginDTO.swift */; };
+		B97D45A929DDD3030033586B /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D45A229DDD3030033586B /* LoginCoordinator.swift */; };
+		B97D45AA29DDD3030033586B /* LoginCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D45A429DDD3030033586B /* LoginCoordinatorDelegate.swift */; };
+		B97D45AB29DDD3030033586B /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D45A629DDD3030033586B /* Bundle+Extension.swift */; };
+		B97D45AC29DDD3030033586B /* LoginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D45A829DDD3030033586B /* LoginImages.swift */; };
+		B97D45AF29DDD30E0033586B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B97D45AE29DDD30E0033586B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,26 +46,26 @@
 
 /* Begin PBXFileReference section */
 		761FEF7DFA835D6896258E71 /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
-		B94908C329BA59FE00B42BDE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		B94908C629BA624100B42BDE /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
-		B94908C829BA634500B42BDE /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		B94908CA29BA66F600B42BDE /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
 		B94908CC29BA69C700B42BDE /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95D643F299DFAD900BCA7E0 /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95D6442299DFAD900BCA7E0 /* Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
-		B95D644A299DFB4400BCA7E0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		B95D644C299DFC2700BCA7E0 /* KakaoLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginButton.swift; sourceTree = "<group>"; };
-		B95D644E299DFC3300BCA7E0 /* AppleLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginButton.swift; sourceTree = "<group>"; };
-		B95D6456299E020000BCA7E0 /* LoginInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInformationViewController.swift; sourceTree = "<group>"; };
-		B95D645F299E1FB300BCA7E0 /* InviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
-		B97D44C329DABD930033586B /* PreUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreUserInfo.swift; sourceTree = "<group>"; };
-		B97D44C529DABE720033586B /* LoginInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInformationViewModel.swift; sourceTree = "<group>"; };
-		B97D44F329DC0E300033586B /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		B97D44FC29DC2E180033586B /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
-		B97D44FF29DC30D60033586B /* LoginCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorDelegate.swift; sourceTree = "<group>"; };
-		B97D452329DD6DF20033586B /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
-		B97D452629DD6E470033586B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B97D452829DD6E570033586B /* LoginImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImages.swift; sourceTree = "<group>"; };
+		B97D458529DDD2F20033586B /* LoginInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInformationViewController.swift; sourceTree = "<group>"; };
+		B97D458729DDD2F20033586B /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B97D458829DDD2F20033586B /* KakaoLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakaoLoginButton.swift; sourceTree = "<group>"; };
+		B97D458929DDD2F20033586B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B97D458A29DDD2F20033586B /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
+		B97D458B29DDD2F20033586B /* AppleLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleLoginButton.swift; sourceTree = "<group>"; };
+		B97D459329DDD2F80033586B /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B97D459429DDD2F80033586B /* LoginInformationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInformationViewModel.swift; sourceTree = "<group>"; };
+		B97D459829DDD2FE0033586B /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		B97D459929DDD2FE0033586B /* PreUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreUserInfo.swift; sourceTree = "<group>"; };
+		B97D459A29DDD2FE0033586B /* LoginProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
+		B97D459B29DDD2FE0033586B /* LoginDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
+		B97D45A229DDD3030033586B /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		B97D45A429DDD3030033586B /* LoginCoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		B97D45A629DDD3030033586B /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		B97D45A829DDD3030033586B /* LoginImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginImages.swift; sourceTree = "<group>"; };
+		B97D45AE29DDD30E0033586B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8A4EF18DAAA0EA3FEAE3D65 /* Pods_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBE81311C68D89E56A55572 /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,28 +93,6 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
-		B94908C229BA59EE00B42BDE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				B94908C329BA59FE00B42BDE /* LoginViewModel.swift */,
-				B97D44C529DABE720033586B /* LoginInformationViewModel.swift */,
-			);
-			name = ViewModel;
-			path = ../View/ViewModel;
-			sourceTree = "<group>";
-		};
-		B94908C529BA612C00B42BDE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B94908C629BA624100B42BDE /* LoginProvider.swift */,
-				B94908C829BA634500B42BDE /* LoginModel.swift */,
-				B94908CA29BA66F600B42BDE /* LoginDTO.swift */,
-				B97D44C329DABD930033586B /* PreUserInfo.swift */,
-			);
-			name = Model;
-			path = ../View/Model;
-			sourceTree = "<group>";
-		};
 		B95D6435299DFAD900BCA7E0 = {
 			isa = PBXGroup;
 			children = (
@@ -137,27 +115,13 @@
 			isa = PBXGroup;
 			children = (
 				B95D6442299DFAD900BCA7E0 /* Login.h */,
-				B95D6449299DFB0A00BCA7E0 /* View */,
-				B94908C229BA59EE00B42BDE /* ViewModel */,
-				B94908C529BA612C00B42BDE /* Model */,
-				B97D452029DD6DCE0033586B /* Source */,
-				B97D452529DD6E370033586B /* Resource */,
+				B97D458429DDD2F20033586B /* View */,
+				B97D459229DDD2F80033586B /* ViewModel */,
+				B97D459729DDD2FE0033586B /* Model */,
+				B97D45A029DDD3030033586B /* Source */,
+				B97D45AD29DDD30E0033586B /* Resource */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		B95D6449299DFB0A00BCA7E0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B97D44FB29DC2E0B0033586B /* Protocol */,
-				B95D644A299DFB4400BCA7E0 /* LoginViewController.swift */,
-				B95D6456299E020000BCA7E0 /* LoginInformationViewController.swift */,
-				B95D645F299E1FB300BCA7E0 /* InviteViewController.swift */,
-				B95D644C299DFC2700BCA7E0 /* KakaoLoginButton.swift */,
-				B95D644E299DFC3300BCA7E0 /* AppleLoginButton.swift */,
-			);
-			name = View;
-			path = ../View;
 			sourceTree = "<group>";
 		};
 		B95D645A299E06CA00BCA7E0 /* Frameworks */ = {
@@ -169,65 +133,96 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B97D44F229DC0E210033586B /* Coordinator */ = {
+		B97D458429DDD2F20033586B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B97D44FE29DC30CB0033586B /* Protocol */,
-				B97D44F329DC0E300033586B /* LoginCoordinator.swift */,
+				B97D458629DDD2F20033586B /* Protocol */,
+				B97D458529DDD2F20033586B /* LoginInformationViewController.swift */,
+				B97D458829DDD2F20033586B /* KakaoLoginButton.swift */,
+				B97D458929DDD2F20033586B /* LoginViewController.swift */,
+				B97D458A29DDD2F20033586B /* InviteViewController.swift */,
+				B97D458B29DDD2F20033586B /* AppleLoginButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B97D458629DDD2F20033586B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B97D458729DDD2F20033586B /* LoginViewControllerDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B97D459229DDD2F80033586B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B97D459329DDD2F80033586B /* LoginViewModel.swift */,
+				B97D459429DDD2F80033586B /* LoginInformationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B97D459729DDD2FE0033586B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B97D459829DDD2FE0033586B /* LoginModel.swift */,
+				B97D459929DDD2FE0033586B /* PreUserInfo.swift */,
+				B97D459A29DDD2FE0033586B /* LoginProvider.swift */,
+				B97D459B29DDD2FE0033586B /* LoginDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B97D45A029DDD3030033586B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B97D45A129DDD3030033586B /* Coordinator */,
+				B97D45A529DDD3030033586B /* Extension */,
+				B97D45A729DDD3030033586B /* Constant */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B97D45A129DDD3030033586B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B97D45A229DDD3030033586B /* LoginCoordinator.swift */,
+				B97D45A329DDD3030033586B /* Protocol */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		B97D44FB29DC2E0B0033586B /* Protocol */ = {
+		B97D45A329DDD3030033586B /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				B97D44FC29DC2E180033586B /* LoginViewControllerDelegate.swift */,
+				B97D45A429DDD3030033586B /* LoginCoordinatorDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		B97D44FE29DC30CB0033586B /* Protocol */ = {
+		B97D45A529DDD3030033586B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				B97D44FF29DC30D60033586B /* LoginCoordinatorDelegate.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		B97D452029DD6DCE0033586B /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				B97D452229DD6DE20033586B /* Constant */,
-				B97D452129DD6DD60033586B /* Extension */,
-				B97D44F229DC0E210033586B /* Coordinator */,
-			);
-			name = Source;
-			path = ../View/Source;
-			sourceTree = "<group>";
-		};
-		B97D452129DD6DD60033586B /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				B97D452329DD6DF20033586B /* Bundle+Extension.swift */,
+				B97D45A629DDD3030033586B /* Bundle+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		B97D452229DD6DE20033586B /* Constant */ = {
+		B97D45A729DDD3030033586B /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				B97D452829DD6E570033586B /* LoginImages.swift */,
+				B97D45A829DDD3030033586B /* LoginImages.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
 		};
-		B97D452529DD6E370033586B /* Resource */ = {
+		B97D45AD29DDD30E0033586B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				B97D452629DD6E470033586B /* Assets.xcassets */,
+				B97D45AE29DDD30E0033586B /* Assets.xcassets */,
 			);
-			name = Resource;
-			path = ../View/Resource;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,7 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B97D452729DD6E470033586B /* Assets.xcassets in Resources */,
+				B97D45AF29DDD30E0033586B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,22 +333,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B97D44C429DABD930033586B /* PreUserInfo.swift in Sources */,
-				B97D452429DD6DF20033586B /* Bundle+Extension.swift in Sources */,
-				B94908C729BA624100B42BDE /* LoginProvider.swift in Sources */,
-				B95D644F299DFC3300BCA7E0 /* AppleLoginButton.swift in Sources */,
-				B97D450029DC30D60033586B /* LoginCoordinatorDelegate.swift in Sources */,
-				B97D44C629DABE720033586B /* LoginInformationViewModel.swift in Sources */,
-				B95D644B299DFB4400BCA7E0 /* LoginViewController.swift in Sources */,
-				B94908C429BA59FE00B42BDE /* LoginViewModel.swift in Sources */,
-				B97D452929DD6E570033586B /* LoginImages.swift in Sources */,
-				B97D44F429DC0E300033586B /* LoginCoordinator.swift in Sources */,
-				B95D644D299DFC2700BCA7E0 /* KakaoLoginButton.swift in Sources */,
-				B97D44FD29DC2E180033586B /* LoginViewControllerDelegate.swift in Sources */,
-				B94908C929BA634500B42BDE /* LoginModel.swift in Sources */,
-				B95D6457299E020000BCA7E0 /* LoginInformationViewController.swift in Sources */,
-				B94908CB29BA66F600B42BDE /* LoginDTO.swift in Sources */,
-				B95D6460299E1FB300BCA7E0 /* InviteViewController.swift in Sources */,
+				B97D459529DDD2F80033586B /* LoginViewModel.swift in Sources */,
+				B97D459129DDD2F20033586B /* AppleLoginButton.swift in Sources */,
+				B97D459F29DDD2FE0033586B /* LoginDTO.swift in Sources */,
+				B97D459C29DDD2FE0033586B /* LoginModel.swift in Sources */,
+				B97D458F29DDD2F20033586B /* LoginViewController.swift in Sources */,
+				B97D459629DDD2F80033586B /* LoginInformationViewModel.swift in Sources */,
+				B97D458C29DDD2F20033586B /* LoginInformationViewController.swift in Sources */,
+				B97D459029DDD2F20033586B /* InviteViewController.swift in Sources */,
+				B97D458E29DDD2F20033586B /* KakaoLoginButton.swift in Sources */,
+				B97D45AA29DDD3030033586B /* LoginCoordinatorDelegate.swift in Sources */,
+				B97D45AB29DDD3030033586B /* Bundle+Extension.swift in Sources */,
+				B97D45A929DDD3030033586B /* LoginCoordinator.swift in Sources */,
+				B97D459E29DDD2FE0033586B /* LoginProvider.swift in Sources */,
+				B97D45AC29DDD3030033586B /* LoginImages.swift in Sources */,
+				B97D458D29DDD2F20033586B /* LoginViewControllerDelegate.swift in Sources */,
+				B97D459D29DDD2FE0033586B /* PreUserInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
