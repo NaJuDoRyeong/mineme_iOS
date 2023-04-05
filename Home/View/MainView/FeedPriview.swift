@@ -28,7 +28,7 @@ class FeedPriview: CustomImageView {
             self.imageView.contentMode = .scaleAspectFill
         }
         else{
-            self.imageView.image = UIImage(named: "no-image-donut")
+            self.imageView.image = HomeAssets.noImage
             postButton = {
                 let button = UIButton()
                 button.setTitle("추가하기", for: .normal)

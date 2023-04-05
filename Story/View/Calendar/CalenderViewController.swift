@@ -30,10 +30,10 @@ class CalendarViewController: UIViewController {
     func initAttribute(){
         
         header.setTitle(string: "캘린더")
-        header.rightIcon.setImage(UIImage(named: "icon-post"), for: .normal)
+        header.rightIcon.setImage(CommonAssets.post, for: .normal)
         header.rightIcon.addTarget(self, action: #selector(tapPostBtn), for: .touchUpInside)
         
-        header.leftIcon.setImage(UIImage(named: "calendar-change"), for: .normal)
+        header.leftIcon.setImage(StoryAssets.calendarButton, for: .normal)
         header.leftIcon.addTarget(self, action: #selector(changeVC), for: .touchUpInside)
         
         dateLabel = {

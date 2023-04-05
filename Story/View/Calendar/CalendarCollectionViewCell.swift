@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Common
 
 class CalendarCollectionViewCell: UICollectionViewCell {
     
@@ -26,7 +27,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     }
     
     func initAttribute(){
-        view.image = UIImage(named: "ugly-circle")
+        view.image = StoryAssets.calendarCircle
         dayLabel = {
             let label = UILabel()
             label.textColor = .white

@@ -14,6 +14,9 @@
 		B97D44F129DC0E070033586B /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44F029DC0E070033586B /* OnboardingCoordinator.swift */; };
 		B97D44F729DC2A4C0033586B /* OnboardingViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44F629DC2A4C0033586B /* OnboardingViewControllerDelegate.swift */; };
 		B97D44F929DC2B650033586B /* OnboardingCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44F829DC2B650033586B /* OnboardingCoordinatorDelegate.swift */; };
+		B97D451129DD69120033586B /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D451029DD69120033586B /* Bundle+Extension.swift */; };
+		B97D451429DD69300033586B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B97D451329DD69300033586B /* Assets.xcassets */; };
+		B97D451729DD69990033586B /* OnboardingAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D451629DD69990033586B /* OnboardingAssets.swift */; };
 		B9F7A6F0293E6FBE00619054 /* Onboarding.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F7A6EF293E6FBE00619054 /* Onboarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9F7A6F8293E700D00619054 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A6F7293E700D00619054 /* OnboardingViewController.swift */; };
 		B9F7A8FD293F60C000619054 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7A8FC293F60C000619054 /* OnboardingContentView.swift */; };
@@ -42,6 +45,9 @@
 		B97D44F029DC0E070033586B /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		B97D44F629DC2A4C0033586B /* OnboardingViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B97D44F829DC2B650033586B /* OnboardingCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		B97D451029DD69120033586B /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		B97D451329DD69300033586B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B97D451629DD69990033586B /* OnboardingAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAssets.swift; sourceTree = "<group>"; };
 		B9F7A6EC293E6FBE00619054 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F7A6EF293E6FBE00619054 /* Onboarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Onboarding.h; sourceTree = "<group>"; };
 		B9F7A6F7293E700D00619054 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +104,40 @@
 			name = Protocol;
 			sourceTree = "<group>";
 		};
+		B97D450929DD68170033586B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B97D450F29DD69070033586B /* Extension */,
+				B97D451529DD69810033586B /* Constant */,
+				B97D44EF29DC0DF30033586B /* Coordinator */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		B97D450F29DD69070033586B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B97D451029DD69120033586B /* Bundle+Extension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		B97D451229DD69200033586B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B97D451329DD69300033586B /* Assets.xcassets */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		B97D451529DD69810033586B /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				B97D451629DD69990033586B /* OnboardingAssets.swift */,
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
 		B9F7A6E2293E6FBE00619054 = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +145,8 @@
 				B9F7A6F6293E6FCB00619054 /* View */,
 				B96A35EC29D07CCB00AC685F /* ViewModel */,
 				B9F7A8FF293F60D000619054 /* Model */,
-				B97D44EF29DC0DF30033586B /* Coordinator */,
+				B97D450929DD68170033586B /* Source */,
+				B97D451229DD69200033586B /* Resource */,
 				B9F7A6ED293E6FBE00619054 /* Products */,
 				B9F7A90E293F701B00619054 /* Frameworks */,
 				CEA533FA79DD932F16A4302C /* Pods */,
@@ -239,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97D451429DD69300033586B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +317,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B97D44F929DC2B650033586B /* OnboardingCoordinatorDelegate.swift in Sources */,
+				B97D451129DD69120033586B /* Bundle+Extension.swift in Sources */,
 				B9F7A919293F8F6E00619054 /* OnboardingProgessBar.swift in Sources */,
+				B97D451729DD69990033586B /* OnboardingAssets.swift in Sources */,
 				B97D44F129DC0E070033586B /* OnboardingCoordinator.swift in Sources */,
 				B96A35EE29D07CE300AC685F /* OnboardingViewModel.swift in Sources */,
 				B9F7A6F8293E700D00619054 /* OnboardingViewController.swift in Sources */,

@@ -19,6 +19,7 @@
 		B97D44DE29DB4DAD0033586B /* TabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44DD29DB4DAD0033586B /* TabBarControllerDelegate.swift */; };
 		B97D44EB29DBFE920033586B /* DefaultTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44EA29DBFE920033586B /* DefaultTabBarCoordinator.swift */; };
 		B97D44EE29DC00C90033586B /* TabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44ED29DC00C90033586B /* TabBarItemType.swift */; };
+		B97D451B29DD6BDF0033586B /* AppAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D451A29DD6BDF0033586B /* AppAssets.swift */; };
 		B9BE5A732923881A00E82CFB /* Story.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BE5A722923881A00E82CFB /* Story.framework */; };
 		B9BE5A742923881A00E82CFB /* Story.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9BE5A722923881A00E82CFB /* Story.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F11F84291696CC00CED4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F11F83291696CC00CED4C1 /* AppDelegate.swift */; };
@@ -67,6 +68,7 @@
 		B97D44DD29DB4DAD0033586B /* TabBarControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerDelegate.swift; sourceTree = "<group>"; };
 		B97D44EA29DBFE920033586B /* DefaultTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTabBarCoordinator.swift; sourceTree = "<group>"; };
 		B97D44ED29DC00C90033586B /* TabBarItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemType.swift; sourceTree = "<group>"; };
+		B97D451A29DD6BDF0033586B /* AppAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssets.swift; sourceTree = "<group>"; };
 		B9BE5A4D2923779E00E82CFB /* Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE5A722923881A00E82CFB /* Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F11F80291696CC00CED4C1 /* MinemeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinemeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,12 +174,22 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		B97D44EC29DC00940033586B /* Model */ = {
+		B97D451E29DD6D8E0033586B /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B97D451F29DD6DB70033586B /* Constant */,
+				B97D44CD29DB3B490033586B /* Coordinator */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B97D451F29DD6DB70033586B /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				B97D451A29DD6BDF0033586B /* AppAssets.swift */,
 				B97D44ED29DC00C90033586B /* TabBarItemType.swift */,
 			);
-			path = Model;
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		B9F11F77291696CC00CED4C1 = {
@@ -205,8 +217,7 @@
 				B92411BF29D47039006DC123 /* Application */,
 				B92411D629D4834B006DC123 /* View */,
 				B97D44C729DB23940033586B /* ViewModel */,
-				B97D44CD29DB3B490033586B /* Coordinator */,
-				B97D44EC29DC00940033586B /* Model */,
+				B97D451E29DD6D8E0033586B /* Source */,
 				B92411BD29D46CA5006DC123 /* Resource */,
 			);
 			path = MinemeApp;
@@ -342,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97D451B29DD6BDF0033586B /* AppAssets.swift in Sources */,
 				B97D44CF29DB3B610033586B /* AppCoordinator.swift in Sources */,
 				B97D44C929DB23AF0033586B /* SplashViewModel.swift in Sources */,
 				B9F11F88291696CC00CED4C1 /* TabBarController.swift in Sources */,

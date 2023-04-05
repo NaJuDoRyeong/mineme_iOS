@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Common
 
 class SplashViewController: UIViewController {
     
@@ -24,8 +25,8 @@ class SplashViewController: UIViewController {
     func initAttribute(){
         view.backgroundColor = UIColor(named: "butter")
         
-        appIcon.image = UIImage(named: "AppIcon")
-        appTitle.image = UIImage(named: "AppTitle")
+        appIcon.image = CommonAssets.appIcon
+        appTitle.image = CommonAssets.appTitle
         
         appIcon.sizeToFit()
         appTitle.sizeToFit()

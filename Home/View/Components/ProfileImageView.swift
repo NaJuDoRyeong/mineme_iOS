@@ -36,7 +36,7 @@ class ProfileImageView : UIImageView {
         self.frame.size = size
     }
     
-    func changeImage(image : UIImage){
+    func changeImage(image : UIImage?){
         circle(image: image)
     }
     
@@ -46,8 +46,8 @@ class ProfileImageView : UIImageView {
         self.kf.setImage(with: url, options: [.processor(processor)])
     }
     
-    func circle(image: UIImage) {
-        self.image = image.resize(width: 80, height: 80)
+    func circle(image: UIImage?) {
+        self.image = image?.resize(width: 80, height: 80)
         self.contentMode = .scaleAspectFill
         self.layer.cornerRadius = self.frame.height/2
         self.layer.cornerCurve = .circular
