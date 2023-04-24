@@ -11,6 +11,7 @@ public class StoryCoordinator: Coordinator{
     
     public func start() {
         navigation.setNavigationBarHidden(true, animated: false)
-        navigation.pushViewController(StoryHomeViewController(), animated: false)
+        let vc = StoryHomeViewController()
+        navigation.viewControllers = [vc]
     }
 }

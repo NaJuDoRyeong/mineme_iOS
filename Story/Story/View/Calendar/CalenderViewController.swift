@@ -10,13 +10,12 @@ import Common
 
 class CalendarViewController: UIViewController {
     
-    let dateFormatter = CommonDateFormatter()
-    let header = CommonHeader()
-    var dateLabel = UILabel()
-    var daysStackView = UIStackView()
-    var calendarCollectionView : UICollectionView!
+    private var header = CommonHeader()
+    private var dateButton : CalendarDateButton!
+    private var calendarWeeksStackView = UIStackView()
+    private var calendarCollectionView : UICollectionView!
 
-    var days = [Int]()
+    private let viewModel = CalendarViewModel()
     
     override func viewDidLoad() {
         print("CalendarViewController viewDidLoad")
@@ -29,22 +28,25 @@ class CalendarViewController: UIViewController {
     
     func initAttribute(){
         
-        header.setTitle(string: "캘린더")
-        header.rightIcon.setImage(CommonAssets.post, for: .normal)
-        header.rightIcon.addTarget(self, action: #selector(tapPostBtn), for: .touchUpInside)
-        
-        header.leftIcon.setImage(StoryImages.calendarButton.image, for: .normal)
-        header.leftIcon.addTarget(self, action: #selector(changeVC), for: .touchUpInside)
-        
-        dateLabel = {
-            let label = UILabel()
-            label.textColor = .black
-            label.font = UIFont.systemFont(ofSize: 17)
-            label.text = dateFormatter.todayToString()
-            return label
+        header = {
+            let header = CommonHeader()
+            header.setTitle(string: "캘린더")
+            header.rightIcon.setImage(CommonAssets.post, for: .normal)
+            header.rightIcon.addTarget(self, action: #selector(tapPostBtn), for: .touchUpInside)
+            
+            header.leftIcon.setImage(StoryImages.calendarButton.image, for: .normal)
+            header.leftIcon.addTarget(self, action: #selector(changeVC), for: .touchUpInside)
+            return header
         }()
         
-        daysStackView = {
+        dateButton = {
+            let button = CalendarDateButton(viewModel: viewModel)
+            button.setTitleColor(.black, for: .normal)
+            button.delegate = self
+            return button
+        }()
+        
+        calendarWeeksStackView = {
             let view = UIStackView()
             view.axis = .horizontal
             view.distribution = .equalSpacing
@@ -67,7 +69,8 @@ class CalendarViewController: UIViewController {
     
     func initAutolayout(){
         
-        [header, dateLabel, daysStackView, calendarCollectionView].forEach { self.view.addSubview($0) }
+        [header, dateButton, calendarWeeksStackView, calendarCollectionView]
+            .forEach { self.view.addSubview($0) }
         
         for day in DayOfWeek.allCases {
             let label : UILabel = {
@@ -78,7 +81,7 @@ class CalendarViewController: UIViewController {
                 return label
             }()
             
-            daysStackView.addArrangedSubview(label)
+            calendarWeeksStackView.addArrangedSubview(label)
         }
         
         
@@ -86,19 +89,19 @@ class CalendarViewController: UIViewController {
             $0.top.equalToSuperview()
         }
         
-        dateLabel.snp.makeConstraints {
+        dateButton.snp.makeConstraints {
             $0.top.equalTo(header.snp.bottom).offset(45)
             $0.centerX.equalToSuperview()
         }
         
-        daysStackView.snp.makeConstraints {
-            $0.top.equalTo(dateLabel.snp.bottom).offset(20)
+        calendarWeeksStackView.snp.makeConstraints {
+            $0.top.equalTo(dateButton.snp.bottom).offset(20)
             $0.left.equalToSuperview().offset(21+20)
             $0.right.equalToSuperview().offset(-21-20)
         }
         
         calendarCollectionView.snp.makeConstraints {
-            $0.top.equalTo(daysStackView.snp.bottom).offset(12)
+            $0.top.equalTo(calendarWeeksStackView.snp.bottom).offset(12)
 //            $0.centerX.equalToSuperview()
             $0.left.equalToSuperview().offset(21)
             $0.right.equalToSuperview().offset(-21)
@@ -114,20 +117,9 @@ class CalendarViewController: UIViewController {
 }
 
 extension CalendarViewController {
-    func updateDays(){
-//        let removedSubviews = contentStackView.arrangedSubviews.reduce([]) { (allSubviews, subview) -> [UIView] in
-//                    contentStackView.removeArrangedSubview(subview)
-//                    return allSubviews + [subview]
-//
-//        }
-        let last = dateFormatter.lastDay(year: "2023", month: "3")!
-        let firstDate = dateFormatter.StringToDate("2023-3-\(1)", format: "yyyy-M-d")
-        let day = dateFormatter.dayOfTheWeek(date: firstDate!)
-        days = Array(repeating: 0, count: day-1)
-        for i in 1...last{
-            days.append(i)
-        }
-        
+    func updateDays(_ year: String? = nil, _ month: String? = nil){
+        viewModel.updateDays(year, month)
+        calendarCollectionView.reloadData()
     }
 }
 
@@ -149,16 +141,16 @@ extension CalendarViewController {
 extension CalendarViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return days.count
+        return viewModel.getDays().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = calendarCollectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.cellID, for: indexPath) as! CalendarCollectionViewCell
-        if days[indexPath.row] == 0 {
+        if viewModel.getDays()[indexPath.row] == 0 {
             cell.isHidden = true
         }
         else{
-            cell.bind(day: String(days[indexPath.row]))
+            cell.bind(day: String(viewModel.getDays()[indexPath.row]))
         }
         return cell
     }
@@ -170,3 +162,9 @@ extension CalendarViewController : UICollectionViewDelegate, UICollectionViewDat
     
 }
 
+extension CalendarViewController : CalendarDateButtonDelegate {
+    func changeDate() {
+        guard let year = viewModel.selectedYear(), let month = viewModel.selectedMonth() else { return }
+        updateDays(year, month)
+    }
+}

@@ -13,8 +13,8 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     
     static let cellID = "CalendarCollectionViewCell"
     
-    var view = UIImageView()
-    var dayLabel = UILabel()
+    private var view = UIImageView()
+    private var dayLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,6 +24,11 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        dayLabel.text = nil
+        isHidden = false
     }
     
     func initAttribute(){
