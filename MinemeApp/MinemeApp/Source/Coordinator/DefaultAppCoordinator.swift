@@ -12,6 +12,7 @@ class DefaultAppCoordinator: AppCoordinator {
     init(window: UIWindow?){
         self.window = window
         self.navigation = UINavigationController()
+        navigation.setNavigationBarHidden(true, animated: false)
     }
     
     func start() {
