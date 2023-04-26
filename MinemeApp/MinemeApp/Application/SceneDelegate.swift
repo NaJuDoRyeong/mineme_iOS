@@ -11,6 +11,7 @@ import Home
 import Story
 import Onboarding
 import Login
+import Common
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -23,14 +24,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         self.appCoordinator = DefaultAppCoordinator(window: window)
-        appCoordinator?.start()
         
-//        /// open splash 2 seconds
-//        window.rootViewController = SplashViewController()
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-//            window.rootViewController = ViewController()
-//        }
+        let appVersionManager = AppVersionManager()
+        appVersionManager.versionChecking { [unowned self] check in
+            if !check {
+                window?.rootViewController = UpdateViewController()
+            }else{
+                appCoordinator?.start()
+            }
+            window?.makeKeyAndVisible()
+        }
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {

@@ -28,7 +28,7 @@ target "MinemeApp" do
 	project "MinemeApp/MinemeApp.project"
 	shared_pods
 	kakao_pods
-	
+	pod 'Firebase/RemoteConfig'
 end
 
 target "Onboarding" do
