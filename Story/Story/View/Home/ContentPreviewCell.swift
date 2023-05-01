@@ -13,9 +13,7 @@ class ContentPreviewCell: UICollectionViewCell {
     
     static let cellID = "ContentPreviewCell"
     
-    var contentID : Int?
     var view = CustomImageView(size: .small)
-    var header = UIView()
     var location = UILabel()
     var date = UILabel()
     
@@ -33,39 +31,48 @@ class ContentPreviewCell: UICollectionViewCell {
         view.imageView.kf.setImage(with: URL(string: content.images.first!))
         location.text = content.location
         date.text = content.date
-        contentID = content.id
+        self.tag = content.id
     }
     
     func initAttribute(){
         view.clipsToBounds = true
         
-        header.layer.backgroundColor = UIColor(red: 0.788, green: 0.788, blue: 0.788, alpha: 0.6).cgColor
+        location = {
+            let label = UILabel()
+            label.font = UIFont.systemFont(ofSize: 14)
+            label.textColor = .black
+            return label
+        }()
+        
+        date = {
+            let label = UILabel()
+            label.font = UIFont.systemFont(ofSize: 11)
+            label.textColor = .gray
+            return label
+        }()
         
     }
     
     func initAutolayout(){
-        self.addSubview(view)
         
-        view.addSubview(header)
-        
-        [location, date].forEach {
-            header.addSubview($0)
+        [view, location, date].forEach {
+            addSubview($0)
         }
         
         view.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        
-        header.snp.makeConstraints {
-            $0.top.equalTo(view)
-            $0.left.equalTo(view)
-            $0.right.equalTo(view)
-            $0.height.equalTo(35)
+            $0.top.left.right.equalToSuperview()
+            $0.size.equalTo(view.size.rawValue)
         }
         
         location.snp.makeConstraints {
-            $0.centerY.equalTo(header)
-            $0.left.equalTo(header).offset(9)
+            $0.top.equalTo(view.snp.bottom).offset(8.05)
+            $0.left.right.equalToSuperview()
+        }
+        
+        date.snp.makeConstraints {
+            $0.top.equalTo(location.snp.bottom).offset(2)
+            $0.left.right.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
         
     }
