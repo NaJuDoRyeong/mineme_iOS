@@ -14,6 +14,7 @@ class StoryPostEnterInfoView: UIView {
     
     let datePicker = CustomDatePicker(title: "언제였나요?")
     let locationPicker = CustomLocationPicker()
+    let stickerPicker = StickerPickerView()
     
     let storyPostVM : StoryPostViewModel
     var disposeBag = DisposeBag()
@@ -42,7 +43,7 @@ class StoryPostEnterInfoView: UIView {
     }
     
     func initAutolayout(){
-        [datePicker, locationPicker].forEach {
+        [datePicker, locationPicker, stickerPicker].forEach {
             self.addSubview($0)
         }
         
@@ -56,7 +57,11 @@ class StoryPostEnterInfoView: UIView {
             $0.top.equalTo(datePicker.snp.bottom).offset(52)
             $0.left.equalToSuperview()
             $0.right.equalToSuperview()
-            $0.bottom.equalToSuperview()
+        }
+        
+        stickerPicker.snp.makeConstraints {
+            $0.top.equalTo(locationPicker.snp.bottom).offset(52)
+            $0.left.right.bottom.equalToSuperview()
         }
         
     }

@@ -33,6 +33,9 @@
 		B97D453929DD70610033586B /* StoryImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D453829DD70610033586B /* StoryImages.swift */; };
 		B97D453B29DD71240033586B /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D453A29DD71240033586B /* Bundle+Extension.swift */; };
 		B97D453D29DD718B0033586B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B97D453C29DD718B0033586B /* Assets.xcassets */; };
+		B97F966D29FFD1F7004EDC15 /* StickerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F966C29FFD1F7004EDC15 /* StickerPickerView.swift */; };
+		B97F966F29FFD6C6004EDC15 /* StickerCiewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F966E29FFD6C6004EDC15 /* StickerCiewCell.swift */; };
+		B97F967129FFEC8A004EDC15 /* Stickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F967029FFEC8A004EDC15 /* Stickers.swift */; };
 		B9BE5A6C292387FD00E82CFB /* Story.h in Headers */ = {isa = PBXBuildFile; fileRef = B9BE5A6B292387FD00E82CFB /* Story.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9BE5A772923884100E82CFB /* StoryHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE5A762923884100E82CFB /* StoryHomeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +82,9 @@
 		B97D453829DD70610033586B /* StoryImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryImages.swift; sourceTree = "<group>"; };
 		B97D453A29DD71240033586B /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		B97D453C29DD718B0033586B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B97F966C29FFD1F7004EDC15 /* StickerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPickerView.swift; sourceTree = "<group>"; };
+		B97F966E29FFD6C6004EDC15 /* StickerCiewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCiewCell.swift; sourceTree = "<group>"; };
+		B97F967029FFEC8A004EDC15 /* Stickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stickers.swift; sourceTree = "<group>"; };
 		B9BE5A68292387FD00E82CFB /* Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE5A6B292387FD00E82CFB /* Story.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
 		B9BE5A762923884100E82CFB /* StoryHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHomeViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +159,8 @@
 				B949082A29AF3E6D00B42BDE /* StoryPostEnterInfoView.swift */,
 				B949082C29AF3F3600B42BDE /* CustomLocationPicker.swift */,
 				B949082E29AF4C5D00B42BDE /* StoryPostWriteContentView.swift */,
+				B97F966C29FFD1F7004EDC15 /* StickerPickerView.swift */,
+				B97F966E29FFD6C6004EDC15 /* StickerCiewCell.swift */,
 				B96D82F6296EFBE900C29AA9 /* PostPhotoView.swift */,
 				B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */,
 			);
@@ -208,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				B97D453829DD70610033586B /* StoryImages.swift */,
+				B97F967029FFEC8A004EDC15 /* Stickers.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -378,7 +387,9 @@
 				B919E1EC29ED62BA004A7BBB /* CalendarViewModel.swift in Sources */,
 				B949083229AF4FCE00B42BDE /* StoryPostViewModel.swift in Sources */,
 				B949087F29B4C0E200B42BDE /* CalenderViewController.swift in Sources */,
+				B97F966D29FFD1F7004EDC15 /* StickerPickerView.swift in Sources */,
 				B949082D29AF3F3600B42BDE /* CustomLocationPicker.swift in Sources */,
+				B97F966F29FFD6C6004EDC15 /* StickerCiewCell.swift in Sources */,
 				B96A35C329C35F8300AC685F /* StoryProvider.swift in Sources */,
 				B949089529BA1D8400B42BDE /* StoryHomeViewModel.swift in Sources */,
 				B949089329BA1BC200B42BDE /* CalendarDateButton.swift in Sources */,
@@ -387,6 +398,7 @@
 				B9BE5A772923884100E82CFB /* StoryHomeViewController.swift in Sources */,
 				B949083629AF779000B42BDE /* FeedtableView.swift in Sources */,
 				B97D44D829DB4A4F0033586B /* StoryCoordinator.swift in Sources */,
+				B97F967129FFEC8A004EDC15 /* Stickers.swift in Sources */,
 				B96D82F5296EF50900C29AA9 /* DateLabel.swift in Sources */,
 				B949082B29AF3E6D00B42BDE /* StoryPostEnterInfoView.swift in Sources */,
 				B97D453929DD70610033586B /* StoryImages.swift in Sources */,
