@@ -63,6 +63,7 @@
 ## 📚 트러블슈팅
 
 - [기본적인 틀이 항상 같은 Response에 대응하여 제네릭한 JsonParser 구현](https://990427.tistory.com/112)
+- [재사용 가능한 NetworkManager 구현](https://990427.tistory.com/117)
 - [기본 제공하지 않는 Toast Message 직접 구현](https://990427.tistory.com/113)
 - [서버와의 이미지 용량 이슈 해결](https://990427.tistory.com/115)
 - 디자이너의 요구사항에 따라 CustomDatePicker구현 ([1편](https://990427.tistory.com/107), [2편](https://990427.tistory.com/108), [3편](https://990427.tistory.com/116))
