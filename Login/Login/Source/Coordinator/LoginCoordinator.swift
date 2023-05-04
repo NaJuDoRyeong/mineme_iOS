@@ -53,6 +53,9 @@ extension LoginCoordinator : LoginViewControllerDelegate {
             UserdefaultManager.startMode = .enterCode
         case .waitingConnection:
             login()
+        case .main:
+            //FIXME: go to main
+            finish()
         default:
             break
         }

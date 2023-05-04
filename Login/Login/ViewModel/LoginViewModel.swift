@@ -17,22 +17,30 @@ class LoginViewModel : NSObject {
     let loginStatus = PublishSubject<Bool>()
     let disposeBag = DisposeBag()
     
+    let networkManager = LoginNetworkManager()
+    
+    
     func login(_ token: String, _ type: ProviderType, _ name : String, _ code : String? = nil){
         let model = LoginModel(accessToken: token, providerType: type.string, username: name, authorizationCode: code)
-        
-        let networkManager = NetworkManager<LoginProvider, LoginDTO>()
+
         let request : LoginProvider = type == .KAKAO ?
             .kakao(loginModel: model) : .apple(loginModel: model)
         
-        networkManager.request(request)
+        networkManager.login(request)
             .subscribe({ [weak self] result in
                 switch result {
                 case let .success(data):
                     do {
-                        let loginDTO = try data.get()
-                        UserdefaultManager.jwt = loginDTO?.jwt
-                        UserdefaultManager.code = loginDTO?.code
+                        let data = try data.get()
+                        UserdefaultManager.jwt = data.data?.jwt
                         print("⭐️NEW JWT : \( UserdefaultManager.jwt!)")
+                        if data.code == 200 {
+                            UserdefaultManager.startMode = .main
+                        }
+                        else{
+                            UserdefaultManager.code = data.data?.code
+                            UserdefaultManager.startMode = .initUserInfo
+                        }
                         self?.loginStatus.onNext(true)
                     }
                     catch {

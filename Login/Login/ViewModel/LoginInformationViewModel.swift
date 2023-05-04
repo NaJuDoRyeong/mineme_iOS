@@ -14,25 +14,26 @@ class LoginInformationViewModel {
     
     let disposeBag = DisposeBag()
     var startMode = BehaviorRelay(value: UserdefaultManager.startMode)
+    let networkManager = LoginNetworkManager()
     
     func setUserInfo(name: String?, birthday: String?){
         guard let name = name, let birthday = birthday?.replacingOccurrences(of: " ", with: "-") else {
             return
         }
     
-        let networkManager = NetworkManager<LoginProvider, String>()
         let userInfo = PreUserInfo(nickname: name, birthday: birthday)
-        print(userInfo)
-        networkManager.request(.enterInfo(preUserInfo: userInfo))
+        
+        networkManager.enterInfo(userInfo)
             .subscribe { [weak self] result in
                 switch result{
                 case .success(_):
                     print("success")
                     self?.startMode.accept(.enterCode)
-                case .failure(_):
-                    print("fail")
+                case .failure(let error):
+                    print("error: \(error.localizedDescription)")
                 }
             }.disposed(by: disposeBag)
+        
     }
     
 }
