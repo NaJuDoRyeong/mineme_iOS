@@ -14,7 +14,12 @@ struct ResponseDTO<CommonDataDTO: Decodable> : Decodable {
     
 }
 
-struct ErrorDTO : Decodable, Error {
+public struct ErrorDTO : Decodable, Error {
     let code : Int
     let message: String
+}
+
+public struct SuccessDTO<DTO: Decodable> {
+    public let code: Int
+    public let data: DTO?
 }
