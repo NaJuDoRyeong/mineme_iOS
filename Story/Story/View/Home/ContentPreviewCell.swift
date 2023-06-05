@@ -34,6 +34,13 @@ class ContentPreviewCell: UICollectionViewCell {
         self.tag = content.id
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        view.imageView.image = nil
+        location.text = nil
+        date.text = nil
+    }
+    
     func initAttribute(){
         view.clipsToBounds = true
         

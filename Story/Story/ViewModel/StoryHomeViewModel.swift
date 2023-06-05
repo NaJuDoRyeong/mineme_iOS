@@ -29,7 +29,7 @@ extension StoryHomeViewModel {
     func setContents(){
         let dummy = "https://random.imagecdn.app/300/300"
         for i in 0..<10{
-            let content = Content(id: i, location: "경상남도 창원시", date: "2023 Mar 9", images: [dummy], text: "~~~")
+            let content = Content(id: i, location: "경상남도 창원시", date: "2023 Mar 9", images: [dummy], text: "~~~", sticker: nil)
             contents.append(content)
         }
     }

@@ -45,9 +45,8 @@ extension FeedtableView : UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FeedCell.cellID, for: indexPath) as! FeedCell
         
-        cell.locationLabel.text = "프랑스 파리"
-        cell.dateLabel.text = "2022 Oct 1"
-        cell.content.text = "너랑 같이 본 첫 에펠탑 \n날씨도 완벽하고 바게트빵도 너무 맛있었지? \n평생 잊지 못할거야 우린 꼭 늙어서 에펠탑이 보이는 곳에서 살자"
+        let content = Content(id: indexPath.row, location: "프랑스 파리", date: "2022 Oct 1", images: [], text: "너랑 같이 본 첫 에펠탑 \n날씨도 완벽하고 바게트빵도 너무 맛있었지? \n평생 잊지 못할거야 우린 꼭 늙어서 에펠탑이 보이는 곳에서 살자", sticker: Int.random(in: 1...9))
+        cell.bind(content: content)
         
         cell.selectionStyle = .none
         

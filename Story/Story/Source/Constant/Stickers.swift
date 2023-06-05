@@ -11,4 +11,9 @@ struct Stickers{
         }
         return result
     }
+    
+    static func sticker(_ num : Int) -> UIImage? {
+        return UIImage(named: "sticker\(num)", in: Bundle.module, with: nil)
+    }
+    
 }
