@@ -6,6 +6,7 @@ import Moya
 enum StoryProvider {
     case postContents(postModel : PostDTO)
     case postPhotos(photos: [Data])
+    case postByRegion
 }
 
 extension StoryProvider : CommonTargetType {
@@ -16,6 +17,8 @@ extension StoryProvider : CommonTargetType {
             return "/api/v1/stories"
         case .postPhotos:
             return "/api/v1/stories/image"
+        case .postByRegion:
+            return "api/v1/stories/location"
         }
     }
 
@@ -23,6 +26,8 @@ extension StoryProvider : CommonTargetType {
         switch self {
         case .postContents , .postPhotos:
             return .post
+        case .postByRegion:
+            return .get
         }
     }
 
@@ -33,6 +38,8 @@ extension StoryProvider : CommonTargetType {
         case .postPhotos(let photos):
             let formData = photos.map { MultipartFormData(provider: .data($0), name: "image") }
             return .uploadMultipart(formData)
+        case .postByRegion:
+            return .requestPlain
         }
     }
 
