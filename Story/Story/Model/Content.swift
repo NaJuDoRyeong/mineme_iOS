@@ -13,6 +13,7 @@ struct Content {
     let date : String
     let images :  [String]
     let text: String
+    let sticker : Int?
 }
 
 

@@ -64,12 +64,11 @@ public class StoryHomeViewController: UIViewController {
         
         contentCollectionView = {
             let layer = UICollectionViewFlowLayout()
-//            layer.minimumLineSpacing = 16
+            layer.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+            layer.minimumLineSpacing = 16
             
             let view = UICollectionView(frame: .zero, collectionViewLayout: layer)
             view.backgroundColor = .clear
-//            view.delegate = self
-//            view.dataSource = self
             view.showsVerticalScrollIndicator = false
             view.register(ContentPreviewCell.self, forCellWithReuseIdentifier: ContentPreviewCell.cellID)
             return view
@@ -119,11 +118,6 @@ extension StoryHomeViewController {
     }
 }
 
-extension StoryHomeViewController : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = CustomImageView.Size.small.rawValue
-        return CGSize(width: size, height: size)
-        }
+extension StoryHomeViewController : UICollectionViewDelegate{
     
 }
