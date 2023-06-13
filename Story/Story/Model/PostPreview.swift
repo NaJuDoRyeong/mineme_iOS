@@ -23,3 +23,18 @@ struct Post : Encodable {
     var title : String
     var content : String
 }
+
+struct PostPreview: Decodable {
+    let date, thumbnail: String
+    let postID: Int
+
+    enum CodingKeys: String, CodingKey {
+        case date, thumbnail
+        case postID
+    }
+}
+
+struct CalendarPostPreview {
+    let day : Int
+    let post : PostPreview?
+}

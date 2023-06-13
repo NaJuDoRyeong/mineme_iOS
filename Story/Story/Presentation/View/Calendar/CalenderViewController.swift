@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 import Common
 
 class CalendarViewController: UIViewController {
@@ -16,6 +17,7 @@ class CalendarViewController: UIViewController {
     private var calendarCollectionView : UICollectionView!
 
     private let viewModel = CalendarViewModel()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         print("CalendarViewController viewDidLoad")
@@ -24,6 +26,18 @@ class CalendarViewController: UIViewController {
         initAttribute()
         initAutolayout()
         updateDays()
+        bind()
+    }
+    
+    func bind(){
+        viewModel.posts
+            .bind(to: calendarCollectionView.rx.items(cellIdentifier: CalendarCollectionViewCell.cellID, cellType: CalendarCollectionViewCell.self)) { idx,data,cell in
+                if let data = data {
+                    cell.bind(data.day, data.post?.thumbnail)
+                }else{
+                    cell.isHidden = true
+                }
+            }.disposed(by: disposeBag)
     }
     
     func initAttribute(){
@@ -56,11 +70,10 @@ class CalendarViewController: UIViewController {
         calendarCollectionView = {
             let layer = UICollectionViewFlowLayout()
             layer.minimumInteritemSpacing = 5
+            layer.itemSize = CGSize(width: CalendarCollectionViewCell.cellSize, height: CalendarCollectionViewCell.cellSize)
             
             let view = UICollectionView(frame: .zero, collectionViewLayout: layer)
             view.backgroundColor = .clear
-            view.delegate = self
-            view.dataSource = self
             view.register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: CalendarCollectionViewCell.cellID)
             return view
         }()
@@ -125,7 +138,7 @@ extension CalendarViewController {
 
 @objc
 extension CalendarViewController {
-    
+
     func tapPostBtn(){
         let storyPostVC = StoryPostViewController()
         storyPostVC.modalPresentationStyle = .fullScreen
@@ -138,33 +151,7 @@ extension CalendarViewController {
     }
 }
 
-extension CalendarViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.getDays().count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = calendarCollectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.cellID, for: indexPath) as! CalendarCollectionViewCell
-        if viewModel.getDays()[indexPath.row] == 0 {
-            cell.isHidden = true
-        }
-        else{
-            cell.bind(day: String(viewModel.getDays()[indexPath.row]))
-        }
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width/7 - 5
-        return CGSize(width: width, height: width)
-    }
-    
-}
-
 extension CalendarViewController : CalendarDateButtonDelegate {
     func changeDate() {
-        guard let year = viewModel.selectedYear(), let month = viewModel.selectedMonth() else { return }
-        updateDays(year, month)
     }
 }

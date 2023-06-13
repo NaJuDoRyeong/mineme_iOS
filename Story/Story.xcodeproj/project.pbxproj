@@ -24,6 +24,12 @@
 		B949089529BA1D8400B42BDE /* StoryHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089429BA1D8400B42BDE /* StoryHomeViewModel.swift */; };
 		B949089829BA1E4800B42BDE /* PostPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089729BA1E4800B42BDE /* PostPreview.swift */; };
 		B949089A29BA21E400B42BDE /* ContentPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089929BA21E400B42BDE /* ContentPreviewCell.swift */; };
+		B94DBE042A37071C00884BF3 /* PostByCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94DBE032A37071C00884BF3 /* PostByCalendar.swift */; };
+		B94DBE062A3751FE00884BF3 /* PostByCalendarRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94DBE052A3751FE00884BF3 /* PostByCalendarRepository.swift */; };
+		B94DBE082A3752B300884BF3 /* GetPostByCalendarUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94DBE072A3752B300884BF3 /* GetPostByCalendarUseCase.swift */; };
+		B94DBE0A2A3757B700884BF3 /* DummyPostByCalendarRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94DBE092A3757B700884BF3 /* DummyPostByCalendarRepository.swift */; };
+		B94DBE0C2A3758D500884BF3 /* DefaultPostByCalendarUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94DBE0B2A3758D500884BF3 /* DefaultPostByCalendarUseCase.swift */; };
+		B94DBE0E2A379A9000884BF3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94DBE0D2A379A9000884BF3 /* UIImage+Extension.swift */; };
 		B96A35C129C35EE800AC685F /* StoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35C029C35EE800AC685F /* StoryDTO.swift */; };
 		B96A35C329C35F8300AC685F /* StoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A35C229C35F8300AC685F /* StoryProvider.swift */; };
 		B96D82EE296EA7A900C29AA9 /* StoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */; };
@@ -82,6 +88,12 @@
 		B949089429BA1D8400B42BDE /* StoryHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHomeViewModel.swift; sourceTree = "<group>"; };
 		B949089729BA1E4800B42BDE /* PostPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPreview.swift; sourceTree = "<group>"; };
 		B949089929BA21E400B42BDE /* ContentPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPreviewCell.swift; sourceTree = "<group>"; };
+		B94DBE032A37071C00884BF3 /* PostByCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostByCalendar.swift; sourceTree = "<group>"; };
+		B94DBE052A3751FE00884BF3 /* PostByCalendarRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostByCalendarRepository.swift; sourceTree = "<group>"; };
+		B94DBE072A3752B300884BF3 /* GetPostByCalendarUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostByCalendarUseCase.swift; sourceTree = "<group>"; };
+		B94DBE092A3757B700884BF3 /* DummyPostByCalendarRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPostByCalendarRepository.swift; sourceTree = "<group>"; };
+		B94DBE0B2A3758D500884BF3 /* DefaultPostByCalendarUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPostByCalendarUseCase.swift; sourceTree = "<group>"; };
+		B94DBE0D2A379A9000884BF3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		B96A35C029C35EE800AC685F /* StoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDTO.swift; sourceTree = "<group>"; };
 		B96A35C229C35F8300AC685F /* StoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProvider.swift; sourceTree = "<group>"; };
 		B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +203,7 @@
 			children = (
 				B949089729BA1E4800B42BDE /* PostPreview.swift */,
 				B9BA94E52A2DD85000418AF0 /* PostByRegion.swift */,
+				B94DBE032A37071C00884BF3 /* PostByCalendar.swift */,
 			);
 			name = Model;
 			path = ../Model;
@@ -243,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				B97D453A29DD71240033586B /* Bundle+Extension.swift */,
+				B94DBE0D2A379A9000884BF3 /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -253,6 +267,7 @@
 				B9BA94E02A2DD3EB00418AF0 /* Protocol */,
 				B9BA94DE2A2DD3B200418AF0 /* DefaultPostByRegionRepository.swift */,
 				B9BA94ED2A2DE00000418AF0 /* DummyPostByRegionRepository.swift */,
+				B94DBE092A3757B700884BF3 /* DummyPostByCalendarRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -261,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				B9BA94E12A2DD4FD00418AF0 /* PostByRegionRepository.swift */,
+				B94DBE052A3751FE00884BF3 /* PostByCalendarRepository.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -298,6 +314,7 @@
 			children = (
 				B9BA94F22A2DE2D200418AF0 /* Protocol */,
 				B9BA94F32A2DE4AE00418AF0 /* DefaultPostByRegionUsecase.swift */,
+				B94DBE0B2A3758D500884BF3 /* DefaultPostByCalendarUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -306,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				B9BA94F02A2DE2B100418AF0 /* GetPostByRegionUseCase.swift */,
+				B94DBE072A3752B300884BF3 /* GetPostByCalendarUseCase.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -476,13 +494,16 @@
 				B9BA94F12A2DE2B100418AF0 /* GetPostByRegionUseCase.swift in Sources */,
 				B97D453B29DD71240033586B /* Bundle+Extension.swift in Sources */,
 				B949088829B5D62E00B42BDE /* CalendarCollectionViewCell.swift in Sources */,
+				B94DBE062A3751FE00884BF3 /* PostByCalendarRepository.swift in Sources */,
 				B96D82EE296EA7A900C29AA9 /* StoryPostViewController.swift in Sources */,
 				B919E1EA29ED50EB004A7BBB /* CalendarDateButtonDelegate.swift in Sources */,
 				B919E1EC29ED62BA004A7BBB /* CalendarViewModel.swift in Sources */,
 				B949083229AF4FCE00B42BDE /* StoryPostViewModel.swift in Sources */,
 				B9BA94EE2A2DE00000418AF0 /* DummyPostByRegionRepository.swift in Sources */,
+				B94DBE0A2A3757B700884BF3 /* DummyPostByCalendarRepository.swift in Sources */,
 				B949087F29B4C0E200B42BDE /* CalenderViewController.swift in Sources */,
 				B9BA94EC2A2DDD1200418AF0 /* PostByRegionDTO.swift in Sources */,
+				B94DBE082A3752B300884BF3 /* GetPostByCalendarUseCase.swift in Sources */,
 				B9BA94E62A2DD85000418AF0 /* PostByRegion.swift in Sources */,
 				B97F966D29FFD1F7004EDC15 /* StickerPickerView.swift in Sources */,
 				B949082D29AF3F3600B42BDE /* CustomLocationPicker.swift in Sources */,
@@ -497,6 +518,7 @@
 				B9BE5A772923884100E82CFB /* StoryHomeViewController.swift in Sources */,
 				B949083629AF779000B42BDE /* FeedtableView.swift in Sources */,
 				B97D44D829DB4A4F0033586B /* StoryCoordinator.swift in Sources */,
+				B94DBE0E2A379A9000884BF3 /* UIImage+Extension.swift in Sources */,
 				B97F967129FFEC8A004EDC15 /* Stickers.swift in Sources */,
 				B9BA94E22A2DD4FD00418AF0 /* PostByRegionRepository.swift in Sources */,
 				B96D82F5296EF50900C29AA9 /* DateLabel.swift in Sources */,
@@ -505,6 +527,8 @@
 				B949082F29AF4C5D00B42BDE /* StoryPostWriteContentView.swift in Sources */,
 				B949083429AF714400B42BDE /* FeedCell.swift in Sources */,
 				B96A35C129C35EE800AC685F /* StoryDTO.swift in Sources */,
+				B94DBE042A37071C00884BF3 /* PostByCalendar.swift in Sources */,
+				B94DBE0C2A3758D500884BF3 /* DefaultPostByCalendarUseCase.swift in Sources */,
 				B9BA94F62A2DFB1900418AF0 /* CustomCollectionViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

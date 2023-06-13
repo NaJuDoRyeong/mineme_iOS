@@ -11,13 +11,3 @@ struct PostByRegion: Decodable {
     let region, city: String
     let posts: [PostPreview]
 }
-
-struct PostPreview: Decodable {
-    let date, thumbnail: String
-    let postID: Int
-
-    enum CodingKeys: String, CodingKey {
-        case date, thumbnail
-        case postID
-    }
-}

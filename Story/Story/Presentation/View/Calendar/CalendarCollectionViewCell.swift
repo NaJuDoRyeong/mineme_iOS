@@ -7,11 +7,13 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 import Common
 
 class CalendarCollectionViewCell: UICollectionViewCell {
     
     static let cellID = "CalendarCollectionViewCell"
+    static let cellSize = ((UIScreen.main.bounds.size.width)/7) - 15
     
     private var view = UIImageView()
     private var dayLabel = UILabel()
@@ -28,6 +30,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         dayLabel.text = nil
+        view.image = StoryImages.calendarCircle.image
         isHidden = false
     }
     
@@ -53,8 +56,13 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func bind(day: String){
-        dayLabel.text = day
+    func bind(_ day: Int, _ imageURL: String? = nil){
+        dayLabel.text = "\(day)"
+        if let imageURL = imageURL {
+            //FIXME: caching & resize
+            let processor = ResizingImageProcessor(referenceSize: CGSize(width: Self.cellSize, height: Self.cellSize)) |> RoundCornerImageProcessor(cornerRadius: Self.cellSize/2) 
+            view.kf.setImage(with: URL(string: imageURL)!, options: [.processor(processor)])
+        }
     }
     
 }

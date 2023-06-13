@@ -1,4 +1,5 @@
 import UIKit
+import RxSwift
 import Common
 
 
@@ -7,6 +8,7 @@ class CalendarDateButton : UIButton {
     var delegate : CalendarDateButtonDelegate?
     private let viewModel : CalendarViewModel
     private let pickerView = UIPickerView()
+    let disposeBag = DisposeBag()
     
     init(viewModel : CalendarViewModel){
         self.viewModel = viewModel
@@ -15,10 +17,24 @@ class CalendarDateButton : UIButton {
         pickerView.dataSource = self
         dateSetting()
         self.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        
+        bind()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func bind(){
+        viewModel.selectedDate
+            .map { "\($0.year)년 \($0.month)월" }
+            .bind(to: self.rx.title())
+            .disposed(by: disposeBag)
+        
+        viewModel.month
+            .subscribe { [weak self] in
+                self?.pickerView.selectRow($0-1, inComponent: 1, animated: true)
+            }.disposed(by: disposeBag)
     }
     
     override var inputView: UIView? {
@@ -73,12 +89,11 @@ extension CalendarDateButton {
     }
     
     private func didTapDone(_ button: UIBarButtonItem) {
-        setTitle()
         delegate?.changeDate()
         resignFirstResponder()
     }
     
-    //MARK: - Open the picker view
+    /// Open the picker view
     private func didTapButton() {
         becomeFirstResponder()
     }
@@ -86,15 +101,8 @@ extension CalendarDateButton {
 }
 
 extension CalendarDateButton {
-    
     private func dateSetting() {
         viewModel.dateSetting()
-        setTitle()
-    }
-    
-    func setTitle(){
-        guard let dateFormat = viewModel.Dateformatting() else { return }
-        super.setTitle(dateFormat, for: .normal)
     }
 }
 
@@ -130,7 +138,7 @@ extension CalendarDateButton: UIPickerViewDelegate, UIPickerViewDataSource {
     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
         case 0:
-            return "\(viewModel.getYears()[row])"
+            return "\(viewModel.getYears()[row])년"
         case 1:
             return "\(viewModel.getMonths()[row])월"
         default:
