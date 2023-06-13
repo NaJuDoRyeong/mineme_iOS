@@ -61,8 +61,7 @@ class StoryPostViewController: UIViewController {
     func initAttribute(){
         
         header.setTitle(string: "스토리 작성")
-        header.leftIcon.setImage(UIImage(named: "btn-bottom"), for: .normal)
-        header.leftIcon.transform = header.leftIcon.transform.rotated(by: .pi/2)
+        header.leftIcon.setImage(CommonAssets.arrowLeft, for: .normal)
         header.leftIcon.addTarget(self, action: #selector(before), for: .touchUpInside)
         
         button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
