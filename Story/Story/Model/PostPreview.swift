@@ -24,6 +24,14 @@ struct Post : Encodable {
     var content : String
 }
 
+struct PostingData : Encodable {
+    var date : String
+    var location : String
+    var content : String
+    var images : [Data]
+    var sticker : Int
+}
+
 struct PostPreview: Decodable {
     let date, thumbnail: String
     let postID: Int

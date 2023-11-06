@@ -42,7 +42,7 @@ class StoryPostWriteContentView: UIView {
             .bind(to: dateLabel.rx.text)
             .disposed(by: disposeBag)
         
-        viewModel.location
+        viewModel.locationText
             .bind(to: locationLabel.rx.text)
             .disposed(by: disposeBag)
         

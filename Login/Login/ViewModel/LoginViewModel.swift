@@ -52,8 +52,21 @@ class LoginViewModel : NSObject {
             }).disposed(by: disposeBag)
     }
     
-    func logout(){
+    func logout(_ token: String, _ type: ProviderType, _ name : String, _ code : String? = nil){
         
+        let model = LoginModel(accessToken: token, providerType: type.string, username: name, authorizationCode: code)
+
+        let request : LoginProvider = type == .KAKAO ?
+            .kakao(loginModel: model) : .apple(loginModel: model)
+        networkManager.test(request)
+            .subscribe { event in
+                switch event {
+                case .success(let data):
+                    print(data.dat)
+                case .failure(_):
+                    return
+                }
+            }
     }
     
     func resign(){
