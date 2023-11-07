@@ -21,7 +21,6 @@
 		B949088229B4C45B00B42BDE /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B949088029B4C45B00B42BDE /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B949088829B5D62E00B42BDE /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949088729B5D62E00B42BDE /* CalendarCollectionViewCell.swift */; };
 		B949089329BA1BC200B42BDE /* CalendarDateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089229BA1BC200B42BDE /* CalendarDateButton.swift */; };
-		B949089529BA1D8400B42BDE /* StoryHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089429BA1D8400B42BDE /* StoryHomeViewModel.swift */; };
 		B949089829BA1E4800B42BDE /* PostPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089729BA1E4800B42BDE /* PostPreview.swift */; };
 		B949089A29BA21E400B42BDE /* ContentPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B949089929BA21E400B42BDE /* ContentPreviewCell.swift */; };
 		B94DBE042A37071C00884BF3 /* PostByCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94DBE032A37071C00884BF3 /* PostByCalendar.swift */; };
@@ -39,6 +38,7 @@
 		B96D82EE296EA7A900C29AA9 /* StoryPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */; };
 		B96D82F5296EF50900C29AA9 /* DateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82F4296EF50900C29AA9 /* DateLabel.swift */; };
 		B96D82F7296EFBE900C29AA9 /* PostPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D82F6296EFBE900C29AA9 /* PostPhotoView.swift */; };
+		B9789A532AFA689800B69AD9 /* StoryHomeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9789A522AFA689800B69AD9 /* StoryHomeViewReactor.swift */; };
 		B97D44D829DB4A4F0033586B /* StoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D44D729DB4A4F0033586B /* StoryCoordinator.swift */; };
 		B97D453929DD70610033586B /* StoryImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D453829DD70610033586B /* StoryImages.swift */; };
 		B97D453B29DD71240033586B /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97D453A29DD71240033586B /* Bundle+Extension.swift */; };
@@ -46,13 +46,12 @@
 		B97F966D29FFD1F7004EDC15 /* StickerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F966C29FFD1F7004EDC15 /* StickerPickerView.swift */; };
 		B97F966F29FFD6C6004EDC15 /* StickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F966E29FFD6C6004EDC15 /* StickerViewCell.swift */; };
 		B97F967129FFEC8A004EDC15 /* Stickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F967029FFEC8A004EDC15 /* Stickers.swift */; };
-		B9BA94DF2A2DD3B200418AF0 /* DefaultPostByRegionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA94DE2A2DD3B200418AF0 /* DefaultPostByRegionRepository.swift */; };
-		B9BA94E22A2DD4FD00418AF0 /* PostByRegionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA94E12A2DD4FD00418AF0 /* PostByRegionRepository.swift */; };
+		B9BA94E22A2DD4FD00418AF0 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA94E12A2DD4FD00418AF0 /* PostRepository.swift */; };
 		B9BA94E62A2DD85000418AF0 /* PostByRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA94E52A2DD85000418AF0 /* PostByRegion.swift */; };
 		B9BA94E92A2DD9FF00418AF0 /* StoryNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA94E82A2DD9FF00418AF0 /* StoryNetworkManager.swift */; };
 		B9BA94EC2A2DDD1200418AF0 /* PostByRegionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA94EB2A2DDD1200418AF0 /* PostByRegionDTO.swift */; };
-		B9BA94EE2A2DE00000418AF0 /* DummyPostByRegionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA94ED2A2DE00000418AF0 /* DummyPostByRegionRepository.swift */; };
-		B9BA94F12A2DE2B100418AF0 /* GetPostByRegionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA94F02A2DE2B100418AF0 /* GetPostByRegionUseCase.swift */; };
+		B9BA94EE2A2DE00000418AF0 /* DummyPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA94ED2A2DE00000418AF0 /* DummyPostRepository.swift */; };
+		B9BA94F12A2DE2B100418AF0 /* GetPostUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA94F02A2DE2B100418AF0 /* GetPostUseCase.swift */; };
 		B9BA94F42A2DE4AE00418AF0 /* DefaultPostByRegionUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA94F32A2DE4AE00418AF0 /* DefaultPostByRegionUsecase.swift */; };
 		B9BA94F62A2DFB1900418AF0 /* CustomCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA94F52A2DFB1900418AF0 /* CustomCollectionViewHeader.swift */; };
 		B9BE5A6C292387FD00E82CFB /* Story.h in Headers */ = {isa = PBXBuildFile; fileRef = B9BE5A6B292387FD00E82CFB /* Story.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -89,7 +88,6 @@
 		B949088029B4C45B00B42BDE /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B949088729B5D62E00B42BDE /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		B949089229BA1BC200B42BDE /* CalendarDateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDateButton.swift; sourceTree = "<group>"; };
-		B949089429BA1D8400B42BDE /* StoryHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHomeViewModel.swift; sourceTree = "<group>"; };
 		B949089729BA1E4800B42BDE /* PostPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPreview.swift; sourceTree = "<group>"; };
 		B949089929BA21E400B42BDE /* ContentPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPreviewCell.swift; sourceTree = "<group>"; };
 		B94DBE032A37071C00884BF3 /* PostByCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostByCalendar.swift; sourceTree = "<group>"; };
@@ -107,6 +105,7 @@
 		B96D82ED296EA7A900C29AA9 /* StoryPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPostViewController.swift; sourceTree = "<group>"; };
 		B96D82F4296EF50900C29AA9 /* DateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLabel.swift; sourceTree = "<group>"; };
 		B96D82F6296EFBE900C29AA9 /* PostPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPhotoView.swift; sourceTree = "<group>"; };
+		B9789A522AFA689800B69AD9 /* StoryHomeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHomeViewReactor.swift; sourceTree = "<group>"; };
 		B97D44D729DB4A4F0033586B /* StoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCoordinator.swift; sourceTree = "<group>"; };
 		B97D453829DD70610033586B /* StoryImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryImages.swift; sourceTree = "<group>"; };
 		B97D453A29DD71240033586B /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
@@ -114,13 +113,12 @@
 		B97F966C29FFD1F7004EDC15 /* StickerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPickerView.swift; sourceTree = "<group>"; };
 		B97F966E29FFD6C6004EDC15 /* StickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerViewCell.swift; sourceTree = "<group>"; };
 		B97F967029FFEC8A004EDC15 /* Stickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stickers.swift; sourceTree = "<group>"; };
-		B9BA94DE2A2DD3B200418AF0 /* DefaultPostByRegionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPostByRegionRepository.swift; sourceTree = "<group>"; };
-		B9BA94E12A2DD4FD00418AF0 /* PostByRegionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostByRegionRepository.swift; sourceTree = "<group>"; };
+		B9BA94E12A2DD4FD00418AF0 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
 		B9BA94E52A2DD85000418AF0 /* PostByRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostByRegion.swift; sourceTree = "<group>"; };
 		B9BA94E82A2DD9FF00418AF0 /* StoryNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryNetworkManager.swift; sourceTree = "<group>"; };
 		B9BA94EB2A2DDD1200418AF0 /* PostByRegionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostByRegionDTO.swift; sourceTree = "<group>"; };
-		B9BA94ED2A2DE00000418AF0 /* DummyPostByRegionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPostByRegionRepository.swift; sourceTree = "<group>"; };
-		B9BA94F02A2DE2B100418AF0 /* GetPostByRegionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostByRegionUseCase.swift; sourceTree = "<group>"; };
+		B9BA94ED2A2DE00000418AF0 /* DummyPostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPostRepository.swift; sourceTree = "<group>"; };
+		B9BA94F02A2DE2B100418AF0 /* GetPostUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostUseCase.swift; sourceTree = "<group>"; };
 		B9BA94F32A2DE4AE00418AF0 /* DefaultPostByRegionUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPostByRegionUsecase.swift; sourceTree = "<group>"; };
 		B9BA94F52A2DFB1900418AF0 /* CustomCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewHeader.swift; sourceTree = "<group>"; };
 		B9BE5A68292387FD00E82CFB /* Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Story.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,9 +160,9 @@
 		B949083029AF4FAC00B42BDE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B949089429BA1D8400B42BDE /* StoryHomeViewModel.swift */,
 				B949083129AF4FCE00B42BDE /* StoryPostViewModel.swift */,
 				B919E1EB29ED62BA004A7BBB /* CalendarViewModel.swift */,
+				B9789A522AFA689800B69AD9 /* StoryHomeViewReactor.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -273,8 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				B9BA94E02A2DD3EB00418AF0 /* Protocol */,
-				B9BA94DE2A2DD3B200418AF0 /* DefaultPostByRegionRepository.swift */,
-				B9BA94ED2A2DE00000418AF0 /* DummyPostByRegionRepository.swift */,
+				B9BA94ED2A2DE00000418AF0 /* DummyPostRepository.swift */,
 				B94DBE092A3757B700884BF3 /* DummyPostByCalendarRepository.swift */,
 			);
 			path = Repository;
@@ -283,7 +280,7 @@
 		B9BA94E02A2DD3EB00418AF0 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				B9BA94E12A2DD4FD00418AF0 /* PostByRegionRepository.swift */,
+				B9BA94E12A2DD4FD00418AF0 /* PostRepository.swift */,
 				B94DBE052A3751FE00884BF3 /* PostByCalendarRepository.swift */,
 				B94DBE5D2A403AD200884BF3 /* PostingRepository.swift */,
 				B94DBE5F2A403D1700884BF3 /* DummyPostingRepository.swift */,
@@ -333,7 +330,7 @@
 		B9BA94F22A2DE2D200418AF0 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				B9BA94F02A2DE2B100418AF0 /* GetPostByRegionUseCase.swift */,
+				B9BA94F02A2DE2B100418AF0 /* GetPostUseCase.swift */,
 				B94DBE072A3752B300884BF3 /* GetPostByCalendarUseCase.swift */,
 				B94DBE612A403DEC00884BF3 /* PostingUseCase.swift */,
 			);
@@ -503,7 +500,7 @@
 			files = (
 				B9BA94F42A2DE4AE00418AF0 /* DefaultPostByRegionUsecase.swift in Sources */,
 				B949089A29BA21E400B42BDE /* ContentPreviewCell.swift in Sources */,
-				B9BA94F12A2DE2B100418AF0 /* GetPostByRegionUseCase.swift in Sources */,
+				B9BA94F12A2DE2B100418AF0 /* GetPostUseCase.swift in Sources */,
 				B97D453B29DD71240033586B /* Bundle+Extension.swift in Sources */,
 				B949088829B5D62E00B42BDE /* CalendarCollectionViewCell.swift in Sources */,
 				B94DBE062A3751FE00884BF3 /* PostByCalendarRepository.swift in Sources */,
@@ -512,18 +509,17 @@
 				B919E1EC29ED62BA004A7BBB /* CalendarViewModel.swift in Sources */,
 				B94DBE642A403E3900884BF3 /* DefaultPostingUseCase.swift in Sources */,
 				B949083229AF4FCE00B42BDE /* StoryPostViewModel.swift in Sources */,
-				B9BA94EE2A2DE00000418AF0 /* DummyPostByRegionRepository.swift in Sources */,
+				B9BA94EE2A2DE00000418AF0 /* DummyPostRepository.swift in Sources */,
 				B94DBE0A2A3757B700884BF3 /* DummyPostByCalendarRepository.swift in Sources */,
 				B949087F29B4C0E200B42BDE /* CalenderViewController.swift in Sources */,
 				B9BA94EC2A2DDD1200418AF0 /* PostByRegionDTO.swift in Sources */,
 				B94DBE082A3752B300884BF3 /* GetPostByCalendarUseCase.swift in Sources */,
+				B9789A532AFA689800B69AD9 /* StoryHomeViewReactor.swift in Sources */,
 				B9BA94E62A2DD85000418AF0 /* PostByRegion.swift in Sources */,
 				B97F966D29FFD1F7004EDC15 /* StickerPickerView.swift in Sources */,
 				B949082D29AF3F3600B42BDE /* CustomLocationPicker.swift in Sources */,
 				B97F966F29FFD6C6004EDC15 /* StickerViewCell.swift in Sources */,
 				B96A35C329C35F8300AC685F /* StoryProvider.swift in Sources */,
-				B949089529BA1D8400B42BDE /* StoryHomeViewModel.swift in Sources */,
-				B9BA94DF2A2DD3B200418AF0 /* DefaultPostByRegionRepository.swift in Sources */,
 				B949089329BA1BC200B42BDE /* CalendarDateButton.swift in Sources */,
 				B9BA94E92A2DD9FF00418AF0 /* StoryNetworkManager.swift in Sources */,
 				B96D82F7296EFBE900C29AA9 /* PostPhotoView.swift in Sources */,
@@ -534,7 +530,7 @@
 				B97D44D829DB4A4F0033586B /* StoryCoordinator.swift in Sources */,
 				B94DBE0E2A379A9000884BF3 /* UIImage+Extension.swift in Sources */,
 				B97F967129FFEC8A004EDC15 /* Stickers.swift in Sources */,
-				B9BA94E22A2DD4FD00418AF0 /* PostByRegionRepository.swift in Sources */,
+				B9BA94E22A2DD4FD00418AF0 /* PostRepository.swift in Sources */,
 				B94DBE602A403D1700884BF3 /* DummyPostingRepository.swift in Sources */,
 				B96D82F5296EF50900C29AA9 /* DateLabel.swift in Sources */,
 				B949082B29AF3E6D00B42BDE /* StoryPostEnterInfoView.swift in Sources */,

@@ -12,6 +12,13 @@ public class StoryCoordinator: Coordinator{
     public func start() {
         navigation.setNavigationBarHidden(true, animated: false)
         let vc = StoryHomeViewController()
+        vc.reactor = makeReactor()
         navigation.viewControllers = [vc]
+    }
+    
+    private func makeReactor() -> StoryHomeViewReactor {
+        let repository = DummyPostRepository()
+        let useCase = DefaultGetPostUseCase(repository)
+        return StoryHomeViewReactor(useCase: useCase)
     }
 }

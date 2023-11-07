@@ -32,7 +32,7 @@ struct PostingData : Encodable {
     var sticker : Int
 }
 
-struct PostPreview: Decodable {
+struct PostPreview: Decodable, Equatable {
     let date, thumbnail: String
     let postID: Int
 
