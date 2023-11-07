@@ -37,7 +37,7 @@ class StoryPostEnterInfoView: UIView {
                 self?.storyPostVM.date.accept(date)
             }
             //FIXME: API변경시 수정
-            self?.storyPostVM.location.onNext("경상남도 창원에서")
+//            self?.storyPostVM.location
         }).disposed(by: disposeBag)
         
     }

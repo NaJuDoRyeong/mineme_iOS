@@ -2,6 +2,7 @@
 import Foundation
 import Common
 import RxSwift
+import Moya
 
 class LoginNetworkManager : BaseNetworkManager<LoginProvider> {
     

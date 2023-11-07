@@ -15,6 +15,7 @@ def shared_pods
 	pod "RxCocoa"
 	pod "Moya/RxSwift"
 	pod "Kingfisher"
+	pod "ReactorKit"
 end
 
 def kakao_pods

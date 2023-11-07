@@ -27,11 +27,11 @@ class ContentPreviewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func bind(_ content: Content){
-        view.imageView.kf.setImage(with: URL(string: content.images.first!))
-        location.text = content.location
+    func bind(_ content: PostPreview){
+        view.imageView.kf.setImage(with: URL(string: content.thumbnail)!)
+//        location.text = content.location
         date.text = content.date
-        self.tag = content.id
+        self.tag = content.postID
     }
     
     override func prepareForReuse() {

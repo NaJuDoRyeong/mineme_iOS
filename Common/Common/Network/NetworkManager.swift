@@ -41,4 +41,9 @@ open class BaseNetworkManager<Target : TargetType>{
                 }
             }
     }
+    
+    public func request(_ type: Target) -> Single<Response> {
+        return provider.rx.request(type)
+    }
 }
+

@@ -10,16 +10,23 @@ import SnapKit
 import Common
 import RxSwift
 import RxCocoa
+import ReactorKit
 
-public class StoryHomeViewController: UIViewController {
-    
-    let vc = StoryHomeViewModel()
-    let disposeBag = DisposeBag()
+class StoryHomeViewController: UIViewController, ReactorKit.View {
+    var disposeBag = DisposeBag()
     
     private var noImageView = UIImageView()
     var header = CommonHeader()
     var postButton = UIButton()
-    var contentCollectionView : UICollectionView!
+    lazy var contentCollectionView: UICollectionView = {
+        let view = UICollectionView(frame: .zero,
+                                    collectionViewLayout: makeCollectionViewLayout())
+        view.backgroundColor = .clear
+        view.showsVerticalScrollIndicator = false
+        view.register(ContentPreviewCell.self,
+                      forCellWithReuseIdentifier: ContentPreviewCell.cellID)
+        return view
+    }()
 
     open override func viewDidLoad() {
         print("StoryHomeViewController viewDidLoad")
@@ -27,29 +34,24 @@ public class StoryHomeViewController: UIViewController {
         self.view.backgroundColor = .white
         initAttribute()
         initAutolayout()
-        bind()
-        
     }
     
-    func bind(){
-        vc.observable.bind(onNext: { [weak self] in
-            if $0.count != 0 {
-                self?.noImageView.isHidden = true
-            }
-            else{
-                self?.noImageView.isHidden = false
-            }
-        })
-        .disposed(by: disposeBag)
+    func bind(reactor: StoryHomeViewReactor) {
+        reactor.action.onNext(.initialize)
         
-        vc.observable.bind(to: contentCollectionView.rx.items(cellIdentifier: ContentPreviewCell.cellID, cellType: ContentPreviewCell.self)) { index, content, cell in
-            cell.bind(content)
-        }.disposed(by: disposeBag)
+        reactor.state.map(\.postList)
+            .distinctUntilChanged()
+            .bind(to: contentCollectionView.rx.items(
+                cellIdentifier: ContentPreviewCell.cellID,
+                cellType: ContentPreviewCell.self)) { index, item, cell in
+                    cell.bind(item)
+                }.disposed(by: disposeBag)
         
-        contentCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
-        contentCollectionView.rx.itemSelected.bind { indexPath in
-            self.navigationController?.pushViewController(FeedtableView(), animated: true)
-        }.disposed(by: disposeBag)
+        reactor.state.map(\.postIsEmpty)
+            .distinctUntilChanged()
+            .map{ !$0 }
+            .bind(to: noImageView.rx.isHidden)
+            .disposed(by: disposeBag)
     }
     
     func initAttribute(){
@@ -61,18 +63,6 @@ public class StoryHomeViewController: UIViewController {
         
         header.leftIcon.setImage(StoryImages.storyButton.image, for: .normal)
         header.leftIcon.addTarget(self, action: #selector(changeVC), for: .touchUpInside)
-        
-        contentCollectionView = {
-            let layer = UICollectionViewFlowLayout()
-            layer.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-            layer.minimumLineSpacing = 16
-            
-            let view = UICollectionView(frame: .zero, collectionViewLayout: layer)
-            view.backgroundColor = .clear
-            view.showsVerticalScrollIndicator = false
-            view.register(ContentPreviewCell.self, forCellWithReuseIdentifier: ContentPreviewCell.cellID)
-            return view
-        }()
         
     }
     
@@ -98,6 +88,13 @@ public class StoryHomeViewController: UIViewController {
         
     }
     
+    private func makeCollectionViewLayout() -> UICollectionViewFlowLayout {
+        let layer = UICollectionViewFlowLayout()
+        layer.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layer.minimumLineSpacing = 16
+        return layer
+    }
+    
     deinit {
         print("StoryHomeViewController deinit")
     }
@@ -116,8 +113,4 @@ extension StoryHomeViewController {
     func changeVC(){
         self.navigationController?.pushViewController(CalendarViewController(), animated: false)
     }
-}
-
-extension StoryHomeViewController : UICollectionViewDelegate{
-    
 }
